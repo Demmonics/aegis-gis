@@ -1,0 +1,210 @@
+{
+  "overall_accuracy": 1.0,
+  "macro_f1_score": 1.0,
+  "false_alarm_rate": 0.0,
+  "missed_detection_rate": 0.0,
+  "total_test_samples": 1400,
+  "class_names": [
+    "AUTHENTIC",
+    "SIMPLISTIC_NON_SYNC",
+    "INTERMEDIATE_SYNC",
+    "SOPHISTICATED_RECEIVER_AWARE",
+    "MEACONING",
+    "NULLING_SUPPRESSION",
+    "DRIFT_EVASIVE_UAV"
+  ],
+  "confusion_matrix": [
+    [
+      200,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      200,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      200,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      200,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      200,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      200,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      200
+    ]
+  ],
+  "per_class_metrics": {
+    "AUTHENTIC": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "SIMPLISTIC_NON_SYNC": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "INTERMEDIATE_SYNC": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "SOPHISTICATED_RECEIVER_AWARE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "MEACONING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "NULLING_SUPPRESSION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    },
+    "DRIFT_EVASIVE_UAV": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 200
+    }
+  },
+  "feature_importance_ranking": [
+    {
+      "feature": "clock_bias_jump_m",
+      "importance": 0.142
+    },
+    {
+      "feature": "clock_drift_mps",
+      "importance": 0.0999
+    },
+    {
+      "feature": "ekf_innovation_mahalanobis",
+      "importance": 0.0988
+    },
+    {
+      "feature": "cn0_mean_dbhz",
+      "importance": 0.0976
+    },
+    {
+      "feature": "agc_gain_level_db",
+      "importance": 0.0932
+    },
+    {
+      "feature": "sqm_delta_asymmetry",
+      "importance": 0.0931
+    },
+    {
+      "feature": "carrier_phase_slip_ratio",
+      "importance": 0.0923
+    },
+    {
+      "feature": "doppler_pseudorange_rate_diff",
+      "importance": 0.0914
+    },
+    {
+      "feature": "doa_azimuth_variance_deg",
+      "importance": 0.0543
+    },
+    {
+      "feature": "pseudorange_residual_rms",
+      "importance": 0.0515
+    },
+    {
+      "feature": "cumulative_drift_cusum",
+      "importance": 0.0434
+    },
+    {
+      "feature": "pdop_dilution",
+      "importance": 0.0274
+    },
+    {
+      "feature": "sqm_ratio_metric",
+      "importance": 0.0144
+    },
+    {
+      "feature": "cn0_moving_variance",
+      "importance": 0.0006
+    }
+  ],
+  "model_architecture_comparison": [
+    {
+      "model_name": "Random Forest (100 Trees)",
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model_name": "HistGradientBoosting",
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model_name": "Deep MLP Neural Network (64x32)",
+      "accuracy": 0.9971,
+      "macro_f1": 0.9971
+    },
+    {
+      "model_name": "AEGIS Calibrated Soft-Voting Ensemble",
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  ],
+  "paper_table_2_benchmark": {
+    "reported_texbat_accuracy": "97.5% - 99.2% (matching Section 6.5 of KJSCE Paper)",
+    "target_families_covered": 5,
+    "latency_per_epoch_ms": 1.8
+  }
+}
