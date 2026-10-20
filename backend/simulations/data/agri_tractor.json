@@ -1,0 +1,1656 @@
+{
+  "scenario_id": "agri_tractor",
+  "domain": "agriculture",
+  "title": "Precision Agriculture: Nashik Vineyard RTK Tractor",
+  "target_vehicle": "Autonomous RTK Weeding Tractor (Autosteer)",
+  "vehicle_type": "tractor",
+  "location_name": "Nashik Precision Viticulture Parcel (Vineyard Furrows)",
+  "map_center": [
+    20.011,
+    73.79
+  ],
+  "default_zoom": 18,
+  "attack_start_epoch": 14,
+  "spoofer_location": [
+    20.013,
+    73.794
+  ],
+  "narrative_phases": [
+    {
+      "phase": 1,
+      "epochs": "0-13",
+      "title": "Precision Row Weeding",
+      "desc": "Tractor centered in vine furrow using dual-freq RTK GNSS autosteer."
+    },
+    {
+      "phase": 2,
+      "epochs": "14-19",
+      "title": "Receiver-Aware Phase Step",
+      "desc": "Adversary injects stealthy 2.8m lateral offset into RTK corrections."
+    },
+    {
+      "phase": 3,
+      "epochs": "20-59",
+      "title": "Row Breach & Autosteer E-Stop",
+      "desc": "Cross-track error exceeds 25cm. AEGIS triggers immediate autosteer lockout."
+    }
+  ],
+  "gis_polygons": [
+    {
+      "name": "Vine Row 4 (Sauvignon Blanc)",
+      "coords": [
+        [
+          20.009,
+          73.7899
+        ],
+        [
+          20.014,
+          73.7899
+        ],
+        [
+          20.014,
+          73.7901
+        ],
+        [
+          20.009,
+          73.7901
+        ],
+        [
+          20.009,
+          73.7899
+        ]
+      ],
+      "color": "#10b981",
+      "type": "CORRIDOR"
+    },
+    {
+      "name": "Vine Row 5 (Crop Collision Risk)",
+      "coords": [
+        [
+          20.009,
+          73.79025
+        ],
+        [
+          20.014,
+          73.79025
+        ],
+        [
+          20.014,
+          73.79045
+        ],
+        [
+          20.009,
+          73.79045
+        ],
+        [
+          20.009,
+          73.79025
+        ]
+      ],
+      "color": "#ef4444",
+      "type": "RESTRICTED"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "true_pos": [
+        20.01,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.0,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 1,
+      "true_pos": [
+        20.01005,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01005,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01005,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.1,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 2,
+      "true_pos": [
+        20.0101,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0101,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0101,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.2,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 3,
+      "true_pos": [
+        20.01015,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01015,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01015,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.3,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 4,
+      "true_pos": [
+        20.0102,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0102,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0102,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.4,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 5,
+      "true_pos": [
+        20.01025,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01025,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01025,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.4,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 6,
+      "true_pos": [
+        20.0103,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0103,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0103,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 7,
+      "true_pos": [
+        20.01035,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01035,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01035,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 8,
+      "true_pos": [
+        20.0104,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0104,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0104,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 9,
+      "true_pos": [
+        20.01045,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01045,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01045,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 10,
+      "true_pos": [
+        20.0105,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0105,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0105,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 11,
+      "true_pos": [
+        20.01055,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01055,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01055,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.4,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 12,
+      "true_pos": [
+        20.0106,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0106,
+        73.79
+      ],
+      "ekf_pos": [
+        20.0106,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.3,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 13,
+      "true_pos": [
+        20.01065,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01065,
+        73.79
+      ],
+      "ekf_pos": [
+        20.01065,
+        73.79
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.3,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.4,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 14,
+      "true_pos": [
+        20.0107,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0107,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0107,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.4,
+      "agc_attenuation_db": -65.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 15,
+      "true_pos": [
+        20.01075,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01075,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01075,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.0,
+      "agc_attenuation_db": -64.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 16,
+      "true_pos": [
+        20.0108,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0108,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0108,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.8,
+      "agc_attenuation_db": -66.5,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 17,
+      "true_pos": [
+        20.01085,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01085,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01085,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.1,
+      "agc_attenuation_db": -64.4,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 18,
+      "true_pos": [
+        20.0109,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0109,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0109,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.9,
+      "agc_attenuation_db": -65.4,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 19,
+      "true_pos": [
+        20.01095,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01095,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01095,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.7,
+      "agc_attenuation_db": -67.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "RTK_PHASE_STEP",
+      "alert_message": "\u26a0\ufe0f RTK Carrier Phase Discontinuity Detected"
+    },
+    {
+      "epoch": 20,
+      "true_pos": [
+        20.011,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.011,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.011,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.8,
+      "agc_attenuation_db": -64.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 21,
+      "true_pos": [
+        20.01105,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01105,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01105,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -65.3,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 22,
+      "true_pos": [
+        20.0111,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0111,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0111,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.0,
+      "agc_attenuation_db": -65.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 23,
+      "true_pos": [
+        20.01115,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01115,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01115,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.4,
+      "agc_attenuation_db": -67.5,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 24,
+      "true_pos": [
+        20.0112,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0112,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0112,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.5,
+      "agc_attenuation_db": -67.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 25,
+      "true_pos": [
+        20.01125,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01125,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01125,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.9,
+      "agc_attenuation_db": -65.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 26,
+      "true_pos": [
+        20.0113,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0113,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0113,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.5,
+      "agc_attenuation_db": -65.1,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 27,
+      "true_pos": [
+        20.01135,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01135,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01135,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.0,
+      "agc_attenuation_db": -64.1,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 28,
+      "true_pos": [
+        20.0114,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0114,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0114,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.5,
+      "agc_attenuation_db": -66.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 29,
+      "true_pos": [
+        20.01145,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01145,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01145,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -64.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 30,
+      "true_pos": [
+        20.0115,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0115,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0115,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.9,
+      "agc_attenuation_db": -64.5,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 31,
+      "true_pos": [
+        20.01155,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01155,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01155,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.8,
+      "agc_attenuation_db": -65.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 32,
+      "true_pos": [
+        20.0116,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0116,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0116,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.3,
+      "agc_attenuation_db": -65.3,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 33,
+      "true_pos": [
+        20.01165,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01165,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01165,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.1,
+      "agc_attenuation_db": -64.8,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 34,
+      "true_pos": [
+        20.0117,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0117,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0117,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.9,
+      "agc_attenuation_db": -65.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 35,
+      "true_pos": [
+        20.01175,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01175,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01175,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.4,
+      "agc_attenuation_db": -64.8,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 36,
+      "true_pos": [
+        20.0118,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0118,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0118,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.0,
+      "agc_attenuation_db": -64.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 37,
+      "true_pos": [
+        20.01185,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01185,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01185,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -65.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 38,
+      "true_pos": [
+        20.0119,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0119,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0119,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.9,
+      "agc_attenuation_db": -65.1,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 39,
+      "true_pos": [
+        20.01195,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01195,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01195,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.4,
+      "agc_attenuation_db": -65.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 40,
+      "true_pos": [
+        20.012,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.012,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.012,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.6,
+      "agc_attenuation_db": -64.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 41,
+      "true_pos": [
+        20.01205,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01205,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01205,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.6,
+      "agc_attenuation_db": -66.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 42,
+      "true_pos": [
+        20.0121,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0121,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0121,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -64.4,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 43,
+      "true_pos": [
+        20.01215,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01215,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01215,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.3,
+      "agc_attenuation_db": -65.8,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 44,
+      "true_pos": [
+        20.0122,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0122,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0122,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.0,
+      "agc_attenuation_db": -66.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 45,
+      "true_pos": [
+        20.01225,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01225,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01225,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -65.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 46,
+      "true_pos": [
+        20.0123,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0123,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0123,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.4,
+      "agc_attenuation_db": -65.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 47,
+      "true_pos": [
+        20.01235,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01235,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01235,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.4,
+      "agc_attenuation_db": -66.3,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 48,
+      "true_pos": [
+        20.0124,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0124,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0124,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 45.9,
+      "agc_attenuation_db": -64.2,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 49,
+      "true_pos": [
+        20.01245,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01245,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01245,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -65.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 50,
+      "true_pos": [
+        20.0125,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0125,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0125,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 44.9,
+      "agc_attenuation_db": -64.8,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 51,
+      "true_pos": [
+        20.01255,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01255,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01255,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.3,
+      "agc_attenuation_db": -64.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 52,
+      "true_pos": [
+        20.0126,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0126,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0126,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.6,
+      "agc_attenuation_db": -64.4,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 53,
+      "true_pos": [
+        20.01265,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01265,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01265,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.7,
+      "agc_attenuation_db": -65.7,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 54,
+      "true_pos": [
+        20.0127,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0127,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0127,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.2,
+      "agc_attenuation_db": -63.4,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 55,
+      "true_pos": [
+        20.01275,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01275,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01275,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.0,
+      "agc_attenuation_db": -63.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 56,
+      "true_pos": [
+        20.0128,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0128,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0128,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -64.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 57,
+      "true_pos": [
+        20.01285,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01285,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01285,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 46.9,
+      "agc_attenuation_db": -66.0,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 58,
+      "true_pos": [
+        20.0129,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.0129,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.0129,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 47.4,
+      "agc_attenuation_db": -64.6,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    },
+    {
+      "epoch": 59,
+      "true_pos": [
+        20.01295,
+        73.79
+      ],
+      "spoofed_pos": [
+        20.01295,
+        73.790028
+      ],
+      "ekf_pos": [
+        20.01295,
+        73.790001
+      ],
+      "altitude_m": 580.0,
+      "speed": 5.4,
+      "speed_unit": "km/h",
+      "heading_deg": 0.0,
+      "inferred_cn0": 48.2,
+      "agc_attenuation_db": -64.8,
+      "doa_azimuth_var": 0.02,
+      "position_drift_m": 2.93,
+      "is_attack_active": true,
+      "gis_violation": "ROW_BOUNDARY_BREACH",
+      "alert_message": "\ud83d\udea8 AUTONOMOUS TRACTOR EMERGENCY STOP: CROP ROW COLLISION HAZARD (XTE > 0.25m) \ud83d\udea8"
+    }
+  ]
+}

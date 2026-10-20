@@ -1,0 +1,1656 @@
+{
+  "scenario_id": "maritime_baltic",
+  "domain": "maritime",
+  "title": "Maritime: Baltic Sea Tanker Runway Teleport (C4ADS)",
+  "target_vehicle": "100,000 DWT Commercial Tanker (ECDIS + RTK)",
+  "vehicle_type": "ship",
+  "location_name": "Baltic Sea approaching Gda\u0144sk / Kaliningrad Corridor",
+  "map_center": [
+    54.78,
+    20.2
+  ],
+  "default_zoom": 10,
+  "attack_start_epoch": 15,
+  "spoofer_location": [
+    54.745,
+    20.15
+  ],
+  "narrative_phases": [
+    {
+      "phase": 1,
+      "epochs": "0-14",
+      "title": "Authentic Navigation",
+      "desc": "Tanker navigating designated IMO corridor. Multi-constellation signals healthy."
+    },
+    {
+      "phase": 2,
+      "epochs": "15-25",
+      "title": "Signal Injection & Pull-off",
+      "desc": "Hostile coastal SDR begins intermediate pull-off with +3 dB power advantage."
+    },
+    {
+      "phase": 3,
+      "epochs": "26-59",
+      "title": "Runway Capture & Alarm",
+      "desc": "Reported fix pulled 14.8 km inland onto Khrabrovo military runway."
+    }
+  ],
+  "gis_polygons": [
+    {
+      "name": "Designated Shipping Lane",
+      "coords": [
+        [
+          54.62,
+          19.75
+        ],
+        [
+          54.72,
+          20.15
+        ],
+        [
+          54.82,
+          20.05
+        ],
+        [
+          54.72,
+          19.65
+        ],
+        [
+          54.62,
+          19.75
+        ]
+      ],
+      "color": "#10b981",
+      "type": "CORRIDOR"
+    },
+    {
+      "name": "Khrabrovo Airport Runway (Inland)",
+      "coords": [
+        [
+          54.88,
+          20.57
+        ],
+        [
+          54.88,
+          20.615
+        ],
+        [
+          54.905,
+          20.615
+        ],
+        [
+          54.905,
+          20.57
+        ],
+        [
+          54.88,
+          20.57
+        ]
+      ],
+      "color": "#ef4444",
+      "type": "RUNWAY"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "true_pos": [
+        54.68,
+        19.85
+      ],
+      "spoofed_pos": [
+        54.68,
+        19.85
+      ],
+      "ekf_pos": [
+        54.68,
+        19.85
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.0,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 1,
+      "true_pos": [
+        54.6808,
+        19.8512
+      ],
+      "spoofed_pos": [
+        54.6808,
+        19.8512
+      ],
+      "ekf_pos": [
+        54.6808,
+        19.8512
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.1,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 2,
+      "true_pos": [
+        54.6816,
+        19.8524
+      ],
+      "spoofed_pos": [
+        54.6816,
+        19.8524
+      ],
+      "ekf_pos": [
+        54.6816,
+        19.8524
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.3,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 3,
+      "true_pos": [
+        54.6824,
+        19.8536
+      ],
+      "spoofed_pos": [
+        54.6824,
+        19.8536
+      ],
+      "ekf_pos": [
+        54.6824,
+        19.8536
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.4,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 4,
+      "true_pos": [
+        54.6832,
+        19.8548
+      ],
+      "spoofed_pos": [
+        54.6832,
+        19.8548
+      ],
+      "ekf_pos": [
+        54.6832,
+        19.8548
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.6,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 5,
+      "true_pos": [
+        54.684,
+        19.856
+      ],
+      "spoofed_pos": [
+        54.684,
+        19.856
+      ],
+      "ekf_pos": [
+        54.684,
+        19.856
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.7,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 6,
+      "true_pos": [
+        54.6848,
+        19.8572
+      ],
+      "spoofed_pos": [
+        54.6848,
+        19.8572
+      ],
+      "ekf_pos": [
+        54.6848,
+        19.8572
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 7,
+      "true_pos": [
+        54.6856,
+        19.8584
+      ],
+      "spoofed_pos": [
+        54.6856,
+        19.8584
+      ],
+      "ekf_pos": [
+        54.6856,
+        19.8584
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.9,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 8,
+      "true_pos": [
+        54.6864,
+        19.8596
+      ],
+      "spoofed_pos": [
+        54.6864,
+        19.8596
+      ],
+      "ekf_pos": [
+        54.6864,
+        19.8596
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.9,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 9,
+      "true_pos": [
+        54.6872,
+        19.8608
+      ],
+      "spoofed_pos": [
+        54.6872,
+        19.8608
+      ],
+      "ekf_pos": [
+        54.6872,
+        19.8608
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 10,
+      "true_pos": [
+        54.688,
+        19.862
+      ],
+      "spoofed_pos": [
+        54.688,
+        19.862
+      ],
+      "ekf_pos": [
+        54.688,
+        19.862
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 11,
+      "true_pos": [
+        54.6888,
+        19.8632
+      ],
+      "spoofed_pos": [
+        54.6888,
+        19.8632
+      ],
+      "ekf_pos": [
+        54.6888,
+        19.8632
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 12,
+      "true_pos": [
+        54.6896,
+        19.8644
+      ],
+      "spoofed_pos": [
+        54.6896,
+        19.8644
+      ],
+      "ekf_pos": [
+        54.6896,
+        19.8644
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 13,
+      "true_pos": [
+        54.6904,
+        19.8656
+      ],
+      "spoofed_pos": [
+        54.6904,
+        19.8656
+      ],
+      "ekf_pos": [
+        54.6904,
+        19.8656
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.9,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 14,
+      "true_pos": [
+        54.6912,
+        19.8668
+      ],
+      "spoofed_pos": [
+        54.6912,
+        19.8668
+      ],
+      "ekf_pos": [
+        54.6912,
+        19.8668
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 42.9,
+      "agc_attenuation_db": -85.0,
+      "doa_azimuth_var": 1.42,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 15,
+      "true_pos": [
+        54.692,
+        19.868
+      ],
+      "spoofed_pos": [
+        54.692,
+        19.868
+      ],
+      "ekf_pos": [
+        54.692,
+        19.868
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.6,
+      "agc_attenuation_db": -39.5,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 0.0,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 16,
+      "true_pos": [
+        54.6928,
+        19.8692
+      ],
+      "spoofed_pos": [
+        54.697182,
+        19.885262
+      ],
+      "ekf_pos": [
+        54.692801,
+        19.869201
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 46.7,
+      "agc_attenuation_db": -37.3,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 1141.4,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 17,
+      "true_pos": [
+        54.6936,
+        19.8704
+      ],
+      "spoofed_pos": [
+        54.702329,
+        19.902471
+      ],
+      "ekf_pos": [
+        54.693601,
+        19.870401
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.7,
+      "agc_attenuation_db": -38.3,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 2278.0,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 18,
+      "true_pos": [
+        54.6944,
+        19.8716
+      ],
+      "spoofed_pos": [
+        54.70744,
+        19.919627
+      ],
+      "ekf_pos": [
+        54.694402,
+        19.871602
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.6,
+      "agc_attenuation_db": -41.8,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 3409.6,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 19,
+      "true_pos": [
+        54.6952,
+        19.8728
+      ],
+      "spoofed_pos": [
+        54.712516,
+        19.936729
+      ],
+      "ekf_pos": [
+        54.695203,
+        19.872803
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.1,
+      "agc_attenuation_db": -37.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 4536.2,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 20,
+      "true_pos": [
+        54.696,
+        19.874
+      ],
+      "spoofed_pos": [
+        54.717556,
+        19.953778
+      ],
+      "ekf_pos": [
+        54.696003,
+        19.874003
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.0,
+      "agc_attenuation_db": -38.9,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 5658.0,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 21,
+      "true_pos": [
+        54.6968,
+        19.8752
+      ],
+      "spoofed_pos": [
+        54.72256,
+        19.970773
+      ],
+      "ekf_pos": [
+        54.696804,
+        19.875204
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 50.0,
+      "agc_attenuation_db": -36.3,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 6774.9,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 22,
+      "true_pos": [
+        54.6976,
+        19.8764
+      ],
+      "spoofed_pos": [
+        54.727529,
+        19.987716
+      ],
+      "ekf_pos": [
+        54.697605,
+        19.876405
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.9,
+      "agc_attenuation_db": -39.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 7886.9,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 23,
+      "true_pos": [
+        54.6984,
+        19.8776
+      ],
+      "spoofed_pos": [
+        54.732462,
+        20.004604
+      ],
+      "ekf_pos": [
+        54.698405,
+        19.877605
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.1,
+      "agc_attenuation_db": -40.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 8993.9,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 24,
+      "true_pos": [
+        54.6992,
+        19.8788
+      ],
+      "spoofed_pos": [
+        54.73736,
+        20.02144
+      ],
+      "ekf_pos": [
+        54.699206,
+        19.878806
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.0,
+      "agc_attenuation_db": -38.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 10096.1,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 25,
+      "true_pos": [
+        54.7,
+        19.88
+      ],
+      "spoofed_pos": [
+        54.742222,
+        20.038222
+      ],
+      "ekf_pos": [
+        54.700007,
+        19.880007
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 51.1,
+      "agc_attenuation_db": -39.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 11193.4,
+      "is_attack_active": true,
+      "gis_violation": "CORRELATOR_PULL_OFF",
+      "alert_message": "\u26a0\ufe0f GNSS Pull-Off Detected: Correlator Asymmetry Alert"
+    },
+    {
+      "epoch": 26,
+      "true_pos": [
+        54.7008,
+        19.8812
+      ],
+      "spoofed_pos": [
+        54.747049,
+        20.054951
+      ],
+      "ekf_pos": [
+        54.700807,
+        19.881207
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.4,
+      "agc_attenuation_db": -36.5,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 12285.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 27,
+      "true_pos": [
+        54.7016,
+        19.8824
+      ],
+      "spoofed_pos": [
+        54.75184,
+        20.071627
+      ],
+      "ekf_pos": [
+        54.701608,
+        19.882408
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.9,
+      "agc_attenuation_db": -36.8,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 13373.4,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 28,
+      "true_pos": [
+        54.7024,
+        19.8836
+      ],
+      "spoofed_pos": [
+        54.756596,
+        20.088249
+      ],
+      "ekf_pos": [
+        54.702409,
+        19.883609
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.8,
+      "agc_attenuation_db": -38.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 14456.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 29,
+      "true_pos": [
+        54.7032,
+        19.8848
+      ],
+      "spoofed_pos": [
+        54.761316,
+        20.104818
+      ],
+      "ekf_pos": [
+        54.703209,
+        19.884809
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.2,
+      "agc_attenuation_db": -35.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 15533.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 30,
+      "true_pos": [
+        54.704,
+        19.886
+      ],
+      "spoofed_pos": [
+        54.766,
+        20.121333
+      ],
+      "ekf_pos": [
+        54.70401,
+        19.88601
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.4,
+      "agc_attenuation_db": -39.2,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 16606.8,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 31,
+      "true_pos": [
+        54.7048,
+        19.8872
+      ],
+      "spoofed_pos": [
+        54.770649,
+        20.137796
+      ],
+      "ekf_pos": [
+        54.704811,
+        19.887211
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.8,
+      "agc_attenuation_db": -39.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 17674.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 32,
+      "true_pos": [
+        54.7056,
+        19.8884
+      ],
+      "spoofed_pos": [
+        54.775262,
+        20.154204
+      ],
+      "ekf_pos": [
+        54.705611,
+        19.888411
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -38.1,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 18738.2,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 33,
+      "true_pos": [
+        54.7064,
+        19.8896
+      ],
+      "spoofed_pos": [
+        54.77984,
+        20.17056
+      ],
+      "ekf_pos": [
+        54.706412,
+        19.889612
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.5,
+      "agc_attenuation_db": -41.1,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 19796.6,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 34,
+      "true_pos": [
+        54.7072,
+        19.8908
+      ],
+      "spoofed_pos": [
+        54.784382,
+        20.186862
+      ],
+      "ekf_pos": [
+        54.707213,
+        19.890813
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.7,
+      "agc_attenuation_db": -39.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 20850.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 35,
+      "true_pos": [
+        54.708,
+        19.892
+      ],
+      "spoofed_pos": [
+        54.788889,
+        20.203111
+      ],
+      "ekf_pos": [
+        54.708013,
+        19.892013
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.6,
+      "agc_attenuation_db": -40.1,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 21898.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 36,
+      "true_pos": [
+        54.7088,
+        19.8932
+      ],
+      "spoofed_pos": [
+        54.79336,
+        20.219307
+      ],
+      "ekf_pos": [
+        54.708814,
+        19.893214
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.8,
+      "agc_attenuation_db": -41.1,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 22942.8,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 37,
+      "true_pos": [
+        54.7096,
+        19.8944
+      ],
+      "spoofed_pos": [
+        54.797796,
+        20.235449
+      ],
+      "ekf_pos": [
+        54.709615,
+        19.894415
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 51.0,
+      "agc_attenuation_db": -40.2,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 23981.8,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 38,
+      "true_pos": [
+        54.7104,
+        19.8956
+      ],
+      "spoofed_pos": [
+        54.802196,
+        20.251538
+      ],
+      "ekf_pos": [
+        54.710415,
+        19.895615
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.3,
+      "agc_attenuation_db": -40.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 25016.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 39,
+      "true_pos": [
+        54.7112,
+        19.8968
+      ],
+      "spoofed_pos": [
+        54.80656,
+        20.267573
+      ],
+      "ekf_pos": [
+        54.711216,
+        19.896816
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.4,
+      "agc_attenuation_db": -40.8,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 26045.5,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 40,
+      "true_pos": [
+        54.712,
+        19.898
+      ],
+      "spoofed_pos": [
+        54.810889,
+        20.283556
+      ],
+      "ekf_pos": [
+        54.712017,
+        19.898017
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -36.3,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 27070.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 41,
+      "true_pos": [
+        54.7128,
+        19.8992
+      ],
+      "spoofed_pos": [
+        54.815182,
+        20.299484
+      ],
+      "ekf_pos": [
+        54.712817,
+        19.899217
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.4,
+      "agc_attenuation_db": -39.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 28089.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 42,
+      "true_pos": [
+        54.7136,
+        19.9004
+      ],
+      "spoofed_pos": [
+        54.81944,
+        20.31536
+      ],
+      "ekf_pos": [
+        54.713618,
+        19.900418
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -38.4,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 29104.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 43,
+      "true_pos": [
+        54.7144,
+        19.9016
+      ],
+      "spoofed_pos": [
+        54.823662,
+        20.331182
+      ],
+      "ekf_pos": [
+        54.714419,
+        19.901619
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.6,
+      "agc_attenuation_db": -34.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 30115.2,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 44,
+      "true_pos": [
+        54.7152,
+        19.9028
+      ],
+      "spoofed_pos": [
+        54.827849,
+        20.346951
+      ],
+      "ekf_pos": [
+        54.715219,
+        19.902819
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.7,
+      "agc_attenuation_db": -38.9,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 31120.6,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 45,
+      "true_pos": [
+        54.716,
+        19.904
+      ],
+      "spoofed_pos": [
+        54.832,
+        20.362667
+      ],
+      "ekf_pos": [
+        54.71602,
+        19.90402
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.5,
+      "agc_attenuation_db": -41.5,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 32121.2,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 46,
+      "true_pos": [
+        54.7168,
+        19.9052
+      ],
+      "spoofed_pos": [
+        54.836116,
+        20.378329
+      ],
+      "ekf_pos": [
+        54.716821,
+        19.905221
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.8,
+      "agc_attenuation_db": -38.0,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 33117.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 47,
+      "true_pos": [
+        54.7176,
+        19.9064
+      ],
+      "spoofed_pos": [
+        54.840196,
+        20.393938
+      ],
+      "ekf_pos": [
+        54.717621,
+        19.906421
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.9,
+      "agc_attenuation_db": -37.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 34108.2,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 48,
+      "true_pos": [
+        54.7184,
+        19.9076
+      ],
+      "spoofed_pos": [
+        54.84424,
+        20.409493
+      ],
+      "ekf_pos": [
+        54.718422,
+        19.907622
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 45.5,
+      "agc_attenuation_db": -42.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 35094.5,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 49,
+      "true_pos": [
+        54.7192,
+        19.9088
+      ],
+      "spoofed_pos": [
+        54.848249,
+        20.424996
+      ],
+      "ekf_pos": [
+        54.719223,
+        19.908823
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 50.6,
+      "agc_attenuation_db": -39.5,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 36076.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 50,
+      "true_pos": [
+        54.72,
+        19.91
+      ],
+      "spoofed_pos": [
+        54.852222,
+        20.440444
+      ],
+      "ekf_pos": [
+        54.720023,
+        19.910023
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.1,
+      "agc_attenuation_db": -38.1,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 37052.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 51,
+      "true_pos": [
+        54.7208,
+        19.9112
+      ],
+      "spoofed_pos": [
+        54.85616,
+        20.45584
+      ],
+      "ekf_pos": [
+        54.720824,
+        19.911224
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 50.0,
+      "agc_attenuation_db": -37.2,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 38024.9,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 52,
+      "true_pos": [
+        54.7216,
+        19.9124
+      ],
+      "spoofed_pos": [
+        54.860062,
+        20.471182
+      ],
+      "ekf_pos": [
+        54.721625,
+        19.912425
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 46.9,
+      "agc_attenuation_db": -38.5,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 38992.2,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 53,
+      "true_pos": [
+        54.7224,
+        19.9136
+      ],
+      "spoofed_pos": [
+        54.863929,
+        20.486471
+      ],
+      "ekf_pos": [
+        54.722425,
+        19.913625
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 47.5,
+      "agc_attenuation_db": -39.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 39954.8,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 54,
+      "true_pos": [
+        54.7232,
+        19.9148
+      ],
+      "spoofed_pos": [
+        54.86776,
+        20.501707
+      ],
+      "ekf_pos": [
+        54.723226,
+        19.914826
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 46.0,
+      "agc_attenuation_db": -39.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 40912.6,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 55,
+      "true_pos": [
+        54.724,
+        19.916
+      ],
+      "spoofed_pos": [
+        54.871556,
+        20.516889
+      ],
+      "ekf_pos": [
+        54.724027,
+        19.916027
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 46.2,
+      "agc_attenuation_db": -40.3,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 41865.7,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 56,
+      "true_pos": [
+        54.7248,
+        19.9172
+      ],
+      "spoofed_pos": [
+        54.875316,
+        20.532018
+      ],
+      "ekf_pos": [
+        54.724827,
+        19.917227
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 48.6,
+      "agc_attenuation_db": -40.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 42814.1,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 57,
+      "true_pos": [
+        54.7256,
+        19.9184
+      ],
+      "spoofed_pos": [
+        54.87904,
+        20.547093
+      ],
+      "ekf_pos": [
+        54.725628,
+        19.918428
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.3,
+      "agc_attenuation_db": -38.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 43757.8,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 58,
+      "true_pos": [
+        54.7264,
+        19.9196
+      ],
+      "spoofed_pos": [
+        54.882729,
+        20.562116
+      ],
+      "ekf_pos": [
+        54.726429,
+        19.919629
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 51.9,
+      "agc_attenuation_db": -38.6,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 44696.7,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    },
+    {
+      "epoch": 59,
+      "true_pos": [
+        54.7272,
+        19.9208
+      ],
+      "spoofed_pos": [
+        54.886382,
+        20.577084
+      ],
+      "ekf_pos": [
+        54.727229,
+        19.920829
+      ],
+      "altitude_m": 0.0,
+      "speed": 12.4,
+      "speed_unit": "knots",
+      "heading_deg": 45.0,
+      "inferred_cn0": 49.4,
+      "agc_attenuation_db": -39.7,
+      "doa_azimuth_var": 0.012,
+      "position_drift_m": 45631.0,
+      "is_attack_active": true,
+      "gis_violation": "IMPOSSIBLE_LAND_TRANSIT",
+      "alert_message": "\ud83d\udea8 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY \ud83d\udea8"
+    }
+  ]
+}

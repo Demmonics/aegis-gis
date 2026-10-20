@@ -4,7 +4,7 @@ import { Shield, Navigation, BarChart3, Database, MessageSquareCode, FileText, F
 export default function Header({ activeTab, setActiveTab, onLogout, user }) {
   const tabs = [
     { id: 'command', label: 'Tactical GIS & RF Command', icon: Navigation },
-    { id: 'cinematic', label: '🎬 Baltic Spoofing Cinema', icon: Film },
+    { id: 'cinematic', label: '🌐 Global Simulations (4 Domains)', icon: Film },
     { id: 'diagnostics', label: 'ML & Table 2 Diagnostics', icon: BarChart3 },
     { id: 'gis', label: 'Section 8.4 GIS & PyQGIS', icon: Database },
     { id: 'copilot', label: 'Qwen-4B RAG Copilot', icon: MessageSquareCode },
