@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck, AlertTriangle, Radio, Navigation, Key, Cpu, MapPin } from 'lucide-react';
 
-export default function DefenseMatrixHud({ currentRecord }) {
+function DefenseMatrixHudComponent({ currentRecord }) {
   if (!currentRecord) return null;
 
   const l1 = currentRecord.layer1_sqm || {};
@@ -112,3 +112,6 @@ export default function DefenseMatrixHud({ currentRecord }) {
     </div>
   );
 }
+
+const DefenseMatrixHud = React.memo(DefenseMatrixHudComponent);
+export default DefenseMatrixHud;

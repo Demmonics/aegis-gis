@@ -26,6 +26,7 @@ class AEGISMongoService:
         self.client = None
         self.db = None
         self.local_store_path = Path(__file__).resolve().parent / "local_geospatial_store.json"
+        self._cached_store: Optional[Dict[str, Any]] = None
 
         self._initialize_store()
 
@@ -55,16 +56,22 @@ class AEGISMongoService:
                 "audit_logs": [],
                 "incident_geometries": []
             })
+        else:
+            self._read_local_store()
 
     def _read_local_store(self) -> Dict[str, Any]:
+        if self._cached_store is not None:
+            return self._cached_store
         try:
-            return json.loads(self.local_store_path.read_text(encoding="utf-8"))
+            self._cached_store = json.loads(self.local_store_path.read_text(encoding="utf-8"))
         except Exception:
-            return {"scenario_runs": [], "audit_logs": [], "incident_geometries": []}
+            self._cached_store = {"scenario_runs": [], "audit_logs": [], "incident_geometries": []}
+        return self._cached_store
 
     def _write_local_store(self, data: Dict[str, Any]):
+        self._cached_store = data
         try:
-            self.local_store_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+            self.local_store_path.write_text(json.dumps(data), encoding="utf-8")
         except Exception as e:
             logger.warning(f"Failed to write local store: {e}")
 

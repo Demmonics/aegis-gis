@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { MapContainer, TileLayer, Polyline, Polygon, CircleMarker, Popup, useMap } from 'react-leaflet';
 
 function ChangeView({ center, zoom }) {
@@ -11,7 +11,7 @@ function ChangeView({ center, zoom }) {
   return null;
 }
 
-export default function TacticalMap({
+function TacticalMapComponent({
   scenarioRun,
   currentEpoch = 0,
   selectedObservation = null,
@@ -29,10 +29,10 @@ export default function TacticalMap({
   const centerLat = meta.center_coords[1];
   const centerLon = meta.center_coords[0];
 
-  // Leaflet uses [lat, lon], paths are stored as [[lon, lat], ...]
-  const truePath = (scenarioRun.ground_truth_path || []).map(p => [p[1], p[0]]);
-  const spoofedPath = (scenarioRun.reported_spoofed_path || []).map(p => [p[1], p[0]]);
-  const ekfPath = (scenarioRun.ekf_recovered_path || []).map(p => [p[1], p[0]]);
+  // Memoize path transformations so epoch progression doesn't trigger map re-projections
+  const truePath = useMemo(() => (scenarioRun.ground_truth_path || []).map(p => [p[1], p[0]]), [scenarioRun.ground_truth_path]);
+  const spoofedPath = useMemo(() => (scenarioRun.reported_spoofed_path || []).map(p => [p[1], p[0]]), [scenarioRun.reported_spoofed_path]);
+  const ekfPath = useMemo(() => (scenarioRun.ekf_recovered_path || []).map(p => [p[1], p[0]]), [scenarioRun.ekf_recovered_path]);
 
   // Current epoch points
   const curTrue = truePath[currentEpoch] || [centerLat, centerLon];
@@ -40,7 +40,7 @@ export default function TacticalMap({
   const curEkf = ekfPath[currentEpoch] || [centerLat, centerLon];
 
   // Parse reference GIS polygons
-  const refFeatures = scenarioRun.gis_reference_geojson?.features || [];
+  const refFeatures = useMemo(() => scenarioRun.gis_reference_geojson?.features || [], [scenarioRun.gis_reference_geojson]);
 
   return (
     <div className="h-full w-full relative rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
@@ -195,3 +195,6 @@ export default function TacticalMap({
     </div>
   );
 }
+
+const TacticalMap = React.memo(TacticalMapComponent);
+export default TacticalMap;
