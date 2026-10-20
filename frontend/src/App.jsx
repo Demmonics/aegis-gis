@@ -8,7 +8,7 @@ import DiagnosticsView from './components/DiagnosticsView';
 import IntegrityGisView from './components/IntegrityGisView';
 import CopilotView from './components/CopilotView';
 import PaperMatrixView from './components/PaperMatrixView';
-import CinematicSimulationPlayer from './components/CinematicSimulationPlayer';
+import SimulationPlayer from './components/SimulationPlayer';
 
 import {
   fetchHealth,
@@ -259,8 +259,7 @@ export default function App() {
         )}
 
         {activeTab === 'cinematic' && (
-          <CinematicSimulationPlayer
-            scenarioRun={scenarioRun}
+          <SimulationPlayer
             onClose={() => setActiveTab('command')}
           />
         )}

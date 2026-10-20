@@ -1,0 +1,1656 @@
+{
+  "scenario_id": "aviation_vilnius",
+  "domain": "aviation",
+  "title": "Aviation: Ryanair Vilnius Approach (EASA Alert 2025)",
+  "target_vehicle": "Ryanair Boeing 737-800 (ADS-B Out + IRS)",
+  "vehicle_type": "airplane",
+  "location_name": "Vilnius International Airport (EYVI) ILS Glide Slope",
+  "map_center": [
+    54.68,
+    25.28
+  ],
+  "default_zoom": 11,
+  "attack_start_epoch": 20,
+  "spoofer_location": [
+    54.58,
+    25.42
+  ],
+  "narrative_phases": [
+    {
+      "phase": 1,
+      "epochs": "0-19",
+      "title": "Nominal ILS Descent",
+      "desc": "Aircraft on 3-degree glide slope descending from 1200m. ADS-B broadcast nominal."
+    },
+    {
+      "phase": 2,
+      "epochs": "20-29",
+      "title": "Meaconing & False Terrain",
+      "desc": "Terrestrial spoofer injects 450m clock bias step. GPWS sounds false terrain pull-up."
+    },
+    {
+      "phase": 3,
+      "epochs": "30-59",
+      "title": "Missed Approach & Divert",
+      "desc": "Pilots execute TOGA go-around, climbing back to 2500m and diverting to Warsaw."
+    }
+  ],
+  "gis_polygons": [
+    {
+      "name": "ICAO ILS Approach Funnel",
+      "coords": [
+        [
+          54.77,
+          25.35
+        ],
+        [
+          54.77,
+          25.29
+        ],
+        [
+          54.63,
+          25.26
+        ],
+        [
+          54.63,
+          25.31
+        ],
+        [
+          54.77,
+          25.35
+        ]
+      ],
+      "color": "#06b6d4",
+      "type": "CORRIDOR"
+    },
+    {
+      "name": "EYVI Runway 19",
+      "coords": [
+        [
+          54.645,
+          25.28
+        ],
+        [
+          54.645,
+          25.295
+        ],
+        [
+          54.625,
+          25.295
+        ],
+        [
+          54.625,
+          25.28
+        ],
+        [
+          54.645,
+          25.28
+        ]
+      ],
+      "color": "#10b981",
+      "type": "RUNWAY"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "true_pos": [
+        54.76,
+        25.32
+      ],
+      "spoofed_pos": [
+        54.76,
+        25.32
+      ],
+      "ekf_pos": [
+        54.76,
+        25.32
+      ],
+      "altitude_m": 1200.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.5,
+      "agc_attenuation_db": -84.0,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 1,
+      "true_pos": [
+        54.7537,
+        25.31825
+      ],
+      "spoofed_pos": [
+        54.7537,
+        25.31825
+      ],
+      "ekf_pos": [
+        54.7537,
+        25.31825
+      ],
+      "altitude_m": 1162.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.7,
+      "agc_attenuation_db": -83.0,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 2,
+      "true_pos": [
+        54.7474,
+        25.3165
+      ],
+      "spoofed_pos": [
+        54.7474,
+        25.3165
+      ],
+      "ekf_pos": [
+        54.7474,
+        25.3165
+      ],
+      "altitude_m": 1125.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.0,
+      "agc_attenuation_db": -85.5,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 3,
+      "true_pos": [
+        54.7411,
+        25.31475
+      ],
+      "spoofed_pos": [
+        54.7411,
+        25.31475
+      ],
+      "ekf_pos": [
+        54.7411,
+        25.31475
+      ],
+      "altitude_m": 1087.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.2,
+      "agc_attenuation_db": -84.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 4,
+      "true_pos": [
+        54.7348,
+        25.313
+      ],
+      "spoofed_pos": [
+        54.7348,
+        25.313
+      ],
+      "ekf_pos": [
+        54.7348,
+        25.313
+      ],
+      "altitude_m": 1050.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.4,
+      "agc_attenuation_db": -83.5,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 5,
+      "true_pos": [
+        54.7285,
+        25.31125
+      ],
+      "spoofed_pos": [
+        54.7285,
+        25.31125
+      ],
+      "ekf_pos": [
+        54.7285,
+        25.31125
+      ],
+      "altitude_m": 1012.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.5,
+      "agc_attenuation_db": -83.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 6,
+      "true_pos": [
+        54.7222,
+        25.3095
+      ],
+      "spoofed_pos": [
+        54.7222,
+        25.3095
+      ],
+      "ekf_pos": [
+        54.7222,
+        25.3095
+      ],
+      "altitude_m": 975.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.6,
+      "agc_attenuation_db": -83.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 7,
+      "true_pos": [
+        54.7159,
+        25.30775
+      ],
+      "spoofed_pos": [
+        54.7159,
+        25.30775
+      ],
+      "ekf_pos": [
+        54.7159,
+        25.30775
+      ],
+      "altitude_m": 937.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.7,
+      "agc_attenuation_db": -83.2,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 8,
+      "true_pos": [
+        54.7096,
+        25.306
+      ],
+      "spoofed_pos": [
+        54.7096,
+        25.306
+      ],
+      "ekf_pos": [
+        54.7096,
+        25.306
+      ],
+      "altitude_m": 900.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.7,
+      "agc_attenuation_db": -84.4,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 9,
+      "true_pos": [
+        54.7033,
+        25.30425
+      ],
+      "spoofed_pos": [
+        54.7033,
+        25.30425
+      ],
+      "ekf_pos": [
+        54.7033,
+        25.30425
+      ],
+      "altitude_m": 862.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.7,
+      "agc_attenuation_db": -84.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 10,
+      "true_pos": [
+        54.697,
+        25.3025
+      ],
+      "spoofed_pos": [
+        54.697,
+        25.3025
+      ],
+      "ekf_pos": [
+        54.697,
+        25.3025
+      ],
+      "altitude_m": 825.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.6,
+      "agc_attenuation_db": -84.2,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 11,
+      "true_pos": [
+        54.6907,
+        25.30075
+      ],
+      "spoofed_pos": [
+        54.6907,
+        25.30075
+      ],
+      "ekf_pos": [
+        54.6907,
+        25.30075
+      ],
+      "altitude_m": 787.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.5,
+      "agc_attenuation_db": -84.4,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 12,
+      "true_pos": [
+        54.6844,
+        25.299
+      ],
+      "spoofed_pos": [
+        54.6844,
+        25.299
+      ],
+      "ekf_pos": [
+        54.6844,
+        25.299
+      ],
+      "altitude_m": 750.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.3,
+      "agc_attenuation_db": -81.7,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 13,
+      "true_pos": [
+        54.6781,
+        25.29725
+      ],
+      "spoofed_pos": [
+        54.6781,
+        25.29725
+      ],
+      "ekf_pos": [
+        54.6781,
+        25.29725
+      ],
+      "altitude_m": 712.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 44.1,
+      "agc_attenuation_db": -82.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 14,
+      "true_pos": [
+        54.6718,
+        25.2955
+      ],
+      "spoofed_pos": [
+        54.6718,
+        25.2955
+      ],
+      "ekf_pos": [
+        54.6718,
+        25.2955
+      ],
+      "altitude_m": 675.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.9,
+      "agc_attenuation_db": -84.1,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 15,
+      "true_pos": [
+        54.6655,
+        25.29375
+      ],
+      "spoofed_pos": [
+        54.6655,
+        25.29375
+      ],
+      "ekf_pos": [
+        54.6655,
+        25.29375
+      ],
+      "altitude_m": 637.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.7,
+      "agc_attenuation_db": -84.2,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 16,
+      "true_pos": [
+        54.6592,
+        25.292
+      ],
+      "spoofed_pos": [
+        54.6592,
+        25.292
+      ],
+      "ekf_pos": [
+        54.6592,
+        25.292
+      ],
+      "altitude_m": 600.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.4,
+      "agc_attenuation_db": -83.7,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 17,
+      "true_pos": [
+        54.6529,
+        25.29025
+      ],
+      "spoofed_pos": [
+        54.6529,
+        25.29025
+      ],
+      "ekf_pos": [
+        54.6529,
+        25.29025
+      ],
+      "altitude_m": 562.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.2,
+      "agc_attenuation_db": -83.0,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 18,
+      "true_pos": [
+        54.6466,
+        25.2885
+      ],
+      "spoofed_pos": [
+        54.6466,
+        25.2885
+      ],
+      "ekf_pos": [
+        54.6466,
+        25.2885
+      ],
+      "altitude_m": 525.0,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -83.9,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 19,
+      "true_pos": [
+        54.6403,
+        25.28675
+      ],
+      "spoofed_pos": [
+        54.6403,
+        25.28675
+      ],
+      "ekf_pos": [
+        54.6403,
+        25.28675
+      ],
+      "altitude_m": 487.5,
+      "speed": 145.0,
+      "speed_unit": "knots",
+      "heading_deg": 195.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -83.6,
+      "doa_azimuth_var": 1.45,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 20,
+      "true_pos": [
+        54.634,
+        25.285
+      ],
+      "spoofed_pos": [
+        54.634,
+        25.285
+      ],
+      "ekf_pos": [
+        54.634,
+        25.285
+      ],
+      "altitude_m": 450.0,
+      "speed": 220.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 27.2,
+      "agc_attenuation_db": -44.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 0.0,
+      "is_attack_active": true,
+      "gis_violation": "SPOOFED_CLOCK_STEP",
+      "alert_message": "\u26a0\ufe0f GNSS Time Step (+450ns) & Lateral Deviation Detected"
+    },
+    {
+      "epoch": 21,
+      "true_pos": [
+        54.632,
+        25.282
+      ],
+      "spoofed_pos": [
+        54.6325,
+        25.27975
+      ],
+      "ekf_pos": [
+        54.632001,
+        25.282001
+      ],
+      "altitude_m": 526.9,
+      "speed": 221.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.6,
+      "agc_attenuation_db": -49.5,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 155.1,
+      "is_attack_active": true,
+      "gis_violation": "SPOOFED_CLOCK_STEP",
+      "alert_message": "\u26a0\ufe0f GNSS Time Step (+450ns) & Lateral Deviation Detected"
+    },
+    {
+      "epoch": 22,
+      "true_pos": [
+        54.63,
+        25.279
+      ],
+      "spoofed_pos": [
+        54.631,
+        25.2745
+      ],
+      "ekf_pos": [
+        54.630002,
+        25.279002
+      ],
+      "altitude_m": 603.8,
+      "speed": 223.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.5,
+      "agc_attenuation_db": -46.0,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 310.3,
+      "is_attack_active": true,
+      "gis_violation": "SPOOFED_CLOCK_STEP",
+      "alert_message": "\u26a0\ufe0f GNSS Time Step (+450ns) & Lateral Deviation Detected"
+    },
+    {
+      "epoch": 23,
+      "true_pos": [
+        54.628,
+        25.276
+      ],
+      "spoofed_pos": [
+        54.6295,
+        25.26925
+      ],
+      "ekf_pos": [
+        54.628003,
+        25.276003
+      ],
+      "altitude_m": 680.6,
+      "speed": 224.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.2,
+      "agc_attenuation_db": -45.3,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 465.4,
+      "is_attack_active": true,
+      "gis_violation": "SPOOFED_CLOCK_STEP",
+      "alert_message": "\u26a0\ufe0f GNSS Time Step (+450ns) & Lateral Deviation Detected"
+    },
+    {
+      "epoch": 24,
+      "true_pos": [
+        54.626,
+        25.273
+      ],
+      "spoofed_pos": [
+        54.628,
+        25.264
+      ],
+      "ekf_pos": [
+        54.626004,
+        25.273004
+      ],
+      "altitude_m": 757.5,
+      "speed": 226.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.9,
+      "agc_attenuation_db": -45.8,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 620.6,
+      "is_attack_active": true,
+      "gis_violation": "SPOOFED_CLOCK_STEP",
+      "alert_message": "\u26a0\ufe0f GNSS Time Step (+450ns) & Lateral Deviation Detected"
+    },
+    {
+      "epoch": 25,
+      "true_pos": [
+        54.624,
+        25.27
+      ],
+      "spoofed_pos": [
+        54.6265,
+        25.25875
+      ],
+      "ekf_pos": [
+        54.624005,
+        25.270005
+      ],
+      "altitude_m": 834.4,
+      "speed": 227.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.6,
+      "agc_attenuation_db": -45.5,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 775.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 26,
+      "true_pos": [
+        54.622,
+        25.267
+      ],
+      "spoofed_pos": [
+        54.625,
+        25.2535
+      ],
+      "ekf_pos": [
+        54.622006,
+        25.267006
+      ],
+      "altitude_m": 911.2,
+      "speed": 229.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.0,
+      "agc_attenuation_db": -47.5,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 930.9,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 27,
+      "true_pos": [
+        54.62,
+        25.264
+      ],
+      "spoofed_pos": [
+        54.6235,
+        25.24825
+      ],
+      "ekf_pos": [
+        54.620007,
+        25.264007
+      ],
+      "altitude_m": 988.1,
+      "speed": 230.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.5,
+      "agc_attenuation_db": -50.5,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1086.1,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 28,
+      "true_pos": [
+        54.618,
+        25.261
+      ],
+      "spoofed_pos": [
+        54.622,
+        25.243
+      ],
+      "ekf_pos": [
+        54.618008,
+        25.261008
+      ],
+      "altitude_m": 1065.0,
+      "speed": 232.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.8,
+      "agc_attenuation_db": -45.2,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1241.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 29,
+      "true_pos": [
+        54.616,
+        25.258
+      ],
+      "spoofed_pos": [
+        54.6205,
+        25.23775
+      ],
+      "ekf_pos": [
+        54.616009,
+        25.258009
+      ],
+      "altitude_m": 1141.9,
+      "speed": 233.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.5,
+      "agc_attenuation_db": -46.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1396.5,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 30,
+      "true_pos": [
+        54.614,
+        25.255
+      ],
+      "spoofed_pos": [
+        54.619,
+        25.2325
+      ],
+      "ekf_pos": [
+        54.61401,
+        25.25501
+      ],
+      "altitude_m": 1218.8,
+      "speed": 235.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.5,
+      "agc_attenuation_db": -48.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1551.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 31,
+      "true_pos": [
+        54.612,
+        25.252
+      ],
+      "spoofed_pos": [
+        54.6175,
+        25.22725
+      ],
+      "ekf_pos": [
+        54.612011,
+        25.252011
+      ],
+      "altitude_m": 1295.6,
+      "speed": 236.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.0,
+      "agc_attenuation_db": -48.2,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1707.0,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 32,
+      "true_pos": [
+        54.61,
+        25.249
+      ],
+      "spoofed_pos": [
+        54.616,
+        25.222
+      ],
+      "ekf_pos": [
+        54.610012,
+        25.249012
+      ],
+      "altitude_m": 1372.5,
+      "speed": 238.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.1,
+      "agc_attenuation_db": -44.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 1862.2,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 33,
+      "true_pos": [
+        54.608,
+        25.246
+      ],
+      "spoofed_pos": [
+        54.6145,
+        25.21675
+      ],
+      "ekf_pos": [
+        54.608013,
+        25.246013
+      ],
+      "altitude_m": 1449.4,
+      "speed": 239.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.5,
+      "agc_attenuation_db": -47.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2017.5,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 34,
+      "true_pos": [
+        54.606,
+        25.243
+      ],
+      "spoofed_pos": [
+        54.613,
+        25.2115
+      ],
+      "ekf_pos": [
+        54.606014,
+        25.243014
+      ],
+      "altitude_m": 1526.2,
+      "speed": 241.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.1,
+      "agc_attenuation_db": -46.0,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2172.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 35,
+      "true_pos": [
+        54.604,
+        25.24
+      ],
+      "spoofed_pos": [
+        54.6115,
+        25.20625
+      ],
+      "ekf_pos": [
+        54.604015,
+        25.240015
+      ],
+      "altitude_m": 1603.1,
+      "speed": 242.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.0,
+      "agc_attenuation_db": -46.0,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2328.0,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 36,
+      "true_pos": [
+        54.602,
+        25.237
+      ],
+      "spoofed_pos": [
+        54.61,
+        25.201
+      ],
+      "ekf_pos": [
+        54.602016,
+        25.237016
+      ],
+      "altitude_m": 1680.0,
+      "speed": 244.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.4,
+      "agc_attenuation_db": -47.6,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2483.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 37,
+      "true_pos": [
+        54.6,
+        25.234
+      ],
+      "spoofed_pos": [
+        54.6085,
+        25.19575
+      ],
+      "ekf_pos": [
+        54.600017,
+        25.234017
+      ],
+      "altitude_m": 1756.9,
+      "speed": 245.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.6,
+      "agc_attenuation_db": -47.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2638.6,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 38,
+      "true_pos": [
+        54.598,
+        25.231
+      ],
+      "spoofed_pos": [
+        54.607,
+        25.1905
+      ],
+      "ekf_pos": [
+        54.598018,
+        25.231018
+      ],
+      "altitude_m": 1833.8,
+      "speed": 247.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.7,
+      "agc_attenuation_db": -45.3,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2793.9,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 39,
+      "true_pos": [
+        54.596,
+        25.228
+      ],
+      "spoofed_pos": [
+        54.6055,
+        25.18525
+      ],
+      "ekf_pos": [
+        54.596019,
+        25.228019
+      ],
+      "altitude_m": 1910.6,
+      "speed": 248.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.6,
+      "agc_attenuation_db": -45.0,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 2949.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 40,
+      "true_pos": [
+        54.594,
+        25.225
+      ],
+      "spoofed_pos": [
+        54.604,
+        25.18
+      ],
+      "ekf_pos": [
+        54.59402,
+        25.22502
+      ],
+      "altitude_m": 1987.5,
+      "speed": 250.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.7,
+      "agc_attenuation_db": -47.5,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3104.6,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 41,
+      "true_pos": [
+        54.592,
+        25.222
+      ],
+      "spoofed_pos": [
+        54.6025,
+        25.17475
+      ],
+      "ekf_pos": [
+        54.592021,
+        25.222021
+      ],
+      "altitude_m": 2064.4,
+      "speed": 251.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.7,
+      "agc_attenuation_db": -44.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3260.0,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 42,
+      "true_pos": [
+        54.59,
+        25.219
+      ],
+      "spoofed_pos": [
+        54.601,
+        25.1695
+      ],
+      "ekf_pos": [
+        54.590022,
+        25.219022
+      ],
+      "altitude_m": 2141.2,
+      "speed": 253.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.2,
+      "agc_attenuation_db": -45.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3415.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 43,
+      "true_pos": [
+        54.588,
+        25.216
+      ],
+      "spoofed_pos": [
+        54.5995,
+        25.16425
+      ],
+      "ekf_pos": [
+        54.588023,
+        25.216023
+      ],
+      "altitude_m": 2218.1,
+      "speed": 254.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.2,
+      "agc_attenuation_db": -43.1,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3570.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 44,
+      "true_pos": [
+        54.586,
+        25.213
+      ],
+      "spoofed_pos": [
+        54.598,
+        25.159
+      ],
+      "ekf_pos": [
+        54.586024,
+        25.213024
+      ],
+      "altitude_m": 2295.0,
+      "speed": 256.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.3,
+      "agc_attenuation_db": -43.1,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3726.1,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 45,
+      "true_pos": [
+        54.584,
+        25.21
+      ],
+      "spoofed_pos": [
+        54.5965,
+        25.15375
+      ],
+      "ekf_pos": [
+        54.584025,
+        25.210025
+      ],
+      "altitude_m": 2371.9,
+      "speed": 257.5,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.9,
+      "agc_attenuation_db": -47.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 3881.5,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 46,
+      "true_pos": [
+        54.582,
+        25.207
+      ],
+      "spoofed_pos": [
+        54.595,
+        25.1485
+      ],
+      "ekf_pos": [
+        54.582026,
+        25.207026
+      ],
+      "altitude_m": 2448.8,
+      "speed": 259.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.4,
+      "agc_attenuation_db": -43.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4036.9,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 47,
+      "true_pos": [
+        54.58,
+        25.204
+      ],
+      "spoofed_pos": [
+        54.5935,
+        25.14325
+      ],
+      "ekf_pos": [
+        54.580027,
+        25.204027
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.7,
+      "agc_attenuation_db": -49.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4192.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 48,
+      "true_pos": [
+        54.578,
+        25.201
+      ],
+      "spoofed_pos": [
+        54.592,
+        25.138
+      ],
+      "ekf_pos": [
+        54.578028,
+        25.201028
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.6,
+      "agc_attenuation_db": -47.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4347.8,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 49,
+      "true_pos": [
+        54.576,
+        25.198
+      ],
+      "spoofed_pos": [
+        54.5905,
+        25.13275
+      ],
+      "ekf_pos": [
+        54.576029,
+        25.198029
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.3,
+      "agc_attenuation_db": -43.1,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4503.2,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 50,
+      "true_pos": [
+        54.574,
+        25.195
+      ],
+      "spoofed_pos": [
+        54.589,
+        25.1275
+      ],
+      "ekf_pos": [
+        54.57403,
+        25.19503
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 22.2,
+      "agc_attenuation_db": -50.3,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4658.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 51,
+      "true_pos": [
+        54.572,
+        25.192
+      ],
+      "spoofed_pos": [
+        54.5875,
+        25.12225
+      ],
+      "ekf_pos": [
+        54.572031,
+        25.192031
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.2,
+      "agc_attenuation_db": -43.3,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4814.1,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 52,
+      "true_pos": [
+        54.57,
+        25.189
+      ],
+      "spoofed_pos": [
+        54.586,
+        25.117
+      ],
+      "ekf_pos": [
+        54.570032,
+        25.189032
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.6,
+      "agc_attenuation_db": -44.7,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 4969.6,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 53,
+      "true_pos": [
+        54.568,
+        25.186
+      ],
+      "spoofed_pos": [
+        54.5845,
+        25.11175
+      ],
+      "ekf_pos": [
+        54.568033,
+        25.186033
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.1,
+      "agc_attenuation_db": -50.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5125.1,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 54,
+      "true_pos": [
+        54.566,
+        25.183
+      ],
+      "spoofed_pos": [
+        54.583,
+        25.1065
+      ],
+      "ekf_pos": [
+        54.566034,
+        25.183034
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 26.2,
+      "agc_attenuation_db": -45.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5280.6,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 55,
+      "true_pos": [
+        54.564,
+        25.18
+      ],
+      "spoofed_pos": [
+        54.5815,
+        25.10125
+      ],
+      "ekf_pos": [
+        54.564035,
+        25.180035
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.5,
+      "agc_attenuation_db": -43.2,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5436.1,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 56,
+      "true_pos": [
+        54.562,
+        25.177
+      ],
+      "spoofed_pos": [
+        54.58,
+        25.096
+      ],
+      "ekf_pos": [
+        54.562036,
+        25.177036
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 24.0,
+      "agc_attenuation_db": -47.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5591.7,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 57,
+      "true_pos": [
+        54.56,
+        25.174
+      ],
+      "spoofed_pos": [
+        54.5785,
+        25.09075
+      ],
+      "ekf_pos": [
+        54.560037,
+        25.174037
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.7,
+      "agc_attenuation_db": -47.9,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5747.2,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 58,
+      "true_pos": [
+        54.558,
+        25.171
+      ],
+      "spoofed_pos": [
+        54.577,
+        25.0855
+      ],
+      "ekf_pos": [
+        54.558038,
+        25.171038
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 25.8,
+      "agc_attenuation_db": -47.4,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 5902.8,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    },
+    {
+      "epoch": 59,
+      "true_pos": [
+        54.556,
+        25.168
+      ],
+      "spoofed_pos": [
+        54.5755,
+        25.08025
+      ],
+      "ekf_pos": [
+        54.556039,
+        25.168039
+      ],
+      "altitude_m": 2500.0,
+      "speed": 260.0,
+      "speed_unit": "knots",
+      "heading_deg": 230.0,
+      "inferred_cn0": 23.0,
+      "agc_attenuation_db": -46.2,
+      "doa_azimuth_var": 0.015,
+      "position_drift_m": 6058.3,
+      "is_attack_active": true,
+      "gis_violation": "ILS_GLIDEPATH_COLLAPSE & FALSE_TERRAIN_GPWS",
+      "alert_message": "\ud83d\udea8 GPWS TERRAIN ALARM: FALSE GROUND PROXIMITY ALERT \u2014 GO-AROUND INITIATED \ud83d\udea8"
+    }
+  ]
+}

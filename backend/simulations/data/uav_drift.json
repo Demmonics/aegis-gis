@@ -1,0 +1,1656 @@
+{
+  "scenario_id": "uav_drift",
+  "domain": "uav",
+  "title": "UAV Drone: Reinforcement Learning Drift-Evasive Attack",
+  "target_vehicle": "Hexacopter Photogrammetry & LiDAR Drone",
+  "vehicle_type": "drone",
+  "location_name": "Navi Mumbai Coastal Infrastructure / Industrial Geofence",
+  "map_center": [
+    18.963,
+    72.972
+  ],
+  "default_zoom": 15,
+  "attack_start_epoch": 12,
+  "spoofer_location": [
+    18.955,
+    72.978
+  ],
+  "narrative_phases": [
+    {
+      "phase": 1,
+      "epochs": "0-11",
+      "title": "Grid Photogrammetry Survey",
+      "desc": "Hexacopter conducting precision lawnmower grid within 120m geofence."
+    },
+    {
+      "phase": 2,
+      "epochs": "12-27",
+      "title": "Sub-Threshold Drift Slewing",
+      "desc": "Adversary injects 0.35 m/s pseudorange drift bypassing instantaneous RAIM."
+    },
+    {
+      "phase": 3,
+      "epochs": "28-59",
+      "title": "Geofence Escape & Spatial Hazard",
+      "desc": "Cumulative 45m drift pushes drone into high-risk industrial facility."
+    }
+  ],
+  "gis_polygons": [
+    {
+      "name": "Authorized Aerial Survey Geofence",
+      "coords": [
+        [
+          18.958,
+          72.965
+        ],
+        [
+          18.968,
+          72.965
+        ],
+        [
+          18.968,
+          72.975
+        ],
+        [
+          18.958,
+          72.975
+        ],
+        [
+          18.958,
+          72.965
+        ]
+      ],
+      "color": "#06b6d4",
+      "type": "GEOFENCE"
+    },
+    {
+      "name": "Prohibited Industrial Crane Zone",
+      "coords": [
+        [
+          18.966,
+          72.976
+        ],
+        [
+          18.972,
+          72.976
+        ],
+        [
+          18.972,
+          72.982
+        ],
+        [
+          18.966,
+          72.982
+        ],
+        [
+          18.966,
+          72.976
+        ]
+      ],
+      "color": "#ef4444",
+      "type": "RESTRICTED"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "true_pos": [
+        18.96,
+        72.967
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.967
+      ],
+      "ekf_pos": [
+        18.96,
+        72.967
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.0,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 1,
+      "true_pos": [
+        18.96,
+        72.9674
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9674
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9674
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.2,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 2,
+      "true_pos": [
+        18.96,
+        72.9678
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9678
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9678
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.5,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 3,
+      "true_pos": [
+        18.96,
+        72.9682
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9682
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9682
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.6,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 4,
+      "true_pos": [
+        18.96,
+        72.9686
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9686
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9686
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.7,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 5,
+      "true_pos": [
+        18.96,
+        72.969
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.969
+      ],
+      "ekf_pos": [
+        18.96,
+        72.969
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.8,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 6,
+      "true_pos": [
+        18.96,
+        72.9694
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9694
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9694
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.8,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 7,
+      "true_pos": [
+        18.96,
+        72.9698
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9698
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9698
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.7,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 8,
+      "true_pos": [
+        18.96,
+        72.9702
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9702
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9702
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.5,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 9,
+      "true_pos": [
+        18.96,
+        72.9706
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9706
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9706
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.3,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 10,
+      "true_pos": [
+        18.96,
+        72.971
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.971
+      ],
+      "ekf_pos": [
+        18.96,
+        72.971
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.1,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 11,
+      "true_pos": [
+        18.96,
+        72.9714
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9714
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9714
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.9,
+      "agc_attenuation_db": -86.0,
+      "doa_azimuth_var": 1.38,
+      "position_drift_m": 0.0,
+      "is_attack_active": false,
+      "gis_violation": null,
+      "alert_message": null
+    },
+    {
+      "epoch": 12,
+      "true_pos": [
+        18.96,
+        72.9718
+      ],
+      "spoofed_pos": [
+        18.96,
+        72.9718
+      ],
+      "ekf_pos": [
+        18.96,
+        72.9718
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 42.2,
+      "agc_attenuation_db": -83.5,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 0.0,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 13,
+      "true_pos": [
+        18.96,
+        72.9722
+      ],
+      "spoofed_pos": [
+        18.960094,
+        72.972294
+      ],
+      "ekf_pos": [
+        18.960002,
+        72.972202
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.2,
+      "agc_attenuation_db": -82.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 14.3,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 14,
+      "true_pos": [
+        18.96,
+        72.9726
+      ],
+      "spoofed_pos": [
+        18.960187,
+        72.972787
+      ],
+      "ekf_pos": [
+        18.960003,
+        72.972603
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 42.4,
+      "agc_attenuation_db": -84.5,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 28.7,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 15,
+      "true_pos": [
+        18.9615,
+        72.973
+      ],
+      "spoofed_pos": [
+        18.961781,
+        72.973281
+      ],
+      "ekf_pos": [
+        18.961505,
+        72.973005
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.5,
+      "agc_attenuation_db": -83.4,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 43.0,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 16,
+      "true_pos": [
+        18.9615,
+        72.9726
+      ],
+      "spoofed_pos": [
+        18.961875,
+        72.972975
+      ],
+      "ekf_pos": [
+        18.961507,
+        72.972607
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.6,
+      "agc_attenuation_db": -82.5,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 57.4,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 17,
+      "true_pos": [
+        18.9615,
+        72.9722
+      ],
+      "spoofed_pos": [
+        18.961969,
+        72.972669
+      ],
+      "ekf_pos": [
+        18.961508,
+        72.972208
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.2,
+      "agc_attenuation_db": -82.8,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 71.7,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 18,
+      "true_pos": [
+        18.9615,
+        72.9718
+      ],
+      "spoofed_pos": [
+        18.962063,
+        72.972363
+      ],
+      "ekf_pos": [
+        18.96151,
+        72.97181
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.2,
+      "agc_attenuation_db": -83.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 86.1,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 19,
+      "true_pos": [
+        18.9615,
+        72.9714
+      ],
+      "spoofed_pos": [
+        18.962156,
+        72.972056
+      ],
+      "ekf_pos": [
+        18.961512,
+        72.971412
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -82.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 100.4,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 20,
+      "true_pos": [
+        18.9615,
+        72.971
+      ],
+      "spoofed_pos": [
+        18.96225,
+        72.97175
+      ],
+      "ekf_pos": [
+        18.961513,
+        72.971013
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.6,
+      "agc_attenuation_db": -83.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 114.8,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 21,
+      "true_pos": [
+        18.9615,
+        72.9706
+      ],
+      "spoofed_pos": [
+        18.962344,
+        72.971444
+      ],
+      "ekf_pos": [
+        18.961515,
+        72.970615
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.4,
+      "agc_attenuation_db": -84.4,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 129.1,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 22,
+      "true_pos": [
+        18.9615,
+        72.9702
+      ],
+      "spoofed_pos": [
+        18.962438,
+        72.971138
+      ],
+      "ekf_pos": [
+        18.961517,
+        72.970217
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.0,
+      "agc_attenuation_db": -81.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 143.5,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 23,
+      "true_pos": [
+        18.9615,
+        72.9698
+      ],
+      "spoofed_pos": [
+        18.962531,
+        72.970831
+      ],
+      "ekf_pos": [
+        18.961518,
+        72.969818
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -81.9,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 157.8,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 24,
+      "true_pos": [
+        18.9615,
+        72.9694
+      ],
+      "spoofed_pos": [
+        18.962625,
+        72.970525
+      ],
+      "ekf_pos": [
+        18.96152,
+        72.96942
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -82.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 172.2,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 25,
+      "true_pos": [
+        18.9615,
+        72.969
+      ],
+      "spoofed_pos": [
+        18.962719,
+        72.970219
+      ],
+      "ekf_pos": [
+        18.961522,
+        72.969022
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -83.9,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 186.5,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 26,
+      "true_pos": [
+        18.9615,
+        72.9686
+      ],
+      "spoofed_pos": [
+        18.962813,
+        72.969912
+      ],
+      "ekf_pos": [
+        18.961523,
+        72.968623
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 44.1,
+      "agc_attenuation_db": -83.4,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 200.9,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 27,
+      "true_pos": [
+        18.9615,
+        72.9682
+      ],
+      "spoofed_pos": [
+        18.962906,
+        72.969606
+      ],
+      "ekf_pos": [
+        18.961525,
+        72.968225
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 40.1,
+      "agc_attenuation_db": -85.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 215.2,
+      "is_attack_active": true,
+      "gis_violation": "CUMULATIVE_SUB_THRESHOLD_DRIFT",
+      "alert_message": "\u26a0\ufe0f Sub-threshold Pseudorange Drift: Innovation Exceeds Gate"
+    },
+    {
+      "epoch": 28,
+      "true_pos": [
+        18.9615,
+        72.9678
+      ],
+      "spoofed_pos": [
+        18.963,
+        72.9693
+      ],
+      "ekf_pos": [
+        18.961527,
+        72.967827
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.3,
+      "agc_attenuation_db": -82.3,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 229.6,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 29,
+      "true_pos": [
+        18.9615,
+        72.9674
+      ],
+      "spoofed_pos": [
+        18.963094,
+        72.968994
+      ],
+      "ekf_pos": [
+        18.961528,
+        72.967428
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.8,
+      "agc_attenuation_db": -84.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 243.9,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 30,
+      "true_pos": [
+        18.963,
+        72.967
+      ],
+      "spoofed_pos": [
+        18.964688,
+        72.968688
+      ],
+      "ekf_pos": [
+        18.96303,
+        72.96703
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -81.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 258.3,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 31,
+      "true_pos": [
+        18.963,
+        72.9674
+      ],
+      "spoofed_pos": [
+        18.964781,
+        72.969181
+      ],
+      "ekf_pos": [
+        18.963032,
+        72.967432
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -84.5,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 272.6,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 32,
+      "true_pos": [
+        18.963,
+        72.9678
+      ],
+      "spoofed_pos": [
+        18.964875,
+        72.969675
+      ],
+      "ekf_pos": [
+        18.963033,
+        72.967833
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -84.0,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 287.0,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 33,
+      "true_pos": [
+        18.963,
+        72.9682
+      ],
+      "spoofed_pos": [
+        18.964969,
+        72.970169
+      ],
+      "ekf_pos": [
+        18.963035,
+        72.968235
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 41.5,
+      "agc_attenuation_db": -82.4,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 301.3,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 34,
+      "true_pos": [
+        18.963,
+        72.9686
+      ],
+      "spoofed_pos": [
+        18.965063,
+        72.970662
+      ],
+      "ekf_pos": [
+        18.963037,
+        72.968637
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 41.5,
+      "agc_attenuation_db": -84.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 315.7,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 35,
+      "true_pos": [
+        18.963,
+        72.969
+      ],
+      "spoofed_pos": [
+        18.965156,
+        72.971156
+      ],
+      "ekf_pos": [
+        18.963038,
+        72.969038
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.3,
+      "agc_attenuation_db": -81.4,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 330.0,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 36,
+      "true_pos": [
+        18.963,
+        72.9694
+      ],
+      "spoofed_pos": [
+        18.96525,
+        72.97165
+      ],
+      "ekf_pos": [
+        18.96304,
+        72.96944
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 45.4,
+      "agc_attenuation_db": -83.2,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 344.4,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 37,
+      "true_pos": [
+        18.963,
+        72.9698
+      ],
+      "spoofed_pos": [
+        18.965344,
+        72.972144
+      ],
+      "ekf_pos": [
+        18.963042,
+        72.969842
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -81.9,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 358.7,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 38,
+      "true_pos": [
+        18.963,
+        72.9702
+      ],
+      "spoofed_pos": [
+        18.965438,
+        72.972638
+      ],
+      "ekf_pos": [
+        18.963043,
+        72.970243
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.2,
+      "agc_attenuation_db": -83.0,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 373.0,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 39,
+      "true_pos": [
+        18.963,
+        72.9706
+      ],
+      "spoofed_pos": [
+        18.965531,
+        72.973131
+      ],
+      "ekf_pos": [
+        18.963045,
+        72.970645
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 43.1,
+      "agc_attenuation_db": -84.0,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 387.4,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 40,
+      "true_pos": [
+        18.963,
+        72.971
+      ],
+      "spoofed_pos": [
+        18.965625,
+        72.973625
+      ],
+      "ekf_pos": [
+        18.963047,
+        72.971047
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 42.4,
+      "agc_attenuation_db": -83.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 401.7,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 41,
+      "true_pos": [
+        18.963,
+        72.9714
+      ],
+      "spoofed_pos": [
+        18.965719,
+        72.974119
+      ],
+      "ekf_pos": [
+        18.963048,
+        72.971448
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 42.8,
+      "agc_attenuation_db": -82.8,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 416.1,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 42,
+      "true_pos": [
+        18.963,
+        72.9718
+      ],
+      "spoofed_pos": [
+        18.965813,
+        72.974613
+      ],
+      "ekf_pos": [
+        18.96305,
+        72.97185
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 41.9,
+      "agc_attenuation_db": -84.9,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 430.4,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 43,
+      "true_pos": [
+        18.963,
+        72.9722
+      ],
+      "spoofed_pos": [
+        18.965906,
+        72.975106
+      ],
+      "ekf_pos": [
+        18.963052,
+        72.972252
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.2,
+      "agc_attenuation_db": -80.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 444.8,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 44,
+      "true_pos": [
+        18.963,
+        72.9726
+      ],
+      "spoofed_pos": [
+        18.966,
+        72.9756
+      ],
+      "ekf_pos": [
+        18.963053,
+        72.972653
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 90.0,
+      "inferred_cn0": 44.1,
+      "agc_attenuation_db": -83.0,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 459.1,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 45,
+      "true_pos": [
+        18.9645,
+        72.973
+      ],
+      "spoofed_pos": [
+        18.967594,
+        72.976094
+      ],
+      "ekf_pos": [
+        18.964555,
+        72.973055
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.3,
+      "agc_attenuation_db": -81.6,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 473.5,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 46,
+      "true_pos": [
+        18.9645,
+        72.9726
+      ],
+      "spoofed_pos": [
+        18.967688,
+        72.975787
+      ],
+      "ekf_pos": [
+        18.964557,
+        72.972657
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.2,
+      "agc_attenuation_db": -84.3,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 487.8,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 47,
+      "true_pos": [
+        18.9645,
+        72.9722
+      ],
+      "spoofed_pos": [
+        18.967781,
+        72.975481
+      ],
+      "ekf_pos": [
+        18.964558,
+        72.972258
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.7,
+      "agc_attenuation_db": -82.2,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 502.2,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 48,
+      "true_pos": [
+        18.9645,
+        72.9718
+      ],
+      "spoofed_pos": [
+        18.967875,
+        72.975175
+      ],
+      "ekf_pos": [
+        18.96456,
+        72.97186
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 44.4,
+      "agc_attenuation_db": -84.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 516.5,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 49,
+      "true_pos": [
+        18.9645,
+        72.9714
+      ],
+      "spoofed_pos": [
+        18.967969,
+        72.974869
+      ],
+      "ekf_pos": [
+        18.964562,
+        72.971462
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.6,
+      "agc_attenuation_db": -83.5,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 530.9,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 50,
+      "true_pos": [
+        18.9645,
+        72.971
+      ],
+      "spoofed_pos": [
+        18.968063,
+        72.974563
+      ],
+      "ekf_pos": [
+        18.964563,
+        72.971063
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 41.7,
+      "agc_attenuation_db": -83.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 545.2,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 51,
+      "true_pos": [
+        18.9645,
+        72.9706
+      ],
+      "spoofed_pos": [
+        18.968156,
+        72.974256
+      ],
+      "ekf_pos": [
+        18.964565,
+        72.970665
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.4,
+      "agc_attenuation_db": -84.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 559.6,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 52,
+      "true_pos": [
+        18.9645,
+        72.9702
+      ],
+      "spoofed_pos": [
+        18.96825,
+        72.97395
+      ],
+      "ekf_pos": [
+        18.964567,
+        72.970267
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 43.7,
+      "agc_attenuation_db": -82.1,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 573.9,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 53,
+      "true_pos": [
+        18.9645,
+        72.9698
+      ],
+      "spoofed_pos": [
+        18.968344,
+        72.973644
+      ],
+      "ekf_pos": [
+        18.964568,
+        72.969868
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.5,
+      "agc_attenuation_db": -81.2,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 588.3,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 54,
+      "true_pos": [
+        18.9645,
+        72.9694
+      ],
+      "spoofed_pos": [
+        18.968438,
+        72.973337
+      ],
+      "ekf_pos": [
+        18.96457,
+        72.96947
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.9,
+      "agc_attenuation_db": -82.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 602.6,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 55,
+      "true_pos": [
+        18.9645,
+        72.969
+      ],
+      "spoofed_pos": [
+        18.968531,
+        72.973031
+      ],
+      "ekf_pos": [
+        18.964572,
+        72.969072
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 44.1,
+      "agc_attenuation_db": -81.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 617.0,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 56,
+      "true_pos": [
+        18.9645,
+        72.9686
+      ],
+      "spoofed_pos": [
+        18.968625,
+        72.972725
+      ],
+      "ekf_pos": [
+        18.964573,
+        72.968673
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 41.9,
+      "agc_attenuation_db": -83.9,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 631.3,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 57,
+      "true_pos": [
+        18.9645,
+        72.9682
+      ],
+      "spoofed_pos": [
+        18.968719,
+        72.972419
+      ],
+      "ekf_pos": [
+        18.964575,
+        72.968275
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.5,
+      "agc_attenuation_db": -83.7,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 645.7,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 58,
+      "true_pos": [
+        18.9645,
+        72.9678
+      ],
+      "spoofed_pos": [
+        18.968813,
+        72.972112
+      ],
+      "ekf_pos": [
+        18.964577,
+        72.967877
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 44.5,
+      "agc_attenuation_db": -83.2,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 660.0,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    },
+    {
+      "epoch": 59,
+      "true_pos": [
+        18.9645,
+        72.9674
+      ],
+      "spoofed_pos": [
+        18.968906,
+        72.971806
+      ],
+      "ekf_pos": [
+        18.964578,
+        72.967478
+      ],
+      "altitude_m": 120.0,
+      "speed": 8.0,
+      "speed_unit": "m/s",
+      "heading_deg": 270.0,
+      "inferred_cn0": 42.0,
+      "agc_attenuation_db": -81.8,
+      "doa_azimuth_var": 0.045,
+      "position_drift_m": 674.4,
+      "is_attack_active": true,
+      "gis_violation": "UAV_GEOFENCE_BREACH",
+      "alert_message": "\ud83d\udea8 UAV INTEGRITY CRITICAL: GEOFENCE BREACH DETECTED \u2014 DRIFT-EVASIVE SPOOFING \ud83d\udea8"
+    }
+  ]
+}

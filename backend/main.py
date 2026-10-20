@@ -27,6 +27,7 @@ from .gis.pyqgis_exporter import export_qgis_bundle
 from .rag_llm.qdrant_service import AEGISQdrantService, PAPER_CHUNKS
 from .rag_llm.hybrid_llm_agent import AEGISHybridForensicAgent
 from .db.mongo_service import AEGISMongoService
+from .simulations.scenario_engine import get_all_simulation_tracks, get_simulation_track
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -498,6 +499,22 @@ async def get_paper_knowledge(query: Optional[str] = Query(None)):
         "qdrant_stats": stats,
         "sample_chunks": PAPER_CHUNKS[:4]
     }
+
+
+# 10. Global Incident Simulation Engine (Section 5 Multi-Scenario Playback)
+@app.get("/api/simulations/tracks")
+async def list_simulation_tracks():
+    """Returns metadata for all 4 Section 5 global incident simulation tracks."""
+    return get_all_simulation_tracks()
+
+
+@app.get("/api/simulations/{scenario_id}")
+async def fetch_simulation_track(scenario_id: str):
+    """Retrieves full 60-epoch track data for a global simulation scenario."""
+    track = get_simulation_track(scenario_id)
+    if not track:
+        raise HTTPException(status_code=404, detail=f"Simulation scenario '{scenario_id}' not found.")
+    return track
 
 
 # Serve built frontend static assets if available
