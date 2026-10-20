@@ -9,6 +9,7 @@ import IntegrityGisView from './components/IntegrityGisView';
 import CopilotView from './components/CopilotView';
 import PaperMatrixView from './components/PaperMatrixView';
 import SimulationPlayer from './components/SimulationPlayer';
+import VivaControlPanel from './components/VivaControlPanel';
 
 import {
   fetchHealth,
@@ -22,6 +23,7 @@ export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [activeTab, setActiveTab] = useState('command');
+  const [isVivaPanelOpen, setIsVivaPanelOpen] = useState(false);
 
   // Simulation Controls State
   const [scenarios, setScenarios] = useState([]);
@@ -39,6 +41,20 @@ export default function App() {
   const [loadingSim, setLoadingSim] = useState(false);
 
   const playbackTimerRef = useRef(null);
+
+  // Global Keyboard Shortcut: Ctrl+Shift+P or Cmd+Shift+P for Professor Viva God Mode
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p')) {
+        e.preventDefault();
+        setIsVivaPanelOpen((prev) => !prev);
+      } else if (e.key === 'Escape' && isVivaPanelOpen) {
+        setIsVivaPanelOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isVivaPanelOpen]);
 
   // Load scenarios on mount
   useEffect(() => {
@@ -94,6 +110,26 @@ export default function App() {
     };
   }, [isPlaying]);
 
+  // God Mode Handlers for Professor Viva Demo
+  const handleInjectAttackNow = () => {
+    setAttackOverride('INTERMEDIATE_SYNC');
+    setPowerAdvantageDb(6.0);
+    setCurrentEpoch(28);
+    setIsPlaying(false);
+  };
+
+  const handleTriggerRecoveryNow = () => {
+    setEnableEkf(true);
+  };
+
+  const handleResetSystem = () => {
+    setAttackOverride('');
+    setPowerAdvantageDb(3.0);
+    setEnableEkf(true);
+    setCurrentEpoch(0);
+    setIsPlaying(false);
+  };
+
   if (!isAuthenticated) {
     return <AuthGate onAuthenticated={(authData) => {
       setIsAuthenticated(true);
@@ -103,14 +139,18 @@ export default function App() {
 
   const currentTelem = scenarioRun?.telemetry_epochs?.[currentEpoch] || null;
   const currentRecord = scenarioRun?.layered_defense_records?.[currentEpoch] || null;
+  const isAttackActive = Boolean(currentTelem?.features_14d?.is_spoofed || currentRecord?.layer5_ml?.is_spoofed || (attackOverride && attackOverride !== 'AUTHENTIC'));
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className={`min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans transition-all duration-500 ${
+      isAttackActive ? 'shadow-[inset_0_0_50px_rgba(239,68,68,0.25)]' : 'bg-cyber-grid'
+    }`}>
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         onLogout={() => setIsAuthenticated(false)}
         user={currentUser}
+        onOpenVivaPanel={() => setIsVivaPanelOpen(true)}
       />
 
       <main className="flex-1 p-4 max-w-7xl mx-auto w-full flex flex-col">
@@ -288,6 +328,23 @@ export default function App() {
           />
         )}
       </main>
+
+      {/* Professor Viva God Mode Floating Panel (Ctrl+Shift+P) */}
+      <VivaControlPanel
+        isOpen={isVivaPanelOpen}
+        onClose={() => setIsVivaPanelOpen(false)}
+        onInjectAttack={handleInjectAttackNow}
+        onTriggerRecovery={handleTriggerRecoveryNow}
+        onResetSystem={handleResetSystem}
+        currentEpoch={currentEpoch}
+        setCurrentEpoch={setCurrentEpoch}
+        attackActive={isAttackActive}
+        ekfActive={enableEkf}
+        selectedScenario={selectedScenarioId}
+        onSelectScenario={(sId) => setSelectedScenarioId(sId)}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
     </div>
   );
 }
