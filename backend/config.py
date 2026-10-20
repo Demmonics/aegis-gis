@@ -41,6 +41,7 @@ class Settings(BaseSettings):
     MONGODB_URI: str = Field(default="")
     MONGODB_DB_NAME: str = Field(default="aegis_gis_db")
     USE_LOCAL_MONGO_STORE: bool = Field(default=True)
+    USE_LOCAL_MOCK_DB: bool = Field(default=False)
 
     # Supabase Auth
     VITE_SUPABASE_URL: str = Field(default="")

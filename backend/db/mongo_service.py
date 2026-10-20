@@ -3,6 +3,7 @@ AEGIS-GIS: MongoDB 2dsphere Geospatial Storage Service
 With automatic thread-safe local JSON/Shapely fallback.
 """
 
+import os
 import json
 import time
 import logging
@@ -31,6 +32,13 @@ class AEGISMongoService:
         self._initialize_store()
 
     def _initialize_store(self):
+        # 0. Check explicit USE_LOCAL_MOCK_DB setting
+        if getattr(settings, "USE_LOCAL_MOCK_DB", False) or os.environ.get("USE_LOCAL_MOCK_DB", "").lower() == "true":
+            self.is_connected = False
+            logger.info("USE_LOCAL_MOCK_DB=true configured. Using zero-latency local JSON geospatial store.")
+            self._init_local_store()
+            return
+
         # 1. Try real MongoDB
         mongo_uri = settings.MONGODB_URI or "mongodb://localhost:27017/"
         try:
@@ -50,6 +58,9 @@ class AEGISMongoService:
             self.is_connected = False
 
         # 2. Local JSON store fallback
+        self._init_local_store()
+
+    def _init_local_store(self):
         if not self.local_store_path.exists():
             self._write_local_store({
                 "scenario_runs": [],
