@@ -23,7 +23,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 0,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -83,7 +83,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 1,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -143,7 +143,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 2,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -203,7 +203,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 3,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -263,7 +263,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 4,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -323,7 +323,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 5,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -383,7 +383,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 6,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -443,7 +443,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 7,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -503,7 +503,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 8,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -563,7 +563,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 9,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -623,7 +623,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 10,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -683,7 +683,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 11,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -743,7 +743,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 12,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -803,7 +803,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 13,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -863,7 +863,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 14,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -923,7 +923,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 15,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -983,7 +983,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 16,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1043,7 +1043,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 17,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1103,7 +1103,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 18,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1163,7 +1163,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 19,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1223,7 +1223,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 20,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1283,7 +1283,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 21,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1343,7 +1343,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 22,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1403,7 +1403,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 23,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1463,7 +1463,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 24,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1523,7 +1523,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 25,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1583,7 +1583,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 26,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1643,7 +1643,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 27,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1703,7 +1703,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 28,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1763,7 +1763,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 29,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1823,7 +1823,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 30,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1883,7 +1883,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 31,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -1943,7 +1943,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 32,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2003,7 +2003,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 33,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2063,7 +2063,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 34,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2123,7 +2123,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 35,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2183,7 +2183,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 36,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2243,7 +2243,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 37,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2303,7 +2303,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 38,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2363,7 +2363,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 39,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2423,7 +2423,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 40,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2483,7 +2483,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 41,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2543,7 +2543,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 42,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2603,7 +2603,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 43,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2663,7 +2663,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 44,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2723,7 +2723,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 45,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2783,7 +2783,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 46,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2843,7 +2843,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 47,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2903,7 +2903,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 48,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -2963,7 +2963,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 49,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3023,7 +3023,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 50,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3083,7 +3083,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 51,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3143,7 +3143,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 52,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3203,7 +3203,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 53,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3263,7 +3263,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 54,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3323,7 +3323,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 55,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3383,7 +3383,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 56,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3443,7 +3443,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 57,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3503,7 +3503,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 58,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
@@ -3563,7 +3563,7 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-20T19:52:42.210360+00:00",
+        "timestamp_utc": "2026-10-20T20:01:39.046267+00:00",
         "epoch_index": 59,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
