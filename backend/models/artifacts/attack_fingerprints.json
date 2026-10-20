@@ -1,0 +1,75 @@
+{
+  "centroids": {
+    "Normal": [
+      0.400429,
+      -0.139504,
+      0.40714,
+      0.347774,
+      -0.497571,
+      0.030094,
+      -0.022149,
+      0.225362,
+      -0.460829,
+      -0.036578,
+      -0.1415
+    ],
+    "Jamming": [
+      -0.466934,
+      0.099849,
+      -0.459078,
+      -0.422975,
+      0.567255,
+      -0.044008,
+      0.029934,
+      -0.125972,
+      -0.116717,
+      -0.031956,
+      0.16498
+    ],
+    "Spoofing": [
+      0.276848,
+      0.011791,
+      0.254471,
+      0.270493,
+      -0.321692,
+      0.036166,
+      -0.022388,
+      -0.079917,
+      0.808324,
+      0.103251,
+      -0.097794
+    ]
+  },
+  "feature_columns": [
+    "cn0_mean",
+    "cn0_std",
+    "cn0_min",
+    "cn0_max",
+    "agc_db",
+    "num_satellites",
+    "elevation_mean",
+    "cn0_elev_corr",
+    "position_jump",
+    "bearing_confidence",
+    "const_cn0_spread"
+  ],
+  "description": "Normalized centroid vectors representing characteristic RF threat signatures for cosine similarity retrieval.",
+  "top_discriminative_features": [
+    {
+      "feature": "position_jump",
+      "importance": 0.3879
+    },
+    {
+      "feature": "agc_db",
+      "importance": 0.3429
+    },
+    {
+      "feature": "cn0_min",
+      "importance": 0.0974
+    },
+    {
+      "feature": "cn0_mean",
+      "importance": 0.0858
+    }
+  ]
+}
