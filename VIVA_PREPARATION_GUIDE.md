@@ -109,6 +109,18 @@ AEGIS-GIS introduces the world's first **end-to-end cyber-physical to geospatial
    - `Primary Violation`: `IMPOSSIBLE_LAND_TRANSIT (Vessel inside aerodrome polygon)`
    - `Mitigation`: `ISOLATE_GNSS_RELY_ON_INS_DEAD_RECKONING`
 
+### Step 2.5: The Grand Finale: Cinematic Baltic Sea Spoofing Animation (The "Wow Factor")
+1. Click the glowing button: **"🎬 Launch Baltic Sea Spoofing Animation"** (or click the **"🎬 Baltic Spoofing Cinema"** tab).
+2. Hit **"Play"** or switch to **"2x Speed"**:
+   - **Phase 1 (Epoch 0–14):** Show the green signal connection lines beaming down from the satellite constellation in the sky to the ghosted vessel in the water corridor.
+   - **Phase 2 (Epoch 15–25):** At Epoch 15, point out how the satellite lines snap to red, emanating from the hostile coastal SDR radar station with expanding concentric RF waves. The solid ship starts diverging.
+   - **Phase 3 (Epoch 26–60):** Watch the solid ship get pulled 14.8 km inland directly onto the Khrabrovo Airport runway. The runway polygon flashes in pulsating red, and the massive alert banner triggers:
+     `🚨 CRITICAL GIS VIOLATION: MARITIME VESSEL DETECTED ON INLAND AIRPORT RUNWAY 🚨`
+3. Click **"Activate AEGIS Extended Kalman Filter (EKF)"**:
+   - Point out the glowing cyan laser tether shooting back from the runway to the authentic waterway.
+   - Show how the EKF-restored vessel marker stays safely locked to the shipping lane with an error of just **1.96 meters**!
+4. Click **"X"** (top right) to smoothly return to the Tactical Command Center.
+
 ### Step 3: Correlator Oscilloscope & Defense Matrix (Bottom Panels)
 1. Point to the **41-Tap Correlator Oscilloscope**:
    - Show how the blue curve (authentic) is a clean peak at delay $\tau = 0$.
