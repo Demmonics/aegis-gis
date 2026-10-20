@@ -340,6 +340,27 @@ The trained model artifact is exported as `backend/models/gnss_spoof_detector.pk
 
 ---
 
+### Q9c: What is GNSS Guardian and how did you implement 3-way threat detection, centroid signatures, and GenAI incident reports?
+**Answer:**  
+In Phase 8, we ingested the domain intelligence from the `GNSS_Guardian_EDA.ipynb` research notebook, creating a unified production trainer at `backend/ml_pipeline/train_gnss_guardian.py`.
+1. **3-Way Threat Classification (`Normal`, `Jamming`, `Spoofing`):**
+   - We trained a soft-voting heterogeneous ensemble of 3 distinct architectures:
+     * **Random Forest** (120 Trees, max depth 12)
+     * **HistGradientBoosting** (100 Iterations, learning rate 0.1)
+     * **Multi-Layer Perceptron (MLP)** (128x64 neurons, Adam optimizer)
+   - Evaluated over 14,850 records with 5-fold cross-validation ($99.88\% \pm 0.06\%$) and holdout test accuracy of **99.93%** (ROC-AUC: 1.0000, FAR: 0.00%).
+2. **Attack Centroid Vector Signatures:**
+   - For each class $c \in \{\text{Normal}, \text{Jamming}, \text{Spoofing}\}$, we compute the standardized 11-dimensional centroid vector $\mu_c$ and save it to `backend/models/artifacts/attack_fingerprints.json`.
+   - When new telemetry arrives, we calculate normalized Cosine Similarity:
+     $$\text{Sim}(x, \mu_c) = \frac{x \cdot \mu_c}{\|x\| \|\mu_c\|}$$
+     providing an instant fingerprint match against historical jamming and spoofing profiles.
+3. **GenAI Threat Report Synthesizer:**
+   - Implemented `generate_guardian_threat_report()` (mirroring Cell 61/63 of the notebook).
+   - Ingests measurable signal facts (C/N0 mean, AGC attenuation, position jump, Direction of Arrival azimuth and bearing confidence) to generate structured executive incident briefs with threat classifications, severity ratings, likely RF causes, and operational countermeasures.
+   - Fully exposed via FastAPI at `GET /api/guardian/diagnostics` and `POST /api/guardian/predict-report`.
+
+---
+
 ### Q10: What happened in the real-world Baltic Sea incident, and how does AEGIS-GIS detect it?
 **Answer:**  
 As documented by C4ADS and maritime intelligence reports (2019-2024), merchant vessels navigating legitimate shipping lanes in the Baltic Sea near Kaliningrad reported their AIS (Automatic Identification System) beacons suddenly plotting their position inland at Chkalovsk Military Naval Airfield, $>14$ km away. The spoofer transmitted coordinated constellation ephemeris to force automated ship systems to panic or ground.

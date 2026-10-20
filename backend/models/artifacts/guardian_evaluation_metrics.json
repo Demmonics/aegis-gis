@@ -1,0 +1,105 @@
+{
+  "model_title": "GNSS Guardian 3-Way Threat Soft-Voting Ensemble",
+  "overall_accuracy": 0.9993,
+  "macro_precision": 0.9993,
+  "macro_recall": 0.9993,
+  "macro_f1_score": 0.9993,
+  "roc_auc_score": 1.0,
+  "false_alarm_rate": 0.0,
+  "total_samples": 14850,
+  "test_samples": 2970,
+  "target_classes": [
+    "Normal",
+    "Jamming",
+    "Spoofing"
+  ],
+  "confusion_matrix": [
+    [
+      990,
+      0,
+      0
+    ],
+    [
+      0,
+      989,
+      1
+    ],
+    [
+      1,
+      0,
+      989
+    ]
+  ],
+  "per_class_metrics": {
+    "Normal": {
+      "precision": 0.999,
+      "recall": 1.0,
+      "f1_score": 0.9995,
+      "support": 990
+    },
+    "Jamming": {
+      "precision": 1.0,
+      "recall": 0.999,
+      "f1_score": 0.9995,
+      "support": 990
+    },
+    "Spoofing": {
+      "precision": 0.999,
+      "recall": 0.999,
+      "f1_score": 0.999,
+      "support": 990
+    }
+  },
+  "feature_importance_ranking": [
+    {
+      "feature": "position_jump",
+      "importance": 0.3879
+    },
+    {
+      "feature": "agc_db",
+      "importance": 0.3429
+    },
+    {
+      "feature": "cn0_min",
+      "importance": 0.0974
+    },
+    {
+      "feature": "cn0_mean",
+      "importance": 0.0858
+    },
+    {
+      "feature": "cn0_max",
+      "importance": 0.0526
+    },
+    {
+      "feature": "cn0_elev_corr",
+      "importance": 0.0156
+    },
+    {
+      "feature": "const_cn0_spread",
+      "importance": 0.0067
+    },
+    {
+      "feature": "cn0_std",
+      "importance": 0.0045
+    },
+    {
+      "feature": "elevation_mean",
+      "importance": 0.0032
+    },
+    {
+      "feature": "bearing_confidence",
+      "importance": 0.0026
+    },
+    {
+      "feature": "num_satellites",
+      "importance": 0.0006
+    }
+  ],
+  "sub_model_scores": {
+    "random_forest_acc": 0.9997,
+    "gradient_boosting_acc": 0.999,
+    "mlp_neural_network_acc": 0.9987,
+    "ensemble_soft_voting_acc": 0.9993
+  }
+}
