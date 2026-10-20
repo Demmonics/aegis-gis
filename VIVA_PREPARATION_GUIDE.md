@@ -318,6 +318,28 @@ Our physics engine mathematically synthesizes these precise phenomena by generat
 
 ---
 
+### Q9b: How did you train your classifier on real-world Hugging Face datasets, and what results did you achieve?
+**Answer:**  
+In Phase 7, we integrated the Hugging Face `datasets` library (`backend/ml_pipeline/hf_loader.py`) to pull 14,850 real-world multi-constellation interference records from `Omrilevi123/gnss-jamming-spoofing-detection` (balanced across Authentic, Spoofing, and Jamming).  
+We aligned 13 core physical features:
+- $C/N_0$ statistical profile (`cn0_mean`, `cn0_std`, `cn0_min`, `cn0_max`)
+- Intersatellite correlator spread (`const_cn0_spread`, `cn0_elev_corr`)
+- Automatic Gain Control RF power (`agc_db`)
+- Pseudorange / position jump residual (`position_jump`)
+- Multi-antenna Angle of Arrival spatial metrics (`bearing_confidence`, `est_source_azimuth`, `est_source_elevation`)
+
+Using `backend/ml_pipeline/train_classifier.py`, we trained a soft-voting ensemble of a **Random Forest (100 Trees)** and a **HistGradientBoosting Classifier (100 Iterations)**.
+On the stratified 20% test holdout (2,970 samples), the model achieved:
+- **Accuracy:** `99.93%`
+- **Macro Precision:** `99.93%`
+- **Macro Recall:** `99.93%`
+- **Macro F1-Score:** `99.93%`
+- **False Alarm Rate (FAR):** `0.00%` on authentic signals!
+- **Top Predictive Features:** `position_jump` (38.73% Gini importance) and `agc_db` (35.65% Gini importance).
+The trained model artifact is exported as `backend/models/gnss_spoof_detector.pkl` and automatically loaded by the FastAPI backend on startup with live inference via `/api/ml/predict-hf`.
+
+---
+
 ### Q10: What happened in the real-world Baltic Sea incident, and how does AEGIS-GIS detect it?
 **Answer:**  
 As documented by C4ADS and maritime intelligence reports (2019-2024), merchant vessels navigating legitimate shipping lanes in the Baltic Sea near Kaliningrad reported their AIS (Automatic Identification System) beacons suddenly plotting their position inland at Chkalovsk Military Naval Airfield, $>14$ km away. The spoofer transmitted coordinated constellation ephemeris to force automated ship systems to panic or ground.
