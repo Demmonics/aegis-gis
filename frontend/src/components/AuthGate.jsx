@@ -62,19 +62,20 @@ export default function AuthGate({ onAuthenticated }) {
           </p>
         </div>
 
-        {/* 1-Click Professor Evaluator Mode (Top Glowing Button) */}
-        <div className="mb-6 p-1 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-emerald-500 shadow-lg shadow-cyan-500/20">
+        {/* 1-Click Professor Evaluator Mode (Precision Cyber Button) */}
+        <div className="mb-6">
           <button
             onClick={handleDemoBypass}
-            className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-200 group text-sm"
+            className="w-full bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 hover:text-white font-mono font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 group text-sm shadow-[0_0_20px_rgba(6,182,212,0.15)]"
           >
             <UserCheck className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
             <span>Launch KJSCE Professor / Evaluator Mode</span>
             <ChevronRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
           </button>
-          <p className="text-[10px] text-center text-slate-400 py-1 bg-slate-900/60 rounded-b-lg">
-            ⚡ 1-Click Instant Access • Bypasses Email Confirmation
-          </p>
+          <div className="flex items-center justify-between text-[10px] text-slate-500 font-mono mt-1.5 px-1">
+            <span>Instant Evaluator Bypass</span>
+            <span className="text-emerald-400 font-semibold">● Zero Setup Required</span>
+          </div>
         </div>
 
         <div className="relative flex py-2 items-center mb-6">
