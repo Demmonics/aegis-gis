@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MessageSquareCode, Cpu, Send, Sparkles, BookOpen, Database, CheckCircle2, Terminal } from 'lucide-react';
 import { analyzeForensics } from '../services/api';
+import CyberTypewriter from './CyberTypewriter';
 
 export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
   const [query, setQuery] = useState('');
@@ -128,8 +129,8 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
               </span>
             </div>
 
-            <div className="prose prose-invert prose-sm max-w-none text-slate-200 leading-relaxed font-sans whitespace-pre-wrap">
-              {report.analysis_markdown}
+            <div className="prose prose-invert prose-sm max-w-none text-slate-200 leading-relaxed font-mono whitespace-pre-wrap">
+              <CyberTypewriter text={report.analysis_markdown} speedMs={10} />
             </div>
           </div>
 

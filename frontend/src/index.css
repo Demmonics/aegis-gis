@@ -128,3 +128,48 @@ body {
 .animate-alert-banner {
   animation: alert-glow 1.2s ease-in-out infinite;
 }
+
+/* Cyberpunk / Palantir HUD Aesthetic Utilities */
+.neon-glow-cyan {
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.45), inset 0 0 8px rgba(6, 182, 212, 0.2);
+}
+
+.neon-glow-emerald {
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.45), inset 0 0 8px rgba(16, 185, 129, 0.2);
+}
+
+.neon-glow-red {
+  box-shadow: 0 0 24px rgba(239, 68, 68, 0.75), inset 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.45), inset 0 0 8px rgba(168, 85, 247, 0.2);
+}
+
+/* Terminal Caret Blink */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-terminal-caret {
+  animation: terminal-blink 0.8s step-end infinite;
+}
+
+/* Cyber Matrix Grid Background Pattern */
+.bg-cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+}
+
+/* Radar Scan Line */
+@keyframes radar-beam-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radar-beam-sweep 4s linear infinite;
+}

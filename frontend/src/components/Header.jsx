@@ -1,7 +1,7 @@
 import React from 'react';
-import { Shield, Navigation, BarChart3, Database, MessageSquareCode, FileText, Film, LogOut, CheckCircle, Cpu } from 'lucide-react';
+import { Shield, Navigation, BarChart3, Database, MessageSquareCode, FileText, Film, LogOut, CheckCircle, Cpu, Zap } from 'lucide-react';
 
-export default function Header({ activeTab, setActiveTab, onLogout, user }) {
+export default function Header({ activeTab, setActiveTab, onLogout, user, onOpenVivaPanel }) {
   const tabs = [
     { id: 'command', label: 'Tactical GIS & RF Command', icon: Navigation },
     { id: 'cinematic', label: '🌐 Global Simulations (4 Domains)', icon: Film },
@@ -12,17 +12,21 @@ export default function Header({ activeTab, setActiveTab, onLogout, user }) {
   ];
 
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <header className="bg-slate-950 border-b border-cyan-500/30 sticky top-0 z-50 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
       {/* Top Banner with Brand and Telemetry Pills */}
-      <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/60">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
-            <Shield className="w-5 h-5" />
+      <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 bg-slate-900/40">
+        <div
+          onClick={onOpenVivaPanel}
+          className="flex items-center gap-3 cursor-pointer group"
+          title="Click to summon Professor Viva God Mode (or press Ctrl+Shift+P)"
+        >
+          <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition">
+            <Shield className="w-5 h-5 group-hover:scale-110 transition" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono font-bold text-base text-white tracking-wider">AEGIS-GIS</span>
-              <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+              <span className="font-mono font-bold text-base text-white tracking-wider group-hover:text-cyan-300 transition">AEGIS-GIS</span>
+              <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 shadow-[0_0_10px_rgba(6,182,212,0.3)]">
                 When Location Lies
               </span>
             </div>
@@ -46,6 +50,14 @@ export default function Header({ activeTab, setActiveTab, onLogout, user }) {
             <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
             <span>ML Accuracy: 98.8%</span>
           </span>
+          <button
+            onClick={onOpenVivaPanel}
+            title="Open Professor Viva God Mode (Ctrl+Shift+P)"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 text-amber-300 font-bold shadow-[0_0_10px_rgba(245,158,11,0.3)] transition-all cursor-pointer"
+          >
+            <Zap className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+            <span>⚡ GOD MODE</span>
+          </button>
           <button
             onClick={onLogout}
             title="Sign Out"
