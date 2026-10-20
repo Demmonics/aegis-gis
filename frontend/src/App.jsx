@@ -8,6 +8,7 @@ import DiagnosticsView from './components/DiagnosticsView';
 import IntegrityGisView from './components/IntegrityGisView';
 import CopilotView from './components/CopilotView';
 import PaperMatrixView from './components/PaperMatrixView';
+import CinematicSimulationPlayer from './components/CinematicSimulationPlayer';
 
 import {
   fetchHealth,
@@ -15,7 +16,7 @@ import {
   runSimulation
 } from './services/api';
 
-import { Play, Pause, RotateCcw, Shield, Zap, AlertTriangle, Cpu } from 'lucide-react';
+import { Play, Pause, RotateCcw, Shield, Zap, AlertTriangle, Cpu, Film } from 'lucide-react';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -185,6 +186,16 @@ export default function App() {
                     EKF Recovery
                   </label>
                 </div>
+
+                {/* Grand Finale Animated Simulation Launch Button */}
+                <button
+                  onClick={() => setActiveTab('cinematic')}
+                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/50 text-amber-300 hover:text-white hover:from-amber-500/30 hover:to-red-500/30 shadow-md transition-all font-mono text-xs font-bold animate-pulse"
+                  title="Launch Baltic Sea Maritime Spoofing Cinematic Animation"
+                >
+                  <Film className="w-3.5 h-3.5 text-amber-400" />
+                  <span>🎬 Launch Baltic Sea Spoofing Animation</span>
+                </button>
               </div>
 
               {/* Scrubber Playback Controls */}
@@ -245,6 +256,13 @@ export default function App() {
               <DefenseMatrixHud currentRecord={currentRecord} />
             </div>
           </div>
+        )}
+
+        {activeTab === 'cinematic' && (
+          <CinematicSimulationPlayer
+            scenarioRun={scenarioRun}
+            onClose={() => setActiveTab('command')}
+          />
         )}
 
         {activeTab === 'diagnostics' && (
