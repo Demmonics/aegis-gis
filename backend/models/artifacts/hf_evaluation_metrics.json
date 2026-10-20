@@ -1,0 +1,106 @@
+{
+  "source_dataset": "Omrilevi123/gnss-jamming-spoofing-detection (Hugging Face)",
+  "total_samples": 14850,
+  "test_samples": 2970,
+  "overall_accuracy": 0.9993,
+  "macro_precision": 0.9993,
+  "macro_recall": 0.9993,
+  "macro_f1_score": 0.9993,
+  "false_alarm_rate": 0.0,
+  "classes": [
+    "AUTHENTIC",
+    "SPOOFING",
+    "JAMMING"
+  ],
+  "confusion_matrix": [
+    [
+      990,
+      0,
+      0
+    ],
+    [
+      0,
+      990,
+      0
+    ],
+    [
+      1,
+      1,
+      988
+    ]
+  ],
+  "per_class_metrics": {
+    "AUTHENTIC": {
+      "precision": 0.999,
+      "recall": 1.0,
+      "f1_score": 0.9995,
+      "support": 990
+    },
+    "SPOOFING": {
+      "precision": 0.999,
+      "recall": 1.0,
+      "f1_score": 0.9995,
+      "support": 990
+    },
+    "JAMMING": {
+      "precision": 1.0,
+      "recall": 0.998,
+      "f1_score": 0.999,
+      "support": 990
+    }
+  },
+  "feature_importance_ranking": [
+    {
+      "feature": "position_jump",
+      "importance": 0.3873
+    },
+    {
+      "feature": "agc_db",
+      "importance": 0.3565
+    },
+    {
+      "feature": "cn0_min",
+      "importance": 0.0849
+    },
+    {
+      "feature": "cn0_mean",
+      "importance": 0.0839
+    },
+    {
+      "feature": "cn0_max",
+      "importance": 0.0467
+    },
+    {
+      "feature": "cn0_elev_corr",
+      "importance": 0.0159
+    },
+    {
+      "feature": "const_cn0_spread",
+      "importance": 0.0074
+    },
+    {
+      "feature": "cn0_std",
+      "importance": 0.0052
+    },
+    {
+      "feature": "elevation_mean",
+      "importance": 0.0032
+    },
+    {
+      "feature": "est_source_elevation",
+      "importance": 0.0031
+    },
+    {
+      "feature": "bearing_confidence",
+      "importance": 0.0028
+    },
+    {
+      "feature": "est_source_azimuth",
+      "importance": 0.0017
+    },
+    {
+      "feature": "num_satellites",
+      "importance": 0.0013
+    }
+  ]
+}
