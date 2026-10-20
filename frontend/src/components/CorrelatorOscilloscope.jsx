@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 import { Activity, Radio, Cpu, BarChart2 } from 'lucide-react';
 
-export default function CorrelatorOscilloscope({
+function CorrelatorOscilloscopeComponent({
   telemetryEpoch,
   allTelemetry = [],
   currentEpoch = 0
@@ -24,22 +24,26 @@ export default function CorrelatorOscilloscope({
   const spoof = taps.spoofer_profile || [];
   const composite = taps.composite_profile || [];
 
-  // Transform 41 taps into Recharts data
-  const correlatorData = delays.map((d, i) => ({
-    delay: d,
-    authentic: auth[i] || 0,
-    spoofer: spoof[i] || 0,
-    composite: composite[i] || 0
-  }));
+  // Memoize 41 taps transform
+  const correlatorData = useMemo(() => {
+    return delays.map((d, i) => ({
+      delay: d,
+      authentic: auth[i] || 0,
+      spoofer: spoof[i] || 0,
+      composite: composite[i] || 0
+    }));
+  }, [delays, auth, spoof, composite]);
 
-  // Build time series from allTelemetry for sparklines
-  const timeSeriesData = allTelemetry.map((t, idx) => ({
-    epoch: idx,
-    cn0: t.features_14d?.cn0_mean_dbhz || 44.0,
-    clock_bias: t.features_14d?.clock_bias_jump_m || 0.0,
-    residual_rms: t.features_14d?.pseudorange_residual_rms || 1.5,
-    ekf_innov: t.features_14d?.ekf_innovation_mahalanobis || 1.0,
-  }));
+  // Memoize time series data from allTelemetry so it doesn't re-map on every epoch tick
+  const timeSeriesData = useMemo(() => {
+    return allTelemetry.map((t, idx) => ({
+      epoch: idx,
+      cn0: t.features_14d?.cn0_mean_dbhz || 44.0,
+      clock_bias: t.features_14d?.clock_bias_jump_m || 0.0,
+      residual_rms: t.features_14d?.pseudorange_residual_rms || 1.5,
+      ekf_innov: t.features_14d?.ekf_innovation_mahalanobis || 1.0,
+    }));
+  }, [allTelemetry]);
 
   return (
     <div className="h-full flex flex-col space-y-3">
@@ -133,3 +137,6 @@ export default function CorrelatorOscilloscope({
     </div>
   );
 }
+
+const CorrelatorOscilloscope = React.memo(CorrelatorOscilloscopeComponent);
+export default CorrelatorOscilloscope;

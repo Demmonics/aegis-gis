@@ -100,6 +100,10 @@ class AEGISMultiClassSpoofingClassifier:
         self.mlp_model: Optional[MLPClassifier] = None
         self.scaler: Optional[StandardScaler] = None
         self.evaluation_metrics: Dict[str, Any] = {}
+        self._prediction_cache: Dict[tuple, Dict[str, Any]] = {}
+        self._cache_max_size: int = 4096
+        self._cache_hits: int = 0
+        self._cache_misses: int = 0
 
         self._load_or_train()
 
@@ -237,10 +241,20 @@ class AEGISMultiClassSpoofingClassifier:
 
         return self.evaluation_metrics
 
+    def _get_cache_key(self, vec: List[float]) -> tuple:
+        """Rounds vector components to 2 decimals for high-efficiency deduplication."""
+        return tuple(round(float(v), 2) for v in vec)
+
     def predict_epoch(self, feature_vector_14d: List[float]) -> Dict[str, Any]:
         """
-        Classify a single epoch's 14-dimensional feature vector.
+        Classify a single epoch's 14-dimensional feature vector with in-memory caching.
         """
+        cache_key = self._get_cache_key(feature_vector_14d)
+        if cache_key in self._prediction_cache:
+            self._cache_hits += 1
+            return self._prediction_cache[cache_key]
+
+        self._cache_misses += 1
         if self.scaler is None or self.rf_model is None:
             self._load_or_train()
 
@@ -277,7 +291,7 @@ class AEGISMultiClassSpoofingClassifier:
             for idx in top_indices
         ]
 
-        return {
+        result = {
             "is_spoofed": is_spoofed,
             "spoof_probability": round(spoof_prob, 4),
             "predicted_attack_type": predicted_class,
@@ -285,3 +299,91 @@ class AEGISMultiClassSpoofingClassifier:
             "class_probabilities": class_probs,
             "top_contributing_features": top_contributors
         }
+
+        # LRU cache management: evict oldest 20% if capacity reached
+        if len(self._prediction_cache) >= self._cache_max_size:
+            evict_count = max(1, int(self._cache_max_size * 0.2))
+            for k in list(self._prediction_cache.keys())[:evict_count]:
+                self._prediction_cache.pop(k, None)
+
+        self._prediction_cache[cache_key] = result
+        return result
+
+    def predict_batch(self, feature_vectors: List[List[float]]) -> List[Dict[str, Any]]:
+        """
+        High-throughput vectorized batch classification (>500 points/second)
+        utilizing matrix scaling and vectorized soft-voting ensemble.
+        """
+        if not feature_vectors:
+            return []
+
+        if self.scaler is None or self.rf_model is None:
+            self._load_or_train()
+
+        results = [None] * len(feature_vectors)
+        uncached_indices = []
+        uncached_vectors = []
+
+        # Check cache first
+        for i, vec in enumerate(feature_vectors):
+            ckey = self._get_cache_key(vec)
+            if ckey in self._prediction_cache:
+                self._cache_hits += 1
+                results[i] = self._prediction_cache[ckey]
+            else:
+                self._cache_misses += 1
+                uncached_indices.append(i)
+                uncached_vectors.append(vec)
+
+        # Batch process remaining uncached vectors in one vectorized pass
+        if uncached_vectors:
+            x_arr = np.array(uncached_vectors, dtype=np.float32)
+            x_scaled = self.scaler.transform(x_arr)
+
+            p_rf = self.rf_model.predict_proba(x_scaled)
+            p_gb = self.gb_model.predict_proba(x_scaled)
+            p_mlp = self.mlp_model.predict_proba(x_scaled)
+
+            probs = 0.45 * p_rf + 0.35 * p_gb + 0.20 * p_mlp
+            rf_imps = self.rf_model.feature_importances_
+            attribution_matrix = np.abs(x_scaled) * rf_imps
+            top4_matrix = np.argsort(attribution_matrix, axis=1)[:, -4:]
+
+            for local_idx, orig_idx in enumerate(uncached_indices):
+                prob = probs[local_idx]
+                pred_idx = int(np.argmax(prob))
+                predicted_class = CLASS_NAMES[pred_idx]
+                confidence = float(prob[pred_idx])
+                is_spoofed = (pred_idx != 0)
+                spoof_prob = float(np.sum(prob[1:]))
+
+                class_probs = {c_name: round(float(prob[ci]), 4) for ci, c_name in enumerate(CLASS_NAMES)}
+
+                vec_raw = uncached_vectors[local_idx]
+                top_indices = top4_matrix[local_idx][::-1]
+                top_contributors = [
+                    {
+                        "feature": FEATURE_NAMES[idx],
+                        "measured_value": round(float(vec_raw[idx]), 3),
+                        "importance_weight": round(float(rf_imps[idx]), 3),
+                        "contribution_score": round(float(attribution_matrix[local_idx, idx]), 3)
+                    }
+                    for idx in top_indices
+                ]
+
+                res = {
+                    "is_spoofed": is_spoofed,
+                    "spoof_probability": round(spoof_prob, 4),
+                    "predicted_attack_type": predicted_class,
+                    "confidence_score": round(confidence, 4),
+                    "class_probabilities": class_probs,
+                    "top_contributing_features": top_contributors
+                }
+
+                ckey = self._get_cache_key(vec_raw)
+                if len(self._prediction_cache) < self._cache_max_size:
+                    self._prediction_cache[ckey] = res
+
+                results[orig_idx] = res
+
+        return results

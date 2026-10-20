@@ -277,7 +277,7 @@ const createSpooferStationIcon = (isAttacking, label = 'TERRESTRIAL SPOOFER') =>
   });
 };
 
-export default function SimulationPlayer({
+function SimulationPlayerComponent({
   onClose = null
 }) {
   // Scenario catalogs available
@@ -393,10 +393,10 @@ export default function SimulationPlayer({
   const currentTelem = epochs[currentEpoch] || epochs[0];
   const isAttackActive = currentTelem.is_attack_active;
 
-  // Paths up to current epoch
-  const truePath = epochs.slice(0, currentEpoch + 1).map(e => e.true_pos);
-  const spoofedPath = epochs.slice(0, currentEpoch + 1).map(e => e.spoofed_pos);
-  const ekfPath = epochs.slice(0, currentEpoch + 1).map(e => e.ekf_pos);
+  // Memoize paths up to current epoch for 60FPS fluid rendering
+  const truePath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.true_pos), [epochs, currentEpoch]);
+  const spoofedPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.spoofed_pos), [epochs, currentEpoch]);
+  const ekfPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.ekf_pos), [epochs, currentEpoch]);
 
   // Current positions
   const currentTrue = currentTelem.true_pos;
@@ -901,3 +901,6 @@ export default function SimulationPlayer({
     </div>
   );
 }
+
+const SimulationPlayer = React.memo(SimulationPlayerComponent);
+export default SimulationPlayer;
