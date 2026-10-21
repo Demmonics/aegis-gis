@@ -10,21 +10,13 @@ function CorrelatorOscilloscopeComponent({
   allTelemetry = [],
   currentEpoch = 0
 }) {
-  if (!telemetryEpoch) {
-    return (
-      <div className="h-full flex items-center justify-center text-slate-500 font-mono text-xs">
-        Connecting RF Correlator Oscilloscope...
-      </div>
-    );
-  }
-
-  const taps = telemetryEpoch.correlator_taps || {};
+  const taps = telemetryEpoch?.correlator_taps || {};
   const delays = taps.delays_chips || [];
   const auth = taps.authentic_profile || [];
   const spoof = taps.spoofer_profile || [];
   const composite = taps.composite_profile || [];
 
-  // Memoize 41 taps transform
+  // Memoize 41 taps transform (called unconditionally to respect Hook rules)
   const correlatorData = useMemo(() => {
     return delays.map((d, i) => ({
       delay: d,
@@ -36,7 +28,7 @@ function CorrelatorOscilloscopeComponent({
 
   // Memoize time series data from allTelemetry so it doesn't re-map on every epoch tick
   const timeSeriesData = useMemo(() => {
-    return allTelemetry.map((t, idx) => ({
+    return (allTelemetry || []).map((t, idx) => ({
       epoch: idx,
       cn0: t.features_14d?.cn0_mean_dbhz || 44.0,
       clock_bias: t.features_14d?.clock_bias_jump_m || 0.0,
@@ -44,6 +36,14 @@ function CorrelatorOscilloscopeComponent({
       ekf_innov: t.features_14d?.ekf_innovation_mahalanobis || 1.0,
     }));
   }, [allTelemetry]);
+
+  if (!telemetryEpoch) {
+    return (
+      <div className="h-full flex items-center justify-center text-slate-500 font-mono text-xs">
+        Connecting RF Correlator Oscilloscope...
+      </div>
+    );
+  }
 
   return (
     <div className="h-full flex flex-col space-y-3">

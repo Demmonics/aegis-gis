@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -381,6 +381,13 @@ function SimulationPlayerComponent({
     };
   }, [isPlaying, playbackSpeed, scenarioData]);
 
+  const epochs = scenarioData?.epochs || [];
+
+  // Memoize paths up to current epoch for 60FPS fluid rendering (called unconditionally to respect Hook rules)
+  const truePath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.true_pos), [epochs, currentEpoch]);
+  const spoofedPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.spoofed_pos), [epochs, currentEpoch]);
+  const ekfPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.ekf_pos), [epochs, currentEpoch]);
+
   if (loading || !scenarioData || !scenarioData.epochs) {
     return (
       <div className="flex flex-col items-center justify-center p-12 bg-slate-950 border border-slate-800 rounded-xl min-h-[500px]">
@@ -391,19 +398,13 @@ function SimulationPlayerComponent({
     );
   }
 
-  const epochs = scenarioData.epochs;
-  const currentTelem = epochs[currentEpoch] || epochs[0];
-  const isAttackActive = currentTelem.is_attack_active;
-
-  // Memoize paths up to current epoch for 60FPS fluid rendering
-  const truePath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.true_pos), [epochs, currentEpoch]);
-  const spoofedPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.spoofed_pos), [epochs, currentEpoch]);
-  const ekfPath = useMemo(() => epochs.slice(0, currentEpoch + 1).map(e => e.ekf_pos), [epochs, currentEpoch]);
+  const currentTelem = epochs[currentEpoch] || epochs[0] || {};
+  const isAttackActive = Boolean(currentTelem.is_attack_active);
 
   // Current positions
-  const currentTrue = currentTelem.true_pos;
-  const currentSpoofed = currentTelem.spoofed_pos;
-  const currentEkf = currentTelem.ekf_pos;
+  const currentTrue = currentTelem.true_pos || scenarioData.map_center || [0, 0];
+  const currentSpoofed = currentTelem.spoofed_pos || scenarioData.map_center || [0, 0];
+  const currentEkf = currentTelem.ekf_pos || scenarioData.map_center || [0, 0];
   const vehicleType = scenarioData.vehicle_type || 'ship';
 
   return (
