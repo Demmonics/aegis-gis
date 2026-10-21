@@ -22,4 +22,4 @@ Datasets/
 ENV_DIAGNOSTICS.json
 .agents/
 skills-lock.json
-
+.taste-skill/

@@ -7,15 +7,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.85,
-          54.68,
-          5.0
+          73.79,
+          20.01,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0000",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0000",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -23,14 +23,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 0,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 425853.53,
-          "northing_m": 6059790.26,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.42,
+          "northing_m": 2213045.29,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.69,
@@ -44,7 +44,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -54,9 +54,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.85,
-            54.68,
-            5.0
+            73.79,
+            20.01,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -67,15 +67,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8512,
-          54.6808,
-          5.0
+          73.79,
+          20.01005,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0001",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0001",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -83,14 +83,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 1,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 425932.35,
-          "northing_m": 6059878.01,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.46,
+          "northing_m": 2213050.82,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.4,
@@ -104,7 +104,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -114,9 +114,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8512,
-            54.6808,
-            5.0
+            73.79,
+            20.01005,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -127,15 +127,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8524,
-          54.6816,
-          5.0
+          73.79,
+          20.0101,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0002",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0002",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -143,14 +143,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 2,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426011.17,
-          "northing_m": 6059965.76,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.5,
+          "northing_m": 2213056.35,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.44,
@@ -164,7 +164,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -174,9 +174,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8524,
-            54.6816,
-            5.0
+            73.79,
+            20.0101,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -187,15 +187,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8536,
-          54.6824,
-          5.0
+          73.79,
+          20.01015,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0003",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0003",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -203,14 +203,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 3,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426089.99,
-          "northing_m": 6060053.5,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.54,
+          "northing_m": 2213061.89,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.37,
@@ -224,7 +224,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -234,9 +234,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8536,
-            54.6824,
-            5.0
+            73.79,
+            20.01015,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -247,15 +247,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8548,
-          54.6832,
-          5.0
+          73.79,
+          20.0102,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0004",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0004",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -263,14 +263,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 4,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426168.81,
-          "northing_m": 6060141.25,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.58,
+          "northing_m": 2213067.42,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.87,
@@ -284,7 +284,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -294,9 +294,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8548,
-            54.6832,
-            5.0
+            73.79,
+            20.0102,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -307,15 +307,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.856,
-          54.684,
-          5.0
+          73.79,
+          20.01025,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0005",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0005",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -323,14 +323,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 5,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426247.62,
-          "northing_m": 6060229.01,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.62,
+          "northing_m": 2213072.95,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.57,
@@ -344,7 +344,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -354,9 +354,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.856,
-            54.684,
-            5.0
+            73.79,
+            20.01025,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -367,15 +367,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8572,
-          54.6848,
-          5.0
+          73.79,
+          20.0103,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0006",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0006",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -383,14 +383,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 6,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426326.43,
-          "northing_m": 6060316.76,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.66,
+          "northing_m": 2213078.49,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.47,
@@ -404,7 +404,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -414,9 +414,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8572,
-            54.6848,
-            5.0
+            73.79,
+            20.0103,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -427,15 +427,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8584,
-          54.6856,
-          5.0
+          73.79,
+          20.01035,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0007",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0007",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -443,14 +443,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 7,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426405.23,
-          "northing_m": 6060404.51,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.7,
+          "northing_m": 2213084.02,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.58,
@@ -464,7 +464,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -474,9 +474,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8584,
-            54.6856,
-            5.0
+            73.79,
+            20.01035,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -487,15 +487,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8596,
-          54.6864,
-          5.0
+          73.79,
+          20.0104,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0008",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0008",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -503,14 +503,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 8,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426484.03,
-          "northing_m": 6060492.27,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.74,
+          "northing_m": 2213089.56,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.63,
@@ -524,7 +524,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -534,9 +534,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8596,
-            54.6864,
-            5.0
+            73.79,
+            20.0104,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -547,15 +547,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8608,
-          54.6872,
-          5.0
+          73.79,
+          20.01045,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0009",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0009",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -563,14 +563,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 9,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426562.83,
-          "northing_m": 6060580.03,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.78,
+          "northing_m": 2213095.09,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.47,
@@ -584,7 +584,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -594,9 +594,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8608,
-            54.6872,
-            5.0
+            73.79,
+            20.01045,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -607,15 +607,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.862,
-          54.688,
-          5.0
+          73.79,
+          20.0105,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0010",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0010",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -623,14 +623,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 10,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426641.63,
-          "northing_m": 6060667.78,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.82,
+          "northing_m": 2213100.62,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.45,
@@ -644,7 +644,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -654,9 +654,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.862,
-            54.688,
-            5.0
+            73.79,
+            20.0105,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -667,15 +667,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8632,
-          54.6888,
-          5.0
+          73.79,
+          20.01055,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0011",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0011",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -683,14 +683,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 11,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426720.42,
-          "northing_m": 6060755.54,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.86,
+          "northing_m": 2213106.16,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.43,
@@ -704,7 +704,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -714,9 +714,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8632,
-            54.6888,
-            5.0
+            73.79,
+            20.01055,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -727,15 +727,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8644,
-          54.6896,
-          5.0
+          73.79,
+          20.0106,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0012",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0012",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -743,14 +743,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 12,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426799.21,
-          "northing_m": 6060843.3,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.9,
+          "northing_m": 2213111.69,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.65,
@@ -764,7 +764,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -774,9 +774,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8644,
-            54.6896,
-            5.0
+            73.79,
+            20.0106,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -787,15 +787,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8656,
-          54.6904,
-          5.0
+          73.79,
+          20.01065,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0013",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0013",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -803,14 +803,14 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 13,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426878.0,
-          "northing_m": 6060931.07,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373428.94,
+          "northing_m": 2213117.23,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 0.05,
         "pdop": 1.39,
@@ -824,7 +824,7 @@
           "passed": true,
           "violation_type": null,
           "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "explanation": "GIS Verified: Tractor tracking within crop row tolerance (XTE=0.0 cm)."
         },
         "ml_classification": {
           "is_spoofed": false,
@@ -834,9 +834,9 @@
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8656,
-            54.6904,
-            5.0
+            73.79,
+            20.01065,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -847,15 +847,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8668,
-          54.6912,
-          5.0
+          73.790028,
+          20.0107,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0014",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0014",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -863,40 +863,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 14,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 426956.78,
-          "northing_m": 6061018.83,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373431.9,
+          "northing_m": 2213122.74,
+          "epsg": "EPSG:32643"
         },
-        "estimated_accuracy_m": 0.05,
-        "pdop": 1.5,
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.6,
         "satellite_count": 10,
-        "cn0_dbhz": 43.8,
-        "correction_status": "RTK_FIXED_AUTHENTIC",
-        "authentication_status": "OSNMA_VERIFIED",
-        "integrity_status": "VERIFIED_AUTHENTIC",
-        "independent_sensor_validated": true,
+        "cn0_dbhz": 44.4,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
         "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
-          "is_spoofed": false,
-          "predicted_attack_type": "AUTHENTIC",
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8668,
-            54.6912,
-            5.0
+            73.790002,
+            20.0107,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -907,15 +907,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.868,
-          54.692,
-          5.0
+          73.790028,
+          20.01075,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0015",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0015",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -923,40 +923,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 15,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 427035.56,
-          "northing_m": 6061106.6,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373431.94,
+          "northing_m": 2213128.27,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.03,
+        "pdop": 1.72,
         "satellite_count": 10,
-        "cn0_dbhz": 47.48,
+        "cn0_dbhz": 43.72,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.868,
-            54.692,
-            5.0
+            73.790002,
+            20.01075,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -967,15 +967,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.8852622,
-          54.6971822,
-          5.0
+          73.790028,
+          20.0108,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0016",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0016",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -983,1180 +983,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 16,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 428157.33,
-          "northing_m": 6061665.4,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.35,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.51,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.869204,
-            54.692804,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9024711,
-          54.7023289,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0017",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 17,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 429275.32,
-          "northing_m": 6062220.58,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.26,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.05,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.870408,
-            54.693608,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9196267,
-          54.70744,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0018",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 18,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 430389.53,
-          "northing_m": 6062772.12,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.94,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.59,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.871612,
-            54.694412,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9367289,
-          54.7125156,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0019",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 19,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 431499.97,
-          "northing_m": 6063320.05,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.88,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.52,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.872816,
-            54.695216,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9537778,
-          54.7175556,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0020",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 20,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 432606.65,
-          "northing_m": 6063864.33,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.72,
-        "satellite_count": 10,
-        "cn0_dbhz": 50.59,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.87402,
-            54.69602,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9707733,
-          54.72256,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0021",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 21,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 433709.55,
-          "northing_m": 6064404.97,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.14,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.29,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.875224,
-            54.696824,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.9877156,
-          54.7275289,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0022",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 22,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 434808.71,
-          "northing_m": 6064941.98,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.18,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.87,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.876428,
-            54.697628,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.0046044,
-          54.7324622,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0023",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 23,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 435904.1,
-          "northing_m": 6065475.34,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.25,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.14,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.877632,
-            54.698432,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.02144,
-          54.73736,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0024",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 24,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 436995.75,
-          "northing_m": 6066005.06,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.99,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.53,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.878836,
-            54.699236,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.0382222,
-          54.7422222,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0025",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 25,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 438083.65,
-          "northing_m": 6066531.14,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.72,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.73,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.88004,
-            54.70004,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.0549511,
-          54.7470489,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0026",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 26,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 439167.81,
-          "northing_m": 6067053.57,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.35,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.72,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.881244,
-            54.700844,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.0716267,
-          54.75184,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0027",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 27,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 440248.23,
-          "northing_m": 6067572.34,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.61,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.78,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.882448,
-            54.701648,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.0882489,
-          54.7565956,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0028",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 28,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 441324.91,
-          "northing_m": 6068087.46,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.86,
-        "satellite_count": 10,
-        "cn0_dbhz": 49.18,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.883652,
-            54.702452,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.1048178,
-          54.7613156,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0029",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 29,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 442397.86,
-          "northing_m": 6068598.92,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.35,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.4,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": true,
-          "violation_type": null,
-          "distance_from_valid_corridor_m": 0.0,
-          "explanation": "GIS Verified: Vessel position is inside authorized Baltic Sea maritime shipping corridor."
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.884856,
-            54.703256,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.1213333,
-          54.766,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0030",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 30,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 443467.08,
-          "northing_m": 6069106.72,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 1.77,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.71,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 1023.3,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.1213, 54.7660] intersects terrestrial landmass/airport runway (1.0 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.88606,
-            54.70406,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.1377956,
-          54.7706489,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0031",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 31,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 444532.59,
-          "northing_m": 6069610.86,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.28,
-        "satellite_count": 10,
-        "cn0_dbhz": 47.28,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 2269.6,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.1378, 54.7706] intersects terrestrial landmass/airport runway (2.3 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.887264,
-            54.704864,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.1542044,
-          54.7752622,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0032",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 32,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 445594.37,
-          "northing_m": 6070111.34,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.18,
-        "satellite_count": 10,
-        "cn0_dbhz": 49.13,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 3510.7,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.1542, 54.7753] intersects terrestrial landmass/airport runway (3.5 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.888468,
-            54.705668,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.17056,
-          54.77984,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0033",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 33,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 446652.44,
-          "northing_m": 6070608.15,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.26,
-        "satellite_count": 10,
-        "cn0_dbhz": 48.95,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 4746.5,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.1706, 54.7798] intersects terrestrial landmass/airport runway (4.7 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.889672,
-            54.706472,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.1868622,
-          54.7843822,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0034",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 34,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 447706.79,
-          "northing_m": 6071101.28,
-          "epsg": "EPSG:32634"
-        },
-        "estimated_accuracy_m": 1.25,
-        "pdop": 2.34,
-        "satellite_count": 10,
-        "cn0_dbhz": 50.24,
-        "correction_status": "RTK_DEGRADED_SPOOFED",
-        "authentication_status": "OSNMA_FAILED",
-        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
-        "independent_sensor_validated": false,
-        "gis_topology_check": {
-          "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 5977.1,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.1869, 54.7844] intersects terrestrial landmass/airport runway (6.0 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
-        },
-        "ml_classification": {
-          "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
-          "confidence_score": 0.985
-        },
-        "mitigated_recovery_geometry": {
-          "type": "Point",
-          "coordinates": [
-            19.890876,
-            54.707276,
-            5.0
-          ],
-          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.2031111,
-          54.7888889,
-          5.0
-        ]
-      },
-      "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0035",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
-        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
-        "constellations_tracked": [
-          "GPS",
-          "Galileo",
-          "GLONASS",
-          "NavIC"
-        ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 35,
-        "crs_epsg": "EPSG:4326",
-        "utm_projection": {
-          "zone": "34N",
-          "easting_m": 448757.44,
-          "northing_m": 6071590.76,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373431.98,
+          "northing_m": 2213133.81,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
         "pdop": 1.96,
         "satellite_count": 10,
-        "cn0_dbhz": 49.01,
+        "cn0_dbhz": 43.74,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 7202.4,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2031, 54.7889] intersects terrestrial landmass/airport runway (7.2 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.89208,
-            54.70808,
-            5.0
+            73.790002,
+            20.0108,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2167,15 +1027,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2193067,
-          54.79336,
-          5.0
+          73.790028,
+          20.01085,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0036",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0017",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2183,40 +1043,340 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 36,
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 17,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 449804.39,
-          "northing_m": 6072076.55,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.02,
+          "northing_m": 2213139.34,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.9,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.22,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01085,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0109,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0018",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 18,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.06,
+          "northing_m": 2213144.88,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.66,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.7,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0109,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01095,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0019",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 19,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.1,
+          "northing_m": 2213150.41,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.61,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.64,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01095,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.011,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0020",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 20,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.14,
+          "northing_m": 2213155.94,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.49,
+        "satellite_count": 10,
+        "cn0_dbhz": 46.48,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.011,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01105,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0021",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 21,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.18,
+          "northing_m": 2213161.48,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.81,
+        "satellite_count": 10,
+        "cn0_dbhz": 43.55,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01105,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0111,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0022",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 22,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.22,
+          "northing_m": 2213167.01,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
         "pdop": 1.84,
         "satellite_count": 10,
-        "cn0_dbhz": 47.84,
+        "cn0_dbhz": 44.95,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 8422.5,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2193, 54.7934] intersects terrestrial landmass/airport runway (8.4 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.893284,
-            54.708884,
-            5.0
+            73.790002,
+            20.0111,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2227,15 +1387,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2354489,
-          54.7977956,
-          5.0
+          73.790028,
+          20.01115,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0037",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0023",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2243,40 +1403,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 37,
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 23,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 450847.63,
-          "northing_m": 6072558.67,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.26,
+          "northing_m": 2213172.54,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.8,
+        "pdop": 1.89,
         "satellite_count": 10,
-        "cn0_dbhz": 47.53,
+        "cn0_dbhz": 43.41,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 9647.9,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2354, 54.7978] intersects terrestrial landmass/airport runway (9.6 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.894488,
-            54.709688,
-            5.0
+            73.790002,
+            20.01115,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2287,15 +1447,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2515378,
-          54.8021956,
-          5.0
+          73.790028,
+          20.0112,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0038",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0024",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2303,40 +1463,700 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
-        "epoch_index": 38,
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 24,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 451887.18,
-          "northing_m": 6073037.11,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.3,
+          "northing_m": 2213178.08,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.7,
+        "satellite_count": 10,
+        "cn0_dbhz": 43.76,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0112,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01125,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0025",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 25,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.34,
+          "northing_m": 2213183.61,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.49,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.83,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01125,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0113,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0026",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 26,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.38,
+          "northing_m": 2213189.15,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.97,
+        "satellite_count": 10,
+        "cn0_dbhz": 43.93,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0113,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01135,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0027",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 27,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.42,
+          "northing_m": 2213194.68,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.41,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.87,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01135,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0114,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0028",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 28,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.46,
+          "northing_m": 2213200.21,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.6,
+        "satellite_count": 10,
+        "cn0_dbhz": 45.22,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0114,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01145,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0029",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 29,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.5,
+          "northing_m": 2213205.75,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.96,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.53,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01145,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0115,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0030",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 30,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.54,
+          "northing_m": 2213211.28,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.53,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.81,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0115,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01155,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0031",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 31,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.58,
+          "northing_m": 2213216.82,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.91,
+        "satellite_count": 10,
+        "cn0_dbhz": 43.54,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01155,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0116,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0032",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 32,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.62,
+          "northing_m": 2213222.35,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.84,
+        "satellite_count": 10,
+        "cn0_dbhz": 45.18,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0116,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01165,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0033",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 33,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.66,
+          "northing_m": 2213227.88,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.9,
+        "satellite_count": 10,
+        "cn0_dbhz": 45.02,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01165,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0117,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0034",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 34,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.7,
+          "northing_m": 2213233.42,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.96,
+        "satellite_count": 10,
+        "cn0_dbhz": 46.17,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0117,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01175,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0035",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 35,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.74,
+          "northing_m": 2213238.95,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
         "pdop": 1.67,
         "satellite_count": 10,
-        "cn0_dbhz": 48.8,
+        "cn0_dbhz": 45.07,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 10906.9,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2515, 54.8022] intersects terrestrial landmass/airport runway (10.9 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.895692,
-            54.710492,
-            5.0
+            73.790002,
+            20.01175,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2347,15 +2167,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2675733,
-          54.80656,
-          5.0
+          73.790028,
+          20.0118,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0039",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0036",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2363,40 +2183,220 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 36,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.78,
+          "northing_m": 2213244.49,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.58,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.04,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0118,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01185,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0037",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 37,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.82,
+          "northing_m": 2213250.02,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.55,
+        "satellite_count": 10,
+        "cn0_dbhz": 43.76,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.01185,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.0119,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0038",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
+        "epoch_index": 38,
+        "crs_epsg": "EPSG:4326",
+        "utm_projection": {
+          "zone": "43N",
+          "easting_m": 373432.86,
+          "northing_m": 2213255.55,
+          "epsg": "EPSG:32643"
+        },
+        "estimated_accuracy_m": 1.25,
+        "pdop": 1.46,
+        "satellite_count": 10,
+        "cn0_dbhz": 44.89,
+        "correction_status": "RTK_DEGRADED_SPOOFED",
+        "authentication_status": "OSNMA_FAILED",
+        "integrity_status": "SPOOFING_DETECTED_MITIGATED",
+        "independent_sensor_validated": false,
+        "gis_topology_check": {
+          "passed": false,
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
+        },
+        "ml_classification": {
+          "is_spoofed": true,
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
+          "confidence_score": 0.985
+        },
+        "mitigated_recovery_geometry": {
+          "type": "Point",
+          "coordinates": [
+            73.790002,
+            20.0119,
+            580.0
+          ],
+          "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.790028,
+          20.01195,
+          580.0
+        ]
+      },
+      "properties": {
+        "observation_id": "obs_precision_ag_tractor_0039",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
+        "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
+        "constellations_tracked": [
+          "GPS",
+          "Galileo",
+          "GLONASS",
+          "NavIC"
+        ],
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 39,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 452923.03,
-          "northing_m": 6073511.86,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.9,
+          "northing_m": 2213261.09,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.87,
+        "pdop": 1.6,
         "satellite_count": 10,
-        "cn0_dbhz": 47.95,
+        "cn0_dbhz": 44.13,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 12189.6,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2676, 54.8066] intersects terrestrial landmass/airport runway (12.2 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.896896,
-            54.711296,
-            5.0
+            73.790002,
+            20.01195,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2407,15 +2407,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2835556,
-          54.8108889,
-          5.0
+          73.790028,
+          20.012,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0040",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0040",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2423,40 +2423,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 40,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 453955.21,
-          "northing_m": 6073982.93,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.94,
+          "northing_m": 2213266.62,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.8,
+        "pdop": 1.55,
         "satellite_count": 10,
-        "cn0_dbhz": 48.43,
+        "cn0_dbhz": 44.56,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 13487.7,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2836, 54.8109] intersects terrestrial landmass/airport runway (13.5 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.8981,
-            54.7121,
-            5.0
+            73.790002,
+            20.012,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2467,15 +2467,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.2994844,
-          54.8151822,
-          5.0
+          73.790028,
+          20.01205,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0041",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0041",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2483,40 +2483,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 41,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 454983.68,
-          "northing_m": 6074450.31,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373432.98,
+          "northing_m": 2213272.16,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.17,
+        "pdop": 1.83,
         "satellite_count": 10,
-        "cn0_dbhz": 49.36,
+        "cn0_dbhz": 45.39,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 14795.7,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.2995, 54.8152] intersects terrestrial landmass/airport runway (14.8 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.899304,
-            54.712904,
-            5.0
+            73.790002,
+            20.01205,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2527,15 +2527,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.31536,
-          54.81944,
-          5.0
+          73.790028,
+          20.0121,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0042",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0042",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2543,40 +2543,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 42,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 456008.49,
-          "northing_m": 6074914.01,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.02,
+          "northing_m": 2213277.69,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.18,
+        "pdop": 1.84,
         "satellite_count": 10,
-        "cn0_dbhz": 47.79,
+        "cn0_dbhz": 43.99,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 16109.9,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3154, 54.8194] intersects terrestrial landmass/airport runway (16.1 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.900508,
-            54.713708,
-            5.0
+            73.790002,
+            20.0121,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2587,15 +2587,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.3311822,
-          54.8236622,
-          5.0
+          73.790028,
+          20.01215,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0043",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0043",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2603,40 +2603,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 43,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 457029.61,
-          "northing_m": 6075374.02,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.06,
+          "northing_m": 2213283.22,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.16,
+        "pdop": 1.82,
         "satellite_count": 10,
-        "cn0_dbhz": 49.4,
+        "cn0_dbhz": 45.42,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 17427.8,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3312, 54.8237] intersects terrestrial landmass/airport runway (17.4 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.901712,
-            54.714512,
-            5.0
+            73.790002,
+            20.01215,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2647,15 +2647,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.3469511,
-          54.8278489,
-          5.0
+          73.790028,
+          20.0122,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0044",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0044",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2663,40 +2663,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 44,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 458047.06,
-          "northing_m": 6075830.33,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.1,
+          "northing_m": 2213288.76,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.31,
+        "pdop": 1.93,
         "satellite_count": 10,
-        "cn0_dbhz": 49.49,
+        "cn0_dbhz": 45.5,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 18747.4,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3470, 54.8278] intersects terrestrial landmass/airport runway (18.7 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.902916,
-            54.715316,
-            5.0
+            73.790002,
+            20.0122,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2707,15 +2707,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.3626667,
-          54.832,
-          5.0
+          73.790028,
+          20.01225,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0045",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0045",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2723,40 +2723,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 45,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 459060.84,
-          "northing_m": 6076282.94,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.14,
+          "northing_m": 2213294.29,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.71,
+        "pdop": 1.48,
         "satellite_count": 10,
-        "cn0_dbhz": 48.85,
+        "cn0_dbhz": 44.93,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 20067.3,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3627, 54.8320] intersects terrestrial landmass/airport runway (20.1 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.90412,
-            54.71612,
-            5.0
+            73.790002,
+            20.01225,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2767,15 +2767,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.3783289,
-          54.8361156,
-          5.0
+          73.790028,
+          20.0123,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0046",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0046",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2783,40 +2783,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 46,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 460070.95,
-          "northing_m": 6076731.87,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.18,
+          "northing_m": 2213299.83,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.14,
+        "pdop": 1.81,
         "satellite_count": 10,
-        "cn0_dbhz": 47.89,
+        "cn0_dbhz": 44.08,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 21386.6,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3783, 54.8361] intersects terrestrial landmass/airport runway (21.4 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.905324,
-            54.716924,
-            5.0
+            73.790002,
+            20.0123,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2827,15 +2827,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.3939378,
-          54.8401956,
-          5.0
+          73.790028,
+          20.01235,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0047",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0047",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2843,40 +2843,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 47,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 461077.4,
-          "northing_m": 6077177.08,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.22,
+          "northing_m": 2213305.36,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.32,
+        "pdop": 1.94,
         "satellite_count": 10,
-        "cn0_dbhz": 49.98,
+        "cn0_dbhz": 45.94,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 22704.5,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.3939, 54.8402] intersects terrestrial landmass/airport runway (22.7 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.906528,
-            54.717728,
-            5.0
+            73.790002,
+            20.01235,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2887,15 +2887,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.4094933,
-          54.84424,
-          5.0
+          73.790028,
+          20.0124,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0048",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0048",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2903,40 +2903,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 48,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 462080.19,
-          "northing_m": 6077618.59,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.26,
+          "northing_m": 2213310.89,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.24,
+        "pdop": 1.88,
         "satellite_count": 10,
-        "cn0_dbhz": 48.56,
+        "cn0_dbhz": 44.68,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 24020.2,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4095, 54.8442] intersects terrestrial landmass/airport runway (24.0 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.907732,
-            54.718532,
-            5.0
+            73.790002,
+            20.0124,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -2947,15 +2947,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.4249956,
-          54.8482489,
-          5.0
+          73.790028,
+          20.01245,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0049",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0049",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -2963,40 +2963,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 49,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 463079.33,
-          "northing_m": 6078056.4,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.3,
+          "northing_m": 2213316.43,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.27,
+        "pdop": 1.9,
         "satellite_count": 10,
-        "cn0_dbhz": 49.77,
+        "cn0_dbhz": 45.75,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 25333.5,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4250, 54.8482] intersects terrestrial landmass/airport runway (25.3 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.908936,
-            54.719336,
-            5.0
+            73.790002,
+            20.01245,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3007,15 +3007,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.4404444,
-          54.8522222,
-          5.0
+          73.790028,
+          20.0125,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0050",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0050",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3023,40 +3023,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 50,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 464074.81,
-          "northing_m": 6078490.5,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.34,
+          "northing_m": 2213321.96,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.16,
+        "pdop": 1.82,
         "satellite_count": 10,
-        "cn0_dbhz": 49.35,
+        "cn0_dbhz": 45.37,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 26643.7,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4404, 54.8522] intersects terrestrial landmass/airport runway (26.6 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.91014,
-            54.72014,
-            5.0
+            73.790002,
+            20.0125,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3067,15 +3067,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.45584,
-          54.85616,
-          5.0
+          73.790028,
+          20.01255,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0051",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0051",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3083,40 +3083,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 51,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 465066.65,
-          "northing_m": 6078920.89,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.38,
+          "northing_m": 2213327.5,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.86,
+        "pdop": 1.59,
         "satellite_count": 10,
-        "cn0_dbhz": 48.64,
+        "cn0_dbhz": 44.75,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 27950.8,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4558, 54.8562] intersects terrestrial landmass/airport runway (28.0 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.911344,
-            54.720944,
-            5.0
+            73.790002,
+            20.01255,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3127,15 +3127,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.4711822,
-          54.8600622,
-          5.0
+          73.790028,
+          20.0126,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0052",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0052",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3143,40 +3143,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 52,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 466054.83,
-          "northing_m": 6079347.56,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.42,
+          "northing_m": 2213333.03,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.75,
+        "pdop": 1.51,
         "satellite_count": 10,
-        "cn0_dbhz": 48.41,
+        "cn0_dbhz": 44.55,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 29254.3,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4712, 54.8601] intersects terrestrial landmass/airport runway (29.3 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.912548,
-            54.721748,
-            5.0
+            73.790002,
+            20.0126,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3187,15 +3187,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.4864711,
-          54.8639289,
-          5.0
+          73.790028,
+          20.01265,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0053",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0053",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3203,40 +3203,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 53,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 467039.38,
-          "northing_m": 6079770.53,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.46,
+          "northing_m": 2213338.56,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.8,
+        "pdop": 1.55,
         "satellite_count": 10,
-        "cn0_dbhz": 48.27,
+        "cn0_dbhz": 44.42,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 30554.2,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.4865, 54.8639] intersects terrestrial landmass/airport runway (30.6 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.913752,
-            54.722552,
-            5.0
+            73.790002,
+            20.01265,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3247,15 +3247,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5017067,
-          54.86776,
-          5.0
+          73.790028,
+          20.0127,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0054",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0054",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3263,40 +3263,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 54,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 468020.3,
-          "northing_m": 6080189.78,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.5,
+          "northing_m": 2213344.1,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.27,
+        "pdop": 1.9,
         "satellite_count": 10,
-        "cn0_dbhz": 47.69,
+        "cn0_dbhz": 43.9,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 31850.2,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5017, 54.8678] intersects terrestrial landmass/airport runway (31.9 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.914956,
-            54.723356,
-            5.0
+            73.790002,
+            20.0127,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3307,15 +3307,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5168889,
-          54.8715556,
-          5.0
+          73.790028,
+          20.01275,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0055",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0055",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3323,40 +3323,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 55,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 468997.57,
-          "northing_m": 6080605.31,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.54,
+          "northing_m": 2213349.63,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.03,
+        "pdop": 1.72,
         "satellite_count": 10,
-        "cn0_dbhz": 48.92,
+        "cn0_dbhz": 45.0,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 33142.1,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5169, 54.8716] intersects terrestrial landmass/airport runway (33.1 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.91616,
-            54.72416,
-            5.0
+            73.790002,
+            20.01275,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3367,15 +3367,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5320178,
-          54.8753156,
-          5.0
+          73.790028,
+          20.0128,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0056",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0056",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3383,40 +3383,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 56,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 469971.22,
-          "northing_m": 6081017.11,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.58,
+          "northing_m": 2213355.17,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.98,
+        "pdop": 1.69,
         "satellite_count": 10,
-        "cn0_dbhz": 47.75,
+        "cn0_dbhz": 43.96,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 34429.9,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5320, 54.8753] intersects terrestrial landmass/airport runway (34.4 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.917364,
-            54.724964,
-            5.0
+            73.790002,
+            20.0128,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3427,15 +3427,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5470933,
-          54.87904,
-          5.0
+          73.790028,
+          20.01285,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0057",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0057",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3443,40 +3443,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 57,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 470941.23,
-          "northing_m": 6081425.19,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.62,
+          "northing_m": 2213360.7,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.28,
+        "pdop": 1.91,
         "satellite_count": 10,
-        "cn0_dbhz": 49.5,
+        "cn0_dbhz": 45.51,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 35713.5,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5471, 54.8790] intersects terrestrial landmass/airport runway (35.7 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.918568,
-            54.725768,
-            5.0
+            73.790002,
+            20.01285,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3487,15 +3487,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5621156,
-          54.8827289,
-          5.0
+          73.790028,
+          20.0129,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0058",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0058",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3503,40 +3503,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 58,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 471907.63,
-          "northing_m": 6081829.55,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.66,
+          "northing_m": 2213366.23,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 1.95,
+        "pdop": 1.66,
         "satellite_count": 10,
-        "cn0_dbhz": 49.97,
+        "cn0_dbhz": 45.93,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 36992.8,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5621, 54.8827] intersects terrestrial landmass/airport runway (37.0 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.919772,
-            54.726572,
-            5.0
+            73.790002,
+            20.0129,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
@@ -3547,15 +3547,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5770844,
-          54.8863822,
-          5.0
+          73.790028,
+          20.01295,
+          580.0
         ]
       },
       "properties": {
-        "observation_id": "obs_baltic_maritime_c4ads_0059",
-        "scenario_id": "baltic_maritime_c4ads",
-        "target_platform": "Commercial Oil Tanker (ECDIS + Dual-Freq RTK)",
+        "observation_id": "obs_precision_ag_tractor_0059",
+        "scenario_id": "precision_ag_tractor",
+        "target_platform": "Autonomous RTK Weeding Tractor (Autosteer)",
         "receiver_type": "Multi-Constellation Dual-Freq RTK + MEMS IMU",
         "constellations_tracked": [
           "GPS",
@@ -3563,40 +3563,40 @@
           "GLONASS",
           "NavIC"
         ],
-        "timestamp_utc": "2026-10-21T04:15:17.781578+00:00",
+        "timestamp_utc": "2026-10-21T05:08:56.892092+00:00",
         "epoch_index": 59,
         "crs_epsg": "EPSG:4326",
         "utm_projection": {
-          "zone": "34N",
-          "easting_m": 472870.4,
-          "northing_m": 6082230.17,
-          "epsg": "EPSG:32634"
+          "zone": "43N",
+          "easting_m": 373433.7,
+          "northing_m": 2213371.77,
+          "epsg": "EPSG:32643"
         },
         "estimated_accuracy_m": 1.25,
-        "pdop": 2.32,
+        "pdop": 1.94,
         "satellite_count": 10,
-        "cn0_dbhz": 47.78,
+        "cn0_dbhz": 43.98,
         "correction_status": "RTK_DEGRADED_SPOOFED",
         "authentication_status": "OSNMA_FAILED",
         "integrity_status": "SPOOFING_DETECTED_MITIGATED",
         "independent_sensor_validated": false,
         "gis_topology_check": {
           "passed": false,
-          "violation_type": "MARITIME_VESSEL_ON_LAND_RUNWAY",
-          "distance_from_valid_corridor_m": 38267.6,
-          "explanation": "CRITICAL GIS CONFLICT: Maritime oil tanker reported position [20.5771, 54.8864] intersects terrestrial landmass/airport runway (38.3 km from shipping lane). Physical maritime vessel cannot navigate on airport tarmac!"
+          "violation_type": "AGRICULTURE_CROP_ROW_COLLISION_RISK",
+          "distance_from_valid_corridor_m": 2.93,
+          "explanation": "CROP ROW COLLISION RISK: Tractor cross-track error is 2.93m (threshold 0.25m). Autosteer has departed the inter-row centerline; herbicide spraying will destroy high-value vines!"
         },
         "ml_classification": {
           "is_spoofed": true,
-          "predicted_attack_type": "INTERMEDIATE_SYNC",
+          "predicted_attack_type": "SOPHISTICATED_RECEIVER_AWARE",
           "confidence_score": 0.985
         },
         "mitigated_recovery_geometry": {
           "type": "Point",
           "coordinates": [
-            19.920976,
-            54.727376,
-            5.0
+            73.790002,
+            20.01295,
+            580.0
           ],
           "recovery_method": "TIGHTLY_COUPLED_INS_EKF_DEAD_RECKONING"
         }
