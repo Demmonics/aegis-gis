@@ -1,91 +1,80 @@
 import React from 'react';
-import { Shield, Navigation, BarChart3, Database, MessageSquareCode, FileText, Film, LogOut, CheckCircle, Cpu, Zap } from 'lucide-react';
+import { SlidersHorizontal, LogOut } from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab, onLogout, user, onOpenVivaPanel }) {
   const tabs = [
-    { id: 'command', label: 'Tactical GIS & RF Command', icon: Navigation },
-    { id: 'cinematic', label: '🌐 Global Simulations (4 Domains)', icon: Film },
-    { id: 'diagnostics', label: 'ML & Table 2 Diagnostics', icon: BarChart3 },
-    { id: 'gis', label: 'Section 8.4 GIS & PyQGIS', icon: Database },
-    { id: 'copilot', label: 'Qwen-4B RAG Copilot', icon: MessageSquareCode },
-    { id: 'paper', label: 'KJSCE Paper & Poster Matrix', icon: FileText },
+    { id: 'command', label: 'Tactical Cartography & RF Analysis' },
+    { id: 'cinematic', label: 'Global Incident Simulations' },
+    { id: 'diagnostics', label: 'Model Diagnostics (Table 2)' },
+    { id: 'gis', label: 'GIS Topology & PyQGIS (Sec 8.4)' },
+    { id: 'paper', label: 'Research Paper & Poster Matrix' },
+    { id: 'copilot', label: 'Forensic Copilot' },
   ];
 
   return (
-    <header className="bg-slate-950 border-b border-cyan-500/30 sticky top-0 z-50 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-      {/* Top Banner with Brand and Telemetry Pills */}
-      <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 bg-slate-900/40">
-        <div
-          onClick={onOpenVivaPanel}
-          className="flex items-center gap-3 cursor-pointer group"
-          title="Click to summon Professor Viva God Mode (or press Ctrl+Shift+P)"
-        >
-          <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition">
-            <Shield className="w-5 h-5 group-hover:scale-110 transition" />
+    <header className="bg-[#fcfbf9] border-b border-[#dfdbd1] sticky top-0 z-50">
+      {/* Top Banner: Instrument Metadata and Status */}
+      <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-[#eae7de]">
+        <div>
+          <div className="flex items-baseline gap-2.5">
+            <h1 className="font-semibold text-lg text-[#191c1d] tracking-tight">
+              AEGIS-GIS
+            </h1>
+            <span className="text-xs text-[#5e6265]">
+              GNSS Spoofing Detection, Sensor Fusion & Integrity-Aware GIS Pipeline
+            </span>
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-mono font-bold text-base text-white tracking-wider group-hover:text-cyan-300 transition">AEGIS-GIS</span>
-              <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 shadow-[0_0_10px_rgba(6,182,212,0.3)]">
-                When Location Lies
-              </span>
-            </div>
-            <p className="text-[11px] text-slate-400">
-              K.J. Somaiya College of Engineering • Dept. of AI & DS • Batch B2 (Yoosha, Yash, Parth, Tanishq)
-            </p>
-          </div>
+          <p className="text-xs text-[#707477] mt-0.5">
+            Department of Artificial Intelligence & Data Science, K.J. Somaiya College of Engineering • Batch B2
+          </p>
         </div>
 
-        {/* Live System Status Telemetry Pills */}
-        <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/80 border border-emerald-500/30 text-emerald-300">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>GNSS L1 C/A Locked</span>
+        {/* Quiet Cartographic Telemetry & Expert Console Button */}
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <span className="px-2.5 py-1 rounded bg-[#f0eee7] text-[#2d3133] border border-[#dfdbd1] tabular-nums">
+            <span className="inline-block w-2 h-2 rounded-full bg-[#1d4e3e] mr-1.5 align-middle"></span>
+            GNSS L1 C/A locked
           </span>
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/80 border border-cyan-500/30 text-cyan-300">
-            <CheckCircle className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Ensemble ML: 99.93%</span>
-          </span>
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/80 border border-slate-800 text-slate-300">
-            <Cpu className="w-3.5 h-3.5 text-purple-400" />
-            <span>Qwen-4B Copilot</span>
+          <span className="px-2.5 py-1 rounded bg-[#f0eee7] text-[#2d3133] border border-[#dfdbd1] tabular-nums">
+            Ensemble: 99.93%
           </span>
           <button
             onClick={onOpenVivaPanel}
-            title="Open Professor Viva God Mode (Ctrl+Shift+P)"
-            className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-all cursor-pointer"
+            title="Open Expert View & Evaluator Console (Ctrl+Shift+P)"
+            className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#f0eee7] hover:bg-[#e6e3da] text-[#191c1d] border border-[#dfdbd1] font-medium transition-colors"
           >
-            <Zap className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
-            <span>⚡ GOD MODE</span>
+            <SlidersHorizontal className="w-3.5 h-3.5 text-[#16697a]" />
+            <span>Expert view</span>
           </button>
           <button
             onClick={onLogout}
-            title="Sign Out"
-            className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 transition-colors"
+            title="Sign Out to Evaluator Selection"
+            className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#fcfbf9] hover:bg-[#f0eee7] border border-[#dfdbd1] text-[#5e6265] hover:text-[#191c1d] transition-colors"
           >
             <LogOut className="w-3 h-3" />
-            <span className="text-[10px]">Exit</span>
+            <span>Exit</span>
           </button>
         </div>
       </div>
 
-      {/* Navigation Tabs */}
-      <div className="max-w-7xl mx-auto px-4 flex overflow-x-auto space-x-1 py-2">
+      {/* Navigation Tabs with Underline Bar & Zero Overflow Clipping */}
+      <div className="max-w-7xl mx-auto px-4 flex flex-wrap gap-1 pt-1.5 pb-0">
         {tabs.map((tab) => {
-          const Icon = tab.icon;
           const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap transition-all duration-150 ${
+              className={`px-3 py-2 text-xs font-medium transition-colors relative whitespace-nowrap ${
                 isActive
-                  ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-500/40 shadow-[0_0_12px_rgba(6,182,212,0.15)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/60 border border-transparent'
+                  ? 'text-[#191c1d] font-semibold'
+                  : 'text-[#5e6265] hover:text-[#191c1d]'
               }`}
             >
-              <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-cyan-400' : 'text-slate-500'}`} />
               <span>{tab.label}</span>
+              {isActive && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#16697a] rounded-t-sm" />
+              )}
             </button>
           );
         })}

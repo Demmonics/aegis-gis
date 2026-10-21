@@ -3,173 +3,119 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color-scheme: dark;
+  --ground: #f6f5f0;
+  --surface: #ffffff;
+  --raised: #f0eee7;
+  --active: #e6e3da;
+  --border: #dfdbd1;
+  --rule: #eae7de;
+  --control: #c8c5bc;
+  --text: #191c1d;
+  --muted: #5e6265;
+  --authentic: #1d4e3e;
+  --spoofed: #b82e2b;
+  --ekf: #16697a;
+  --warning: #854d0e;
+  
+  font-family: 'IBM Plex Sans', sans-serif;
+  color-scheme: light;
+}
+
+html, body, #root, .font-sans {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+* {
+  text-shadow: none !important; /* taste-skill-ignore */
+}
+
+code, pre, kbd, samp {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #020617;
-  color: #f8fafc;
-  overflow-x: hidden;
+  background-color: var(--ground);
+  color: var(--text);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-/* Custom Scrollbar */
+/* Tabular Numerals for instrumentation and telemetry */
+.tabular-nums,
+table,
+.metric-value,
+.coord-readout {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle survey scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: var(--ground);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--border);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--control);
 }
 
-/* Leaflet dark styling */
+/* Leaflet Cartographic Survey Styling */
 .leaflet-container {
-  background-color: #020617 !important;
+  background-color: #e5e3db !important;
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
-  font-family: inherit;
+  border-radius: 4px;
+  font-family: 'IBM Plex Sans', sans-serif !important;
 }
 
 .leaflet-popup-content-wrapper {
-  background: #0f172a !important;
-  color: #f1f5f9 !important;
-  border: 1px solid #334155 !important;
-  border-radius: 0.5rem !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  background: #ffffff !important;
+  color: #191c1d !important;
+  border: 1px solid #dfdbd1 !important;
+  border-radius: 4px !important;
 }
 
 .leaflet-popup-tip {
-  background: #0f172a !important;
+  background: #ffffff !important;
 }
 
-/* Radar pulse animation */
-@keyframes radar-pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
-  }
+/* Cartographic Map Furniture: Border Graticule Ticks */
+.map-graticule-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 800;
+  border: 2px solid #2d3133;
 }
 
-.animate-radar {
-  animation: radar-pulse 2s infinite;
+.map-graticule-tick {
+  position: absolute;
+  font-size: 11px;
+  color: #45494c;
+  background: rgba(246, 245, 240, 0.95);
+  padding: 1px 4px;
+  border: 1px solid #d5d1c7;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
-/* Cinematic RF Spoofer Waves */
-@keyframes rf-wave-expand {
-  0% {
-    transform: scale(0.2);
-    opacity: 0.9;
-    border-color: #ef4444;
-  }
-  50% {
-    opacity: 0.6;
-    border-color: #f87171;
-  }
-  100% {
-    transform: scale(3.5);
-    opacity: 0;
-    border-color: #dc2626;
-  }
+/* Plain Survey Legend */
+.survey-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #333638;
 }
 
-.animate-rf-wave {
-  animation: rf-wave-expand 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-
-.animate-rf-wave-delayed {
-  animation: rf-wave-expand 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  animation-delay: 1s;
-}
-
-/* Airport Runway Flashing Alarm */
-@keyframes runway-pulse-alarm {
-  0%, 100% {
-    fill-opacity: 0.2;
-    stroke-opacity: 0.6;
-  }
-  50% {
-    fill-opacity: 0.65;
-    stroke-opacity: 1;
-  }
-}
-
-.animate-runway-alarm {
-  animation: runway-pulse-alarm 1s ease-in-out infinite;
-}
-
-/* Glitch / Alarm Glow Banner */
-@keyframes alert-glow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(239, 68, 68, 0.5), inset 0 0 15px rgba(239, 68, 68, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 35px rgba(239, 68, 68, 0.9), inset 0 0 25px rgba(239, 68, 68, 0.6);
-  }
-}
-
-.animate-alert-banner {
-  animation: alert-glow 1.2s ease-in-out infinite;
-}
-
-/* Cyberpunk / Palantir HUD Aesthetic Utilities */
-.neon-glow-cyan {
-  box-shadow: 0 0 18px rgba(6, 182, 212, 0.45), inset 0 0 8px rgba(6, 182, 212, 0.2);
-}
-
-.neon-glow-emerald {
-  box-shadow: 0 0 18px rgba(16, 185, 129, 0.45), inset 0 0 8px rgba(16, 185, 129, 0.2);
-}
-
-.neon-glow-red {
-  box-shadow: 0 0 24px rgba(239, 68, 68, 0.75), inset 0 0 12px rgba(239, 68, 68, 0.4);
-}
-
-.neon-glow-purple {
-  box-shadow: 0 0 18px rgba(168, 85, 247, 0.45), inset 0 0 8px rgba(168, 85, 247, 0.2);
-}
-
-/* Terminal Caret Blink */
-@keyframes terminal-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.animate-terminal-caret {
-  animation: terminal-blink 0.8s step-end infinite;
-}
-
-/* Cyber Matrix Grid Background Pattern */
-.bg-cyber-grid {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(14, 165, 233, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
-}
-
-/* Radar Scan Line */
-@keyframes radar-beam-sweep {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.animate-radar-sweep {
-  animation: radar-beam-sweep 4s linear infinite;
+.survey-legend-swatch {
+  width: 18px;
+  height: 3px;
+  border-radius: 1px;
 }

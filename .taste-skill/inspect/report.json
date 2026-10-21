@@ -1,0 +1,1377 @@
+{
+ "url": "http://localhost:5173",
+ "at": "2026-10-21T04:12:56.964Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.8,
+    0.87
+   ],
+   "motion": {
+    "elements": 29,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 29,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 915,
+     "screens": 1,
+     "words": 347,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "567",
+      "568",
+      "567",
+      "568",
+      "567",
+      "568",
+      "566",
+      "569"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 18,
+     "vw": 1.3,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "lines": 1,
+     "size": 18,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      },
+      {
+       "family": "Lucida Console",
+       "share": 0,
+       "mono": true
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      18,
+      22
+     ],
+     "sizeCount": 4,
+     "notLoaded": [
+      "Lucida Console"
+     ],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6
+     },
+     "measureChars": 89,
+     "max": {
+      "size": 22,
+      "vw": 1.5,
+      "font": "Lucida Console",
+      "text": "+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "Lucida Console"
+     ],
+     "monoSamples": [
+      "+",
+      "−"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.15,
+     "smallText": 49
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f5f0",
+     "bodyBgHsl": {
+      "h": 50,
+      "s": 0.25,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6f5f0",
+       "top": 0,
+       "hsl": {
+        "h": 50,
+        "s": 0.25,
+        "l": 0.95
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5e6265",
+       "share": 0.43
+      },
+      {
+       "color": "#191c1d",
+       "share": 0.24
+      },
+      {
+       "color": "#707477",
+       "share": 0.15
+      },
+      {
+       "color": "#2d3133",
+       "share": 0.07
+      },
+      {
+       "color": "#333638",
+       "share": 0.04
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "header.bg-[#fcfbf9].border-b 1440px",
+      "div.max-w-7xl.mx-auto 1280px",
+      "div.flex.items-baseline 487px",
+      "div.flex.items-baseline 487px",
+      "footer.border-t.border-[#dfdbd1] 1440px"
+     ],
+     "outlinedBoxes": 10,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 12,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 743
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.38
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 110,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 915,
+    "margins": {
+     "left": 96,
+     "right": 107
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "AEGIS-GIS",
+      "size": 18,
+      "top": 12,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 96,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.04,
+    "voidBox": {
+     "x": 1380,
+     "y": 120,
+     "w": 60,
+     "h": 780
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#f6f5f0",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 96,
+     "right": 107
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 18,
+     "vw": 1.3,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 3,
+    "layout": {
+     "panels": 9,
+     "firstScreen": 9,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 10,
+     "radii": [
+      [
+       4,
+       7
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 8,
+     "tabularShare": 0.88,
+     "kpiMax": 12
+    },
+    "rows": null,
+    "chartHues": 3,
+    "placeholders": [],
+    "type": {
+     "under13": 1,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      18
+     ]
+    },
+    "title": {
+     "text": "AEGIS-GIS",
+     "size": 18,
+     "top": 12
+    },
+    "colourShare": 0.007
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.97,
+    0.97
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 16,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1562,
+     "screens": 1.5,
+     "words": 360,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1136",
+      "1137",
+      "1136",
+      "1137",
+      "1135",
+      "1138",
+      "1135",
+      "1138"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 18,
+     "vw": 2.3,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "lines": 1,
+     "size": 18,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      },
+      {
+       "family": "Lucida Console",
+       "share": 0,
+       "mono": true
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      18,
+      22
+     ],
+     "sizeCount": 4,
+     "notLoaded": [
+      "Lucida Console"
+     ],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6
+     },
+     "measureChars": 89,
+     "max": {
+      "size": 22,
+      "vw": 2.9,
+      "font": "Lucida Console",
+      "text": "+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "Lucida Console"
+     ],
+     "monoSamples": [
+      "+",
+      "−"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.15,
+     "smallText": 49
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f5f0",
+     "bodyBgHsl": {
+      "h": 50,
+      "s": 0.25,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6f5f0",
+       "top": 0,
+       "hsl": {
+        "h": 50,
+        "s": 0.25,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#e5e3db",
+       "top": 373,
+       "hsl": {
+        "h": 48,
+        "s": 0.16,
+        "l": 0.88
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5e6265",
+       "share": 0.43
+      },
+      {
+       "color": "#191c1d",
+       "share": 0.24
+      },
+      {
+       "color": "#707477",
+       "share": 0.15
+      },
+      {
+       "color": "#2d3133",
+       "share": 0.07
+      },
+      {
+       "color": "#333638",
+       "share": 0.04
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "header.bg-[#fcfbf9].border-b 768px",
+      "div.max-w-7xl.mx-auto 768px",
+      "div.flex.items-baseline 710px",
+      "div.flex.items-baseline 710px",
+      "footer.border-t.border-[#dfdbd1] 768px"
+     ],
+     "outlinedBoxes": 5,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.54
+     },
+     {
+      "type": "svg",
+      "ratio": 0.1
+     },
+     {
+      "type": "img",
+      "ratio": 0.08
+     },
+     {
+      "type": "img",
+      "ratio": 0.08
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 184,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1562,
+    "margins": {
+     "left": 16,
+     "right": 29
+    },
+    "sections": [
+     {
+      "sel": "header.bg-[#fcfbf9].border-b",
+      "tag": "header",
+      "top": 0,
+      "height": 184,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "AEGIS-GIS",
+       "size": 18,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 175,
+      "textLeft": 16,
+      "textRight": 187,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "main.flex-1.p-4",
+      "tag": "main",
+      "top": 184,
+      "height": 1309,
+      "words": 161,
+      "media": 11,
+      "middle": 0,
+      "heading": null,
+      "left": 0,
+      "right": 0,
+      "textLeft": 27,
+      "textRight": 16,
+      "fullBleed": true,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "AEGIS-GIS",
+      "size": 18,
+      "top": 12,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "AUTHENTIC",
+      "side": "right",
+      "px": 16
+     }
+    ],
+    "edges": [
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#f6f5f0",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 16,
+     "right": 16
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 18,
+     "vw": 2.3,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 3,
+    "layout": {
+     "panels": 4,
+     "firstScreen": 3,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 5,
+     "radii": [
+      [
+       0,
+       3
+      ],
+      [
+       4,
+       2
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 8,
+     "tabularShare": 0.88,
+     "kpiMax": 12
+    },
+    "rows": null,
+    "chartHues": 3,
+    "placeholders": [],
+    "type": {
+     "under13": 1,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      18
+     ]
+    },
+    "title": {
+     "text": "AEGIS-GIS",
+     "size": 18,
+     "top": 12
+    },
+    "colourShare": 0.007
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.95,
+    0.89,
+    0.84
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2161,
+     "screens": 2.6,
+     "words": 338,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1136",
+      "1137",
+      "1136",
+      "1137"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 2,
+     "size": 18,
+     "vw": 4.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "lines": 2,
+     "size": 18,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Lucida Console",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.36,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.08,
+      "top": 637,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "−",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Lucida Console",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.36,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.08,
+      "top": 667,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      },
+      {
+       "family": "Lucida Console",
+       "share": 0,
+       "mono": true
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      18,
+      22
+     ],
+     "sizeCount": 4,
+     "notLoaded": [
+      "Lucida Console"
+     ],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 22,
+      "vw": 5.6,
+      "font": "Lucida Console",
+      "text": "+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "Lucida Console"
+     ],
+     "monoSamples": [
+      "+",
+      "−"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.15,
+     "smallText": 49
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f5f0",
+     "bodyBgHsl": {
+      "h": 50,
+      "s": 0.25,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6f5f0",
+       "top": 0,
+       "hsl": {
+        "h": 50,
+        "s": 0.25,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#fcfbf9",
+       "top": 0,
+       "hsl": {
+        "h": 40,
+        "s": 0.33,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#e5e3db",
+       "top": 624,
+       "hsl": {
+        "h": 48,
+        "s": 0.16,
+        "l": 0.88
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5e6265",
+       "share": 0.43
+      },
+      {
+       "color": "#191c1d",
+       "share": 0.24
+      },
+      {
+       "color": "#707477",
+       "share": 0.15
+      },
+      {
+       "color": "#2d3133",
+       "share": 0.07
+      },
+      {
+       "color": "#333638",
+       "share": 0.04
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "header.bg-[#fcfbf9].border-b 390px",
+      "div.max-w-7xl.mx-auto 390px",
+      "div.flex.items-baseline 332px",
+      "div.flex.items-baseline 332px",
+      "footer.border-t.border-[#dfdbd1] 390px"
+     ],
+     "outlinedBoxes": 10,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1615
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.31
+     },
+     {
+      "type": "img",
+      "ratio": 0.15
+     },
+     {
+      "type": "img",
+      "ratio": 0.12
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 334,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2161,
+    "margins": {
+     "left": 16,
+     "right": 22
+    },
+    "sections": [
+     {
+      "sel": "header.bg-[#fcfbf9].border-b",
+      "tag": "header",
+      "top": 0,
+      "height": 334,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "AEGIS-GIS",
+       "size": 18,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 18,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "main.flex-1.p-4",
+      "tag": "main",
+      "top": 334,
+      "height": 1726,
+      "words": 161,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "RF correlator tap response",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 27,
+      "textRight": 22,
+      "fullBleed": true,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "AEGIS-GIS",
+      "size": 18,
+      "top": 12,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": false,
+    "ground": "#f6f5f0",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 16,
+     "right": 16
+    },
+    "hero": {
+     "text": "AEGIS-GIS",
+     "words": 1,
+     "chars": 9,
+     "lines": 2,
+     "size": 18,
+     "vw": 4.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 12,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 3,
+    "layout": {
+     "panels": 9,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 10,
+     "radii": [
+      [
+       4,
+       7
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 8,
+     "tabularShare": 0.88,
+     "kpiMax": 12
+    },
+    "rows": null,
+    "chartHues": 3,
+    "placeholders": [],
+    "type": {
+     "under13": 1,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      18
+     ]
+    },
+    "title": {
+     "text": "AEGIS-GIS",
+     "size": 18,
+     "top": 12
+    },
+    "colourShare": 0.005
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (page background #f6f5f0, section #f6f5f0).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-fallback",
+   "width": 1440,
+   "message": "Typeface(s) declared but not loaded, so a fallback is rendering: Lucida Console",
+   "fix": "Fix the font URL / family name, or the screenshots you are judging are not the design.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "tiny-text",
+   "width": 1440,
+   "message": "100% of the text is under 13px.",
+   "fix": "Data and labels read at 13–14px; keep 11–12px for sublines and axis ticks.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Study\\ig\\aegis-gis\\.taste-skill\\inspect\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

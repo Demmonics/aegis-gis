@@ -3,7 +3,6 @@ import {
   AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, ReferenceLine
 } from 'recharts';
-import { Activity, Radio, Cpu, BarChart2 } from 'lucide-react';
 
 function CorrelatorOscilloscopeComponent({
   telemetryEpoch,
@@ -39,97 +38,152 @@ function CorrelatorOscilloscopeComponent({
 
   if (!telemetryEpoch) {
     return (
-      <div className="h-full flex items-center justify-center text-slate-500 font-mono text-xs">
-        Connecting RF Correlator Oscilloscope...
+      <div className="h-full flex items-center justify-center text-[#5e6265] text-xs bg-[#ffffff] border border-[#dfdbd1]">
+        Connecting RF correlator oscilloscope...
       </div>
     );
   }
 
+  const asymmetryDelta = telemetryEpoch.features_14d?.sqm_delta_asymmetry || 0;
+  const isDistorted = asymmetryDelta > 0.12;
+
   return (
     <div className="h-full flex flex-col space-y-3">
-      {/* 1. RF Correlator Peak Distortion Oscilloscope */}
-      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col shadow-lg">
-        <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-          <div className="flex items-center gap-2">
-            <Radio className="w-4 h-4 text-cyan-400 animate-pulse" />
-            <span className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-              RF Correlator Peak Triangle (I/Q Taps)
-            </span>
+      {/* 1. RF Correlator Peak Triangle (I/Q Taps) */}
+      <div className="flex-1 bg-[#ffffff] border border-[#dfdbd1] p-3 flex flex-col">
+        <div className="flex items-baseline justify-between pb-2 mb-2 border-b border-[#eae7de]">
+          <div>
+            <h3 className="text-xs font-semibold text-[#191c1d]">
+              RF correlator tap response
+            </h3>
+            <p className="text-[11px] text-[#5e6265] mt-0.5">
+              {isDistorted
+                ? `Peak asymmetry Δ=${asymmetryDelta.toFixed(3)} indicates intermediate synchronized pull-off`
+                : 'Symmetric triangular correlation peak indicates authentic signal structure'}
+            </p>
           </div>
-          <div className="flex items-center gap-3 text-[10px] font-mono">
-            <span className="text-emerald-400">● Authentic</span>
-            <span className="text-red-400">● Spoofer</span>
-            <span className="text-amber-400 font-bold">● Composite</span>
-          </div>
-        </div>
-
-        {/* Live SQM Metrics Badges */}
-        <div className="grid grid-cols-3 gap-2 mb-2 text-center text-[10px] font-mono">
-          <div className="bg-slate-950 p-1.5 rounded border border-slate-800">
-            <span className="text-slate-400 block">Peak Ratio (M_ratio)</span>
-            <span className="font-bold text-white text-xs">{taps.ratio_metric?.toFixed(3) || '1.020'}</span>
-          </div>
-          <div className="bg-slate-950 p-1.5 rounded border border-slate-800">
-            <span className="text-slate-400 block">Delta Asymmetry (M_Δ)</span>
-            <span className={`font-bold text-xs ${Math.abs(taps.delta_asymmetry || 0) > 0.15 ? 'text-red-400' : 'text-emerald-400'}`}>
-              {taps.delta_asymmetry?.toFixed(3) || '0.000'}
-            </span>
-          </div>
-          <div className="bg-slate-950 p-1.5 rounded border border-slate-800">
-            <span className="text-slate-400 block">Prompt Amplitude</span>
-            <span className="font-bold text-cyan-400 text-xs">{taps.prompt_tap?.toFixed(3) || '1.000'}</span>
+          <div className="flex items-center gap-3 text-xs">
+            <span className="text-[#1d4e3e] font-medium">Authentic</span>
+            <span className="text-[#b82e2b] font-medium">Spoofed</span>
+            <span className="text-[#16697a] font-medium">Composite</span>
           </div>
         </div>
 
-        {/* 41-Tap Oscilloscope Chart */}
-        <div className="flex-1 min-h-[140px]">
+        <div className="flex-1 min-h-[160px]">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={correlatorData} margin={{ top: 5, right: 10, left: -25, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-              <XAxis dataKey="delay" stroke="#64748b" tick={{ fontSize: 9 }} unit="τ" />
-              <YAxis stroke="#64748b" tick={{ fontSize: 9 }} domain={[0, 2.5]} />
-              <Tooltip
-                contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', fontSize: '11px', borderRadius: '6px' }}
-                formatter={(val, name) => [Number(val).toFixed(3), name]}
+              <CartesianGrid strokeDasharray="3 3" stroke="#eae7de" vertical={false} />
+              <XAxis
+                dataKey="delay"
+                tick={{ fontSize: 11, fill: '#707477' }}
+                tickFormatter={(v) => `${v.toFixed(1)}τ`}
+                stroke="#dfdbd1"
               />
-              <ReferenceLine x={-0.5} stroke="#3b82f6" strokeDasharray="2 2" label={{ value: 'E', fill: '#3b82f6', fontSize: 10 }} />
-              <ReferenceLine x={0.0} stroke="#06b6d4" strokeDasharray="2 2" label={{ value: 'P', fill: '#06b6d4', fontSize: 10 }} />
-              <ReferenceLine x={0.5} stroke="#3b82f6" strokeDasharray="2 2" label={{ value: 'L', fill: '#3b82f6', fontSize: 10 }} />
-              <Area type="monotone" dataKey="authentic" stroke="#10b981" fill="#10b981" fillOpacity={0.15} strokeWidth={1.5} name="Authentic" />
-              <Area type="monotone" dataKey="spoofer" stroke="#ef4444" fill="#ef4444" fillOpacity={0.15} strokeWidth={1.5} strokeDasharray="3 3" name="Spoofer" />
-              <Area type="monotone" dataKey="composite" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.25} strokeWidth={2} name="Composite" />
+              <YAxis
+                tick={{ fontSize: 11, fill: '#707477' }}
+                domain={[0, 1.4]}
+                stroke="#dfdbd1"
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: '#ffffff',
+                  borderColor: '#dfdbd1',
+                  borderRadius: '4px',
+                  fontSize: '11px',
+                  color: '#191c1d'
+                }}
+                formatter={(val, name) => [Number(val).toFixed(3), name === 'authentic' ? 'Authentic' : name === 'spoofer' ? 'Spoofed' : 'Composite']}
+                labelFormatter={(l) => `Code delay: ${Number(l).toFixed(2)} chips`}
+              />
+              <Area
+                type="monotone"
+                dataKey="authentic"
+                stroke="#1d4e3e"
+                strokeWidth={2}
+                fill="#1d4e3e"
+                fillOpacity={0.08}
+                isAnimationActive={false}
+              />
+              <Area
+                type="monotone"
+                dataKey="spoofer"
+                stroke="#b82e2b"
+                strokeWidth={2}
+                fill="#b82e2b"
+                fillOpacity={0.10}
+                isAnimationActive={false}
+              />
+              <Line
+                type="monotone"
+                dataKey="composite"
+                stroke="#16697a"
+                strokeWidth={2}
+                dot={false}
+                isAnimationActive={false}
+              />
             </AreaChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      {/* 2. Synchronized Telemetry Sparkline (C/N0 & EKF Innovations) */}
-      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 flex flex-col shadow-lg">
-        <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-          <div className="flex items-center gap-2">
-            <Activity className="w-4 h-4 text-emerald-400" />
-            <span className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-              Synchronized Multi-Parameter Time Series
-            </span>
+      {/* 2. Receiver RF Telemetry: Carrier-to-Noise Ratio & EKF Innovation */}
+      <div className="flex-1 bg-[#ffffff] border border-[#dfdbd1] p-3 flex flex-col">
+        <div className="flex items-baseline justify-between pb-2 mb-2 border-b border-[#eae7de]">
+          <div>
+            <h3 className="text-xs font-semibold text-[#191c1d]">
+              Carrier-to-noise ratio and filter innovation
+            </h3>
+            <p className="text-[11px] text-[#5e6265] mt-0.5">
+              C/N0 mean = {telemetryEpoch.features_14d?.cn0_mean_dbhz?.toFixed(1) || '44.0'} dB-Hz, Mahalanobis innovation = {telemetryEpoch.features_14d?.ekf_innovation_mahalanobis?.toFixed(2) || '1.00'}
+            </p>
           </div>
-          <div className="flex items-center gap-3 text-[10px] font-mono">
-            <span className="text-cyan-400">● C/N0 (dB-Hz)</span>
-            <span className="text-purple-400">● EKF Innovation (γ)</span>
-          </div>
+          <span className="text-[11px] text-[#5e6265] tabular-nums">
+            T={currentEpoch}s of 59s
+          </span>
         </div>
 
         <div className="flex-1 min-h-[130px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={timeSeriesData} margin={{ top: 5, right: 10, left: -25, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-              <XAxis dataKey="epoch" stroke="#64748b" tick={{ fontSize: 9 }} />
-              <YAxis stroke="#64748b" tick={{ fontSize: 9 }} />
-              <Tooltip
-                contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', fontSize: '11px', borderRadius: '6px' }}
+              <CartesianGrid strokeDasharray="3 3" stroke="#eae7de" vertical={false} />
+              <XAxis
+                dataKey="epoch"
+                tick={{ fontSize: 11, fill: '#707477' }}
+                stroke="#dfdbd1"
+                tickFormatter={(v) => `T${v}`}
               />
-              <ReferenceLine x={currentEpoch} stroke="#ffffff" strokeDasharray="3 3" label={{ value: `T=${currentEpoch}`, fill: '#ffffff', fontSize: 9 }} />
-              <Line type="monotone" dataKey="cn0" stroke="#06b6d4" strokeWidth={2} dot={false} name="C/N0 (dB-Hz)" />
-              <Line type="monotone" dataKey="ekf_innov" stroke="#a855f7" strokeWidth={2} dot={false} name="EKF Innovation γ" />
+              <YAxis
+                tick={{ fontSize: 11, fill: '#707477' }}
+                stroke="#dfdbd1"
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: '#ffffff',
+                  borderColor: '#dfdbd1',
+                  borderRadius: '4px',
+                  fontSize: '11px',
+                  color: '#191c1d'
+                }}
+              />
+              <ReferenceLine x={currentEpoch} stroke="#16697a" strokeDasharray="3 3" />
+              <Line
+                type="monotone"
+                dataKey="cn0"
+                name="C/N0 (dB-Hz)"
+                stroke="#1d4e3e"
+                strokeWidth={1.75}
+                dot={false}
+                isAnimationActive={false}
+              />
+              <Line
+                type="monotone"
+                dataKey="ekf_innov"
+                name="EKF innovation"
+                stroke="#16697a"
+                strokeWidth={1.75}
+                dot={false}
+                isAnimationActive={false}
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>

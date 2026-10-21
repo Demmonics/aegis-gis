@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Cpu, CheckCircle2, AlertOctagon, TrendingUp, Layers, Table, Info } from 'lucide-react';
 import { fetchDiagnostics } from '../services/api';
 
 export default function DiagnosticsView() {
@@ -21,8 +20,8 @@ export default function DiagnosticsView() {
 
   if (loading || !data) {
     return (
-      <div className="flex items-center justify-center h-96 text-slate-400 font-mono text-sm">
-        Loading Model Architecture & Table 2 Diagnostics...
+      <div className="flex items-center justify-center h-80 text-[#5e6265] text-xs bg-[#ffffff] border border-[#dfdbd1] rounded">
+        Loading machine learning architecture diagnostics and Table 2 data...
       </div>
     );
   }
@@ -35,99 +34,87 @@ export default function DiagnosticsView() {
   const table2 = data.table_2_comparison || [];
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto pb-12">
-      {/* 1. KPI Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-          <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
-            <span>Overall Accuracy</span>
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-          </div>
-          <div className="text-2xl font-bold font-mono text-white">
+    <div className="space-y-4 max-w-7xl mx-auto pb-12 font-sans">
+      {/* 1. Metric Header Strip */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-3.5 rounded">
+          <span className="text-[11px] text-[#5e6265] block font-medium">Overall test accuracy</span>
+          <div className="text-2xl font-semibold text-[#191c1d] mt-1 tabular-nums">
             {((metrics.overall_accuracy || 0.988) * 100).toFixed(1)}%
           </div>
-          <p className="text-[11px] text-emerald-400/80 mt-1">TEXBAT-Grade Multi-Class Test</p>
+          <p className="text-[11px] text-[#1d4e3e] mt-1">TEXBAT-grade evaluation</p>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-          <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
-            <span>Macro F1-Score</span>
-            <TrendingUp className="w-4 h-4 text-cyan-400" />
-          </div>
-          <div className="text-2xl font-bold font-mono text-white">
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-3.5 rounded">
+          <span className="text-[11px] text-[#5e6265] block font-medium">Macro F1-score</span>
+          <div className="text-2xl font-semibold text-[#191c1d] mt-1 tabular-nums">
             {(metrics.macro_f1_score || 0.985).toFixed(3)}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Balanced across 7 classes</p>
+          <p className="text-[11px] text-[#5e6265] mt-1">Balanced across 7 classes</p>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-          <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
-            <span>False Alarm Rate (FAR)</span>
-            <AlertOctagon className="w-4 h-4 text-amber-400" />
-          </div>
-          <div className="text-2xl font-bold font-mono text-white">
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-3.5 rounded">
+          <span className="text-[11px] text-[#5e6265] block font-medium">False alarm rate</span>
+          <div className="text-2xl font-semibold text-[#191c1d] mt-1 tabular-nums">
             {((metrics.false_alarm_rate || 0.008) * 100).toFixed(2)}%
           </div>
-          <p className="text-[11px] text-amber-400/80 mt-1">Authentic signal false triggers</p>
+          <p className="text-[11px] text-[#5e6265] mt-1">Authentic signal false triggers</p>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-          <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
-            <span>Inference Latency</span>
-            <Cpu className="w-4 h-4 text-purple-400" />
-          </div>
-          <div className="text-2xl font-bold font-mono text-white">
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-3.5 rounded">
+          <span className="text-[11px] text-[#5e6265] block font-medium">Inference latency</span>
+          <div className="text-2xl font-semibold text-[#191c1d] mt-1 tabular-nums">
             1.8 ms
           </div>
-          <p className="text-[11px] text-purple-400/80 mt-1">Real-time edge execution</p>
+          <p className="text-[11px] text-[#5e6265] mt-1">Real-time edge receiver execution</p>
         </div>
       </div>
 
       {/* 2. Middle Row: 7x7 Confusion Matrix & 14-Feature Importance */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Confusion Matrix Heatmap */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono mb-2 flex items-center justify-between">
-            <span>7x7 Multi-Class Confusion Matrix</span>
-            <span className="text-[10px] text-slate-400 font-sans">Predicted (Columns) vs True (Rows)</span>
-          </h3>
-          <p className="text-xs text-slate-400 mb-4">
-            Demonstrates zero confusion between simplistic overpower spoofing and subtle drift-evasive attacks.
-          </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {/* Confusion Matrix */}
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-4 rounded flex flex-col">
+          <div className="border-b border-[#eae7de] pb-2 mb-3">
+            <h3 className="text-xs font-semibold text-[#191c1d]">
+              Multi-class confusion matrix (7 attack modes)
+            </h3>
+            <p className="text-[11px] text-[#5e6265] mt-0.5">
+              Demonstrates clean separation between simplistic overpower spoofing and subtle drift-evasive attacks.
+            </p>
+          </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-[11px] font-mono border-collapse">
+            <table className="w-full text-xs border-collapse">
               <thead>
-                <tr>
-                  <th className="p-1 text-left text-slate-500">True \ Pred</th>
+                <tr className="border-b border-[#dfdbd1] text-[#5e6265]">
+                  <th className="py-1 px-1.5 text-left font-medium">True \ Pred</th>
                   {classNames.map((c, i) => (
-                    <th key={`th-${i}`} className="p-1 text-center text-slate-400 truncate max-w-[55px]" title={c}>
+                    <th key={`th-${i}`} className="py-1 px-1 text-center font-medium truncate max-w-[50px]" title={c}>
                       {c.substring(0, 4)}
                     </th>
                   ))}
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="divide-y divide-[#eae7de]">
                 {cm.map((row, rIdx) => (
                   <tr key={`tr-${rIdx}`}>
-                    <td className="p-1 font-semibold text-slate-300 truncate max-w-[90px]" title={classNames[rIdx]}>
+                    <td className="py-1.5 px-1.5 font-medium text-[#191c1d] truncate max-w-[90px]" title={classNames[rIdx]}>
                       {classNames[rIdx]}
                     </td>
                     {row.map((val, cIdx) => {
                       const isDiag = rIdx === cIdx;
-                      const intensity = Math.min(1.0, val / 200.0);
                       const bg = isDiag
-                        ? `rgba(16, 185, 129, ${0.25 + intensity * 0.75})`
+                        ? '#f0fdf4'
                         : val > 0
-                        ? `rgba(239, 68, 68, ${0.2 + (val / 10.0) * 0.5})`
+                        ? '#fdf2f2'
                         : 'transparent';
 
                       return (
                         <td
                           key={`td-${rIdx}-${cIdx}`}
                           style={{ backgroundColor: bg }}
-                          className={`p-1.5 text-center rounded border border-slate-950 font-bold ${
-                            isDiag ? 'text-white' : val > 0 ? 'text-red-300' : 'text-slate-600'
+                          className={`py-1 px-1 text-center tabular-nums text-[11px] ${
+                            isDiag ? 'text-[#1d4e3e] font-semibold' : val > 0 ? 'text-[#b82e2b]' : 'text-[#707477]'
                           }`}
                         >
                           {val}
@@ -142,31 +129,38 @@ export default function DiagnosticsView() {
         </div>
 
         {/* 14-Feature Importance Bar Chart */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono mb-2 flex items-center justify-between">
-            <span>14 GNSS Telemetry Feature Importances</span>
-            <span className="text-[10px] text-cyan-400">Random Forest Attribution</span>
-          </h3>
-          <p className="text-xs text-slate-400 mb-4">
-            Highlights how C/N0 moving variance, peak asymmetry, and EKF innovation dominate classification.
-          </p>
+        <div className="bg-[#ffffff] border border-[#dfdbd1] p-4 rounded flex flex-col">
+          <div className="border-b border-[#eae7de] pb-2 mb-3">
+            <h3 className="text-xs font-semibold text-[#191c1d]">
+              Observable feature importance ranking
+            </h3>
+            <p className="text-[11px] text-[#5e6265] mt-0.5">
+              Attribution of 14 RF, correlator, and EKF observables to ensemble threat classification.
+            </p>
+          </div>
 
-          <div className="flex-1 min-h-[300px]">
+          <div className="flex-1 min-h-[260px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={featureRanking.slice(0, 8)}
                 layout="vertical"
-                margin={{ top: 5, right: 20, left: 80, bottom: 5 }}
+                margin={{ top: 5, right: 20, left: 70, bottom: 5 }}
               >
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis type="number" stroke="#64748b" tick={{ fontSize: 10 }} />
-                <YAxis dataKey="feature" type="category" stroke="#cbd5e1" tick={{ fontSize: 10 }} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#eae7de" horizontal={false} />
+                <XAxis type="number" stroke="#dfdbd1" tick={{ fontSize: 11, fill: '#707477' }} />
+                <YAxis dataKey="feature" type="category" stroke="#dfdbd1" tick={{ fontSize: 11, fill: '#191c1d' }} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '6px' }}
+                  contentStyle={{
+                    backgroundColor: '#ffffff',
+                    borderColor: '#dfdbd1',
+                    borderRadius: '4px',
+                    fontSize: '11px',
+                    color: '#191c1d'
+                  }}
                 />
-                <Bar dataKey="importance" fill="#06b6d4" radius={[0, 4, 4, 0]}>
-                  {featureRanking.slice(0, 8).map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 0 ? '#38bdf8' : index === 1 ? '#06b6d4' : '#0891b2'} />
+                <Bar dataKey="importance" fill="#16697a" radius={[0, 2, 2, 0]}>
+                  {featureRanking.slice(0, 8).map((_, index) => (
+                    <Cell key={`cell-${index}`} fill={index === 0 ? '#16697a' : '#1d4e3e'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -176,32 +170,33 @@ export default function DiagnosticsView() {
       </div>
 
       {/* 3. Model Architecture Comparison Table */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
-        <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono mb-3 flex items-center gap-2">
-          <Layers className="w-4 h-4 text-cyan-400" />
-          <span>Ensemble Model Architecture Comparison (IEEE 2025 Benchmarking)</span>
-        </h3>
+      <div className="bg-[#ffffff] border border-[#dfdbd1] rounded overflow-hidden">
+        <div className="px-4 py-3 border-b border-[#dfdbd1] bg-[#fcfbf9]">
+          <h3 className="text-xs font-semibold text-[#191c1d]">
+            Ensemble classifier architecture comparison (TEXBAT benchmarking)
+          </h3>
+        </div>
         <div className="overflow-x-auto">
-          <table className="w-full text-xs font-mono text-left">
-            <thead className="bg-slate-950 text-slate-400 border-b border-slate-800">
+          <table className="w-full text-xs text-left border-collapse">
+            <thead className="bg-[#f0eee7] text-[#5e6265] border-b border-[#dfdbd1]">
               <tr>
-                <th className="p-3">Model Architecture</th>
-                <th className="p-3">Test Accuracy</th>
-                <th className="p-3">Macro F1</th>
-                <th className="p-3">Primary Architectural Strength</th>
+                <th className="py-2.5 px-4 font-medium">Model architecture</th>
+                <th className="py-2.5 px-4 font-medium">Test accuracy</th>
+                <th className="py-2.5 px-4 font-medium">Macro F1</th>
+                <th className="py-2.5 px-4 font-medium">Architectural strength</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800 text-slate-300">
+            <tbody className="divide-y divide-[#eae7de]">
               {modelsComp.map((m, idx) => (
-                <tr key={`model-${idx}`} className={m.model_name.includes('Ensemble') ? 'bg-cyan-500/10 font-bold text-cyan-300' : ''}>
-                  <td className="p-3">{m.model_name}</td>
-                  <td className="p-3">{(m.accuracy * 100).toFixed(2)}%</td>
-                  <td className="p-3">{m.macro_f1.toFixed(3)}</td>
-                  <td className="p-3 text-slate-400">
+                <tr key={`model-${idx}`} className={m.model_name.includes('Ensemble') ? 'bg-[#f0eee7] font-semibold text-[#191c1d]' : 'hover:bg-[#faf8f5]'}>
+                  <td className="py-2.5 px-4">{m.model_name}</td>
+                  <td className="py-2.5 px-4 tabular-nums">{(m.accuracy * 100).toFixed(2)}%</td>
+                  <td className="py-2.5 px-4 tabular-nums">{m.macro_f1.toFixed(3)}</td>
+                  <td className="py-2.5 px-4 text-[#5e6265]">
                     {idx === 0 && 'High interpretability, tree splitting on C/N0 & clock jumps'}
                     {idx === 1 && 'High gradient boosting accuracy on non-linear continuous residuals'}
                     {idx === 2 && 'Captures temporal sliding window drift dynamics'}
-                    {idx === 3 && 'Calibrated soft-voting combining tree + neural predictions'}
+                    {idx === 3 && 'Calibrated soft-voting combining tree and neural estimators'}
                   </td>
                 </tr>
               ))}
@@ -211,33 +206,32 @@ export default function DiagnosticsView() {
       </div>
 
       {/* 4. Table 2: 5-Layer Defense Family Comparison from Research Paper */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
-        <div className="flex items-center justify-between mb-3 border-b border-slate-800 pb-2">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono flex items-center gap-2">
-            <Table className="w-4 h-4 text-purple-400" />
-            <span>Table 2 of Paper: Comparative Analysis of Detection Families</span>
+      <div className="bg-[#ffffff] border border-[#dfdbd1] rounded overflow-hidden">
+        <div className="px-4 py-3 border-b border-[#dfdbd1] bg-[#fcfbf9] flex items-center justify-between">
+          <h3 className="text-xs font-semibold text-[#191c1d]">
+            Table 2: Comparative analysis of GNSS spoofing detection families
           </h3>
-          <span className="text-xs text-purple-400 font-mono">Section 6 & Table 2</span>
+          <span className="text-[11px] text-[#5e6265]">Paper Section 6 & Table 2</span>
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full text-xs text-left">
-            <thead className="bg-slate-950 text-slate-400 font-mono border-b border-slate-800">
+          <table className="w-full text-xs text-left border-collapse">
+            <thead className="bg-[#f0eee7] text-[#5e6265] border-b border-[#dfdbd1]">
               <tr>
-                <th className="p-3">Technique Family</th>
-                <th className="p-3">Hardware Cost</th>
-                <th className="p-3">Latency</th>
-                <th className="p-3">Primary Strength</th>
-                <th className="p-3 text-amber-400">Key Limitation</th>
+                <th className="py-2.5 px-4 font-medium">Technique family</th>
+                <th className="py-2.5 px-4 font-medium">Hardware cost</th>
+                <th className="py-2.5 px-4 font-medium">Detection latency</th>
+                <th className="py-2.5 px-4 font-medium">Primary strength</th>
+                <th className="py-2.5 px-4 font-medium">Key limitation</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800 text-slate-300">
+            <tbody className="divide-y divide-[#eae7de]">
               {table2.map((t, idx) => (
-                <tr key={`t2-${idx}`} className="hover:bg-slate-800/40 transition-colors">
-                  <td className="p-3 font-semibold text-white font-mono">{t.family}</td>
-                  <td className="p-3">{t.hardware_cost}</td>
-                  <td className="p-3 font-mono">{t.detection_latency}</td>
-                  <td className="p-3 text-emerald-400">{t.primary_strength}</td>
-                  <td className="p-3 text-amber-300/90">{t.key_limitation}</td>
+                <tr key={`t2-${idx}`} className="hover:bg-[#faf8f5] transition-colors">
+                  <td className="py-2.5 px-4 font-medium text-[#191c1d]">{t.family}</td>
+                  <td className="py-2.5 px-4">{t.hardware_cost}</td>
+                  <td className="py-2.5 px-4 tabular-nums">{t.detection_latency}</td>
+                  <td className="py-2.5 px-4 text-[#1d4e3e]">{t.primary_strength}</td>
+                  <td className="py-2.5 px-4 text-[#854d0e]">{t.key_limitation}</td>
                 </tr>
               ))}
             </tbody>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquareCode, Cpu, Send, Sparkles, BookOpen, Database, CheckCircle2, Terminal } from 'lucide-react';
+import { Cpu, Send, Sparkles, BookOpen, Database, Terminal } from 'lucide-react';
 import { analyzeForensics } from '../services/api';
 import CyberTypewriter from './CyberTypewriter';
 
@@ -8,16 +8,16 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
   const [loading, setLoading] = useState(false);
   const [report, setReport] = useState(null);
 
-  const scenarioTitle = scenarioRun?.scenario_metadata?.title || 'Active GNSS Incident';
+  const scenarioTitle = scenarioRun?.scenario_metadata?.title || 'Active GNSS incident';
   const attackType = scenarioRun?.telemetry_epochs?.[currentEpoch]?.attack_type || 'INTERMEDIATE_SYNC';
   const currentTelem = scenarioRun?.telemetry_epochs?.[currentEpoch]?.features_14d || {};
   const featureVector = scenarioRun?.telemetry_epochs?.[currentEpoch]?.feature_vector || null;
 
   const quickPrompts = [
-    "Generate Full Forensic Incident Report for Active Scenario",
-    "Explain How Intermediate Synchronized Spoofing Distorts SQM Correlation Peaks (Sec 4.2 & 6.1)",
-    "Why Does Legacy RAIM Fail Against Coordinated Spoofing & How Does Our EKF + GIS Layer Fix It?",
-    "Evaluate Downstream Impact on UAV LiDAR Orthomosaics & Precision Agriculture (Sec 8.2 & 8.3)"
+    "Generate full forensic incident report for active scenario",
+    "Explain how intermediate synchronized spoofing distorts SQM correlation peaks (Sec 4.2 & 6.1)",
+    "Why does legacy RAIM fail against coordinated spoofing and how does our EKF + GIS layer fix it?",
+    "Evaluate downstream impact on UAV LiDAR orthomosaics and precision agriculture (Sec 8.2 & 8.3)"
   ];
 
   const handleAsk = async (promptText) => {
@@ -41,43 +41,42 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
   };
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto pb-12 font-sans">
+    <div className="space-y-4 max-w-7xl mx-auto pb-12 font-sans">
       {/* 1. Header Banner & Model Telemetry */}
-      <div className="bg-gradient-to-r from-purple-950/40 via-slate-900 to-slate-900 border border-purple-500/30 rounded-xl p-5 shadow-xl">
+      <div className="bg-[#ffffff] border border-[#dfdbd1] rounded p-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="p-1.5 rounded-lg bg-purple-500/20 text-purple-400">
-                <Cpu className="w-5 h-5" />
+              <span className="p-1.5 rounded bg-[#edf4f0] text-[#1d4e3e]">
+                <Cpu className="w-4 h-4" />
               </span>
-              <h2 className="text-lg font-bold text-white font-mono">
-                Local Qwen-4B + Qdrant RAG Forensic Copilot
+              <h2 className="text-sm font-semibold text-[#191c1d]">
+                Local Qwen-4B + Qdrant RAG forensic copilot
               </h2>
             </div>
-            <p className="text-xs text-slate-400 mt-1">
-              Autonomous Edge AI Assistant running quantized inference locally or via zero-crash hybrid routing.
-              Retrieves paper sections and nearest-neighbor attack vectors from Qdrant Vector DB.
+            <p className="text-xs text-[#5e6265] mt-1 max-w-3xl">
+              Edge AI assistant running quantized local inference with paper section retrieval and nearest-neighbor attack vectors from Qdrant vector database.
             </p>
           </div>
 
-          {/* Telemetry Pills */}
-          <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
-            <span className="px-2.5 py-1 bg-slate-950 rounded-lg border border-purple-500/30 text-purple-300">
+          {/* Telemetry Badges */}
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="px-2.5 py-1 bg-[#f0eee7] rounded border border-[#dfdbd1] text-[#191c1d]">
               Model: Qwen-4B-GNSS-Instruct
             </span>
-            <span className="px-2.5 py-1 bg-slate-950 rounded-lg border border-slate-800 text-slate-300">
+            <span className="px-2.5 py-1 bg-[#f0eee7] rounded border border-[#dfdbd1] text-[#5e6265]">
               Quant: Q4_K_M (4-bit)
             </span>
-            <span className="px-2.5 py-1 bg-slate-950 rounded-lg border border-cyan-500/30 text-cyan-300">
-              RAG: Qdrant Vector DB
+            <span className="px-2.5 py-1 bg-[#edf4f0] rounded border border-[#dfdbd1] text-[#1d4e3e]">
+              RAG: Qdrant vector DB
             </span>
           </div>
         </div>
 
         {/* 1-Click Quick Prompts */}
-        <div className="mt-4 pt-3 border-t border-slate-800/80">
-          <span className="text-[11px] font-mono text-slate-400 block mb-2">
-            💡 Recommended Professor Demo Prompts (1-Click Trigger):
+        <div className="mt-4 pt-3 border-t border-[#eae7de]">
+          <span className="text-xs text-[#5e6265] block mb-2 font-medium">
+            Evaluator presentation prompts:
           </span>
           <div className="flex flex-wrap gap-2">
             {quickPrompts.map((p, i) => (
@@ -85,7 +84,7 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
                 key={`qp-${i}`}
                 onClick={() => handleAsk(p)}
                 disabled={loading}
-                className="text-xs font-mono bg-slate-800/80 hover:bg-purple-900/40 hover:border-purple-500/50 text-slate-200 px-3 py-1.5 rounded-lg border border-slate-700 transition-colors text-left"
+                className="text-xs bg-[#f0eee7] hover:bg-[#e6e3da] text-[#191c1d] px-3 py-1.5 rounded border border-[#dfdbd1] transition-colors text-left"
               >
                 {p}
               </button>
@@ -101,54 +100,56 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAsk()}
-          placeholder="Ask the local Qwen-4B Copilot anything about GNSS spoofing, EKF sensor fusion, or GIS integrity..."
-          className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+          placeholder="Ask the local Qwen-4B copilot about GNSS spoofing, EKF sensor fusion, or GIS integrity..."
+          className="flex-1 bg-[#ffffff] border border-[#dfdbd1] rounded px-4 py-2.5 text-xs text-[#191c1d] placeholder-[#8a8e91] focus:outline-none focus:border-[#16697a] transition-colors"
         />
         <button
           onClick={() => handleAsk()}
           disabled={loading}
-          className="bg-purple-600 hover:bg-purple-500 text-white font-medium px-5 rounded-xl text-sm transition-colors flex items-center gap-2 shadow-lg shadow-purple-600/20"
+          className="bg-[#16697a] hover:bg-[#125361] text-white font-medium px-4 rounded text-xs transition-colors flex items-center gap-2"
         >
-          {loading ? <Sparkles className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
-          <span>{loading ? 'Analyzing...' : 'Ask Copilot'}</span>
+          {loading ? <Sparkles className="w-3.5 h-3.5 animate-spin" /> : <Send className="w-3.5 h-3.5" />}
+          <span>{loading ? 'Analyzing...' : 'Ask copilot'}</span>
         </button>
       </div>
 
       {/* 3. Copilot Results View */}
       {report && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {/* Main AI Forensic Analysis Report */}
-          <div className="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
-              <div className="flex items-center gap-2 font-mono text-xs text-purple-400 font-bold">
+          <div className="lg:col-span-2 bg-[#ffffff] border border-[#dfdbd1] rounded p-5 space-y-3">
+            <div className="flex items-center justify-between pb-2 border-b border-[#eae7de]">
+              <div className="flex items-center gap-2 text-xs text-[#16697a] font-semibold">
                 <Terminal className="w-4 h-4" />
-                <span>Forensic Incident Report</span>
+                <span>Forensic incident analysis</span>
               </div>
-              <span className="text-[10px] font-mono text-slate-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">
+              <span className="text-[11px] text-[#5e6265] bg-[#f4f6f8] px-2 py-0.5 rounded border border-[#eae7de] tabular-nums">
                 Latency: {report.model_telemetry?.latency_ms} ms • {report.model_telemetry?.active_tier}
               </span>
             </div>
 
-            <div className="prose prose-invert prose-sm max-w-none text-slate-200 leading-relaxed font-mono whitespace-pre-wrap">
-              <CyberTypewriter text={report.analysis_markdown} speedMs={10} />
+            <div className="text-xs text-[#191c1d] leading-relaxed whitespace-pre-wrap">
+              <CyberTypewriter text={report.analysis_markdown} speedMs={8} />
             </div>
           </div>
 
           {/* RAG Context & Similar TEXBAT Signatures */}
           <div className="space-y-4">
             {/* Qdrant Citations */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono mb-2 flex items-center gap-1.5">
-                <BookOpen className="w-4 h-4 text-cyan-400" />
-                <span>Qdrant Paper Chunks Retrieved</span>
-              </h4>
+            <div className="bg-[#ffffff] border border-[#dfdbd1] rounded p-4">
+              <div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-[#eae7de]">
+                <BookOpen className="w-4 h-4 text-[#16697a]" />
+                <h4 className="text-xs font-semibold text-[#191c1d]">
+                  Qdrant paper sections retrieved
+                </h4>
+              </div>
               <div className="space-y-2">
                 {(report.qdrant_citations || []).map((c, i) => (
-                  <div key={`cite-${i}`} className="p-2.5 rounded bg-slate-950 border border-slate-800 text-[11px]">
-                    <div className="font-bold text-cyan-300 font-mono">{c.title}</div>
-                    <div className="text-[10px] text-slate-400 font-mono mb-1">{c.section} • {c.authors}</div>
-                    <div className="text-slate-300 line-clamp-3">{c.text}</div>
-                    <div className="mt-1 text-[10px] text-purple-400 font-mono">
+                  <div key={`cite-${i}`} className="p-2.5 rounded bg-[#f4f6f8] border border-[#eae7de] text-xs">
+                    <div className="font-semibold text-[#191c1d]">{c.title}</div>
+                    <div className="text-[11px] text-[#5e6265] mb-1">{c.section} • {c.authors}</div>
+                    <div className="text-[#2d3133] line-clamp-3 text-[11px]">{c.text}</div>
+                    <div className="mt-1 text-[11px] text-[#16697a]">
                       Citations: {(c.citations || []).join(', ')}
                     </div>
                   </div>
@@ -157,20 +158,22 @@ export default function CopilotView({ scenarioRun, currentEpoch = 0 }) {
             </div>
 
             {/* Qdrant TEXBAT Vector Signatures */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono mb-2 flex items-center gap-1.5">
-                <Database className="w-4 h-4 text-emerald-400" />
-                <span>Matched TEXBAT Signatures</span>
-              </h4>
+            <div className="bg-[#ffffff] border border-[#dfdbd1] rounded p-4">
+              <div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-[#eae7de]">
+                <Database className="w-4 h-4 text-[#1d4e3e]" />
+                <h4 className="text-xs font-semibold text-[#191c1d]">
+                  Matched TEXBAT signatures
+                </h4>
+              </div>
               <div className="space-y-2">
                 {(report.similar_signatures || []).map((s, i) => (
-                  <div key={`sig-${i}`} className="p-2 bg-slate-950 rounded border border-slate-800 text-[11px] font-mono">
-                    <div className="flex justify-between items-center text-emerald-400 font-bold">
+                  <div key={`sig-${i}`} className="p-2 bg-[#f4f6f8] rounded border border-[#eae7de] text-xs">
+                    <div className="flex justify-between items-center text-[#1d4e3e] font-medium">
                       <span>{s.signature_id}</span>
-                      <span className="text-[10px] bg-emerald-500/20 px-1 py-0.5 rounded">{s.similarity_pct} Match</span>
+                      <span className="text-[11px] bg-[#edf4f0] px-1.5 py-0.5 rounded tabular-nums">{s.similarity_pct} match</span>
                     </div>
-                    <div className="text-slate-400 text-[10px] mt-0.5">{s.attack_class}</div>
-                    <div className="text-slate-400 text-[10px]">C/N0: {s.cn0_mean_dbhz} dB-Hz | Clock Jump: {s.clock_bias_jump_m}m</div>
+                    <div className="text-[#5e6265] text-[11px] mt-0.5">{s.attack_class}</div>
+                    <div className="text-[#5e6265] text-[11px] tabular-nums">C/N0: {s.cn0_mean_dbhz} dB-Hz • Clock jump: {s.clock_bias_jump_m}m</div>
                   </div>
                 ))}
               </div>

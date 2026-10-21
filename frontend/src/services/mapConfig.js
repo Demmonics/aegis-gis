@@ -1,36 +1,43 @@
 /**
  * AEGIS-GIS Cartographic Basemap Configuration
- * Fully locally-hosted with authenticated CARTO raster basemaps.
- * Eliminates 'API Key Required' watermarks across all map viewports.
+ * Keyless, reliable cartographic basemaps for survey-agency & national-atlas aesthetic.
+ * 100% keyless: Esri World Topo, OpenTopoMap, OpenStreetMap, Esri Imagery & OpenSeaMap.
  */
 
-export const CARTO_API_KEY = import.meta.env.VITE_CARTO_KEY || 'cb1_4qj3_1_0f4a6ae049937b9a4e1d7f69';
-
 export const MAP_STYLES = {
-  voyager: {
-    id: 'voyager',
-    name: 'Carto Voyager (Street & Marine)',
-    shortName: 'Voyager',
-    icon: '🗺️',
-    url: `https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
-    attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+  esri_topo: {
+    id: 'esri_topo',
+    name: 'National Topographic Survey (Esri)',
+    shortName: 'Survey Topo',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri &mdash; USGS, NOAA, Esri, DeLorme, NAVTEQ',
+    maxZoom: 19
   },
-  dark: {
-    id: 'dark',
-    name: 'Carto Dark Matter (Tactical Radar)',
-    shortName: 'Dark Matter',
-    icon: '🌓',
-    url: `https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
-    attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+  opentopo: {
+    id: 'opentopo',
+    name: 'Topographic Contours (OpenTopoMap)',
+    shortName: 'Contours',
+    url: 'https://tile.opentopomap.org/{z}/{x}/{y}.png',
+    attribution: 'Map: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA), &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+    maxZoom: 17
   },
-  positron: {
-    id: 'positron',
-    name: 'Carto Positron (High Contrast Light)',
-    shortName: 'Positron',
-    icon: '☀️',
-    url: `https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
-    attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+  osm_standard: {
+    id: 'osm_standard',
+    name: 'OpenStreetMap Cartographic',
+    shortName: 'Cartographic',
+    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  },
+  esri_imagery: {
+    id: 'esri_imagery',
+    name: 'Aerial Survey Imagery (Esri World)',
+    shortName: 'Aerial Imagery',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri &mdash; USDA, USGS, AEX, GeoEye, Getmapping',
+    maxZoom: 19
   }
 };
 
-export const DEFAULT_STYLE_ID = 'voyager';
+export const DEFAULT_STYLE_ID = 'esri_topo';
+export const OPENSEAMAP_OVERLAY_URL = 'https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png';

@@ -17,11 +17,10 @@ import {
   runSimulation
 } from './services/api';
 
-import { Play, Pause, RotateCcw, Shield, Zap, AlertTriangle, Cpu, Film } from 'lucide-react';
+import { Play, Pause, RotateCcw } from 'lucide-react';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    // Default to true for seamless local hosting; allows manual logout
     const saved = localStorage.getItem('aegis_auth');
     return saved !== 'false';
   });
@@ -30,7 +29,7 @@ export default function App() {
     if (saved) {
       try { return JSON.parse(saved); } catch (e) {}
     }
-    return { email: 'evaluator@somaiya.edu', role: 'KJSCE Professor / Evaluator (Local Mode)' };
+    return { email: 'evaluator@somaiya.edu', role: 'KJSCE Professor / Evaluator' };
   });
   const [activeTab, setActiveTab] = useState('command');
   const [isVivaPanelOpen, setIsVivaPanelOpen] = useState(false);
@@ -52,7 +51,7 @@ export default function App() {
 
   const playbackTimerRef = useRef(null);
 
-  // Global Keyboard Shortcut: Ctrl+Shift+P or Cmd+Shift+P for Professor Viva God Mode
+  // Keyboard Shortcut: Ctrl+Shift+P for Expert Console
   useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p')) {
@@ -120,22 +119,7 @@ export default function App() {
     };
   }, [isPlaying]);
 
-  // God Mode Handlers for Professor Viva Demo
-  const handleInjectAttackNow = () => {
-    setAttackOverride('INTERMEDIATE_SYNC');
-    setPowerAdvantageDb(6.0);
-    setCurrentEpoch(28);
-    setIsPlaying(false);
-  };
-
-  const handleTriggerRecoveryNow = () => {
-    setEnableEkf(true);
-  };
-
-  const handleResetSystem = () => {
-    setAttackOverride('');
-    setPowerAdvantageDb(3.0);
-    setEnableEkf(true);
+  const handleReset = () => {
     setCurrentEpoch(0);
     setIsPlaying(false);
   };
@@ -153,12 +137,9 @@ export default function App() {
 
   const currentTelem = scenarioRun?.telemetry_epochs?.[currentEpoch] || null;
   const currentRecord = scenarioRun?.layered_defense_records?.[currentEpoch] || null;
-  const isAttackActive = Boolean(currentTelem?.features_14d?.is_spoofed || currentRecord?.layer5_ml?.is_spoofed || (attackOverride && attackOverride !== 'AUTHENTIC'));
 
   return (
-    <div className={`min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans transition-all duration-500 ${
-      isAttackActive ? 'shadow-[inset_0_0_50px_rgba(239,68,68,0.25)]' : 'bg-cyber-grid'
-    }`}>
+    <div className="min-h-screen bg-[#f6f5f0] text-[#191c1d] flex flex-col font-sans antialiased">
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -173,51 +154,51 @@ export default function App() {
       <main className="flex-1 p-4 max-w-7xl mx-auto w-full flex flex-col">
         {activeTab === 'command' && (
           <div className="flex-1 flex flex-col space-y-3">
-            {/* 1. Top Control Bar (Scenario, Attack Injector & Timeline Scrubber) */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-lg flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-              <div className="flex flex-wrap items-center gap-3">
+            {/* 1. Quiet Cartographic Control Bar: Scenario, Attack Injection & Timeline */}
+            <div className="bg-[#ffffff] border border-[#dfdbd1] p-3 rounded flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="flex flex-wrap items-center gap-4">
                 {/* Scenario Selector */}
                 <div>
-                  <label className="text-[10px] text-slate-400 block mb-0.5 uppercase tracking-wider">
-                    Incident Scenario (Sec 5)
+                  <label className="text-[11px] text-[#5e6265] block mb-0.5 font-medium">
+                    Incident scenario (§5)
                   </label>
                   <select
                     value={selectedScenarioId}
                     onChange={(e) => setSelectedScenarioId(e.target.value)}
-                    className="bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="bg-[#fcfbf9] border border-[#dfdbd1] rounded px-2.5 py-1 text-xs text-[#191c1d] focus:outline-none focus:border-[#16697a]"
                   >
-                    <option value="baltic_maritime_c4ads">Baltic Sea Tanker (C4ADS Runway Spoof - Sec 5.2)</option>
-                    <option value="vilnius_aviation_adsb">Ryanair Vilnius ILS Approach (ADS-B Reset - Sec 5.1)</option>
-                    <option value="uav_lidar_survey">UAV LiDAR Survey (RL Drift-Evasive - Sec 5.3)</option>
-                    <option value="precision_ag_tractor">Nashik Vineyard RTK Tractor (Row Deviation - Sec 5.4)</option>
+                    <option value="baltic_maritime_c4ads">Baltic Sea tanker (C4ADS runway spoof — §5.2)</option>
+                    <option value="vilnius_aviation_adsb">Ryanair Vilnius ILS approach (ADS-B reset — §5.1)</option>
+                    <option value="uav_lidar_survey">UAV LiDAR survey (drift-evasive attack — §5.3)</option>
+                    <option value="precision_ag_tractor">Nashik vineyard RTK tractor (row deviation — §5.4)</option>
                   </select>
                 </div>
 
-                {/* Live Attack Override Selector */}
+                {/* Attack Injection Selector */}
                 <div>
-                  <label className="text-[10px] text-slate-400 block mb-0.5 uppercase tracking-wider">
-                    Attack Injection (Sec 4.2)
+                  <label className="text-[11px] text-[#5e6265] block mb-0.5 font-medium">
+                    Attack mode (§4.2)
                   </label>
                   <select
                     value={attackOverride}
                     onChange={(e) => setAttackOverride(e.target.value)}
-                    className="bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-amber-300 focus:outline-none focus:border-amber-500"
+                    className="bg-[#fcfbf9] border border-[#dfdbd1] rounded px-2.5 py-1 text-xs text-[#191c1d] focus:outline-none focus:border-[#16697a]"
                   >
-                    <option value="">Scenario Default</option>
-                    <option value="AUTHENTIC">AUTHENTIC (Clean GNSS)</option>
-                    <option value="SIMPLISTIC_NON_SYNC">SIMPLISTIC_NON_SYNC (Overpower)</option>
-                    <option value="INTERMEDIATE_SYNC">INTERMEDIATE_SYNC (Pull-Off)</option>
-                    <option value="SOPHISTICATED_RECEIVER_AWARE">SOPHISTICATED (Multi-Antenna)</option>
-                    <option value="MEACONING">MEACONING (Replay Delay)</option>
-                    <option value="NULLING_SUPPRESSION">NULLING_SUPPRESSION (Carrier Null)</option>
-                    <option value="DRIFT_EVASIVE_UAV">DRIFT_EVASIVE_UAV (Sub-threshold)</option>
+                    <option value="">Scenario default</option>
+                    <option value="AUTHENTIC">Authentic GNSS signal</option>
+                    <option value="SIMPLISTIC_NON_SYNC">Simplistic non-synchronized</option>
+                    <option value="INTERMEDIATE_SYNC">Intermediate code pull-off</option>
+                    <option value="SOPHISTICATED_RECEIVER_AWARE">Sophisticated multi-antenna</option>
+                    <option value="MEACONING">Meaconing replay delay</option>
+                    <option value="NULLING_SUPPRESSION">Nulling carrier suppression</option>
+                    <option value="DRIFT_EVASIVE_UAV">Drift-evasive UAV spoofing</option>
                   </select>
                 </div>
 
                 {/* Spoofer Power Slider */}
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-slate-400 uppercase tracking-wider mb-0.5">
-                    Power Adv: <span className="text-cyan-400 font-bold">+{powerAdvantageDb} dB</span>
+                  <span className="text-[11px] text-[#5e6265] font-medium mb-0.5">
+                    Power advantage: <span className="text-[#191c1d] font-semibold tabular-nums">+{powerAdvantageDb} dB</span>
                   </span>
                   <input
                     type="range"
@@ -226,48 +207,46 @@ export default function App() {
                     step="0.5"
                     value={powerAdvantageDb}
                     onChange={(e) => setPowerAdvantageDb(parseFloat(e.target.value))}
-                    className="w-24 h-1.5 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                    className="w-24 h-1.5 bg-[#dfdbd1] rounded appearance-none cursor-pointer accent-[#16697a]"
                   />
                 </div>
 
                 {/* EKF Mitigation Toggle */}
-                <div className="flex items-center gap-1.5 pt-3">
+                <div className="flex items-center gap-1.5 pt-2">
                   <input
                     type="checkbox"
                     id="ekfToggle"
                     checked={enableEkf}
                     onChange={(e) => setEnableEkf(e.target.checked)}
-                    className="rounded bg-slate-950 border-slate-700 text-cyan-500 focus:ring-0 cursor-pointer"
+                    className="rounded border-[#dfdbd1] text-[#16697a] focus:ring-0 cursor-pointer"
                   />
-                  <label htmlFor="ekfToggle" className="text-xs text-slate-300 cursor-pointer select-none">
-                    EKF Recovery
+                  <label htmlFor="ekfToggle" className="text-xs text-[#2d3133] cursor-pointer select-none">
+                    EKF sensor fusion mitigation
                   </label>
                 </div>
 
-                {/* Grand Finale Animated Simulation Launch Button */}
+                {/* Switch to Detailed Multi-Scenario Player */}
                 <button
                   onClick={() => setActiveTab('cinematic')}
-                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/50 text-amber-300 hover:text-white hover:from-amber-500/30 hover:to-red-500/30 shadow-md transition-all font-mono text-xs font-bold animate-pulse"
-                  title="Launch Baltic Sea Maritime Spoofing Cinematic Animation"
+                  className="px-3 py-1 rounded bg-[#f0eee7] hover:bg-[#e6e3da] text-[#191c1d] border border-[#dfdbd1] font-medium text-xs transition-colors"
                 >
-                  <Film className="w-3.5 h-3.5 text-amber-400" />
-                  <span>🎬 Launch Baltic Sea Spoofing Animation</span>
+                  Inspect global scenario tracks
                 </button>
               </div>
 
               {/* Scrubber Playback Controls */}
-              <div className="flex items-center gap-2 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800">
+              <div className="flex items-center gap-2 bg-[#f0eee7] px-3 py-1.5 rounded border border-[#dfdbd1]">
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className={`p-1.5 rounded-md ${isPlaying ? 'bg-amber-500/20 text-amber-400' : 'bg-cyan-500/20 text-cyan-400'} hover:bg-cyan-500/30 transition-colors`}
-                  title={isPlaying ? 'Pause' : 'Play Timeline'}
+                  className="p-1 rounded hover:bg-[#e6e3da] text-[#191c1d] transition-colors"
+                  title={isPlaying ? 'Pause' : 'Play trajectory timeline'}
                 >
                   {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
                 </button>
                 <button
-                  onClick={() => { setIsPlaying(false); setCurrentEpoch(0); }}
-                  className="p-1.5 rounded-md bg-slate-800 text-slate-300 hover:text-white"
-                  title="Reset to Epoch 0"
+                  onClick={handleReset}
+                  className="p-1 rounded hover:bg-[#e6e3da] text-[#5e6265] hover:text-[#191c1d] transition-colors"
+                  title="Reset to epoch 0"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                 </button>
@@ -279,27 +258,27 @@ export default function App() {
                     max="59"
                     value={currentEpoch}
                     onChange={(e) => setCurrentEpoch(parseInt(e.target.value))}
-                    className="w-32 md:w-44 h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                    className="w-28 md:w-36 h-1.5 bg-[#c8c5bc] rounded appearance-none cursor-pointer accent-[#16697a]"
                   />
-                  <span className="text-[11px] font-bold text-cyan-300 min-w-[55px] text-right">
+                  <span className="text-[11px] font-semibold text-[#191c1d] min-w-[50px] text-right tabular-nums">
                     T={currentEpoch}s / 59s
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* 2. Main Middle Workspace: Tactical WebGIS (Left) & RF Oscilloscope (Right) */}
+            {/* 2. Main Middle Workspace: Tactical WebGIS (Hero ~60% Width) & RF Oscilloscope (~40% Width) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 min-h-[460px]">
-              {/* Center-Left: Tactical WebGIS Map */}
-              <div className="lg:col-span-7 h-[460px] lg:h-auto min-h-[400px]">
+              {/* Hero Map View (~60% of Width) */}
+              <div className="lg:col-span-7 h-[460px] lg:h-auto min-h-[420px]">
                 <TacticalMap
                   scenarioRun={scenarioRun}
                   currentEpoch={currentEpoch}
                 />
               </div>
 
-              {/* Center-Right: RF Correlator Peak & Telemetry Oscilloscopes */}
-              <div className="lg:col-span-5 flex flex-col min-h-[400px]">
+              {/* RF Correlator Oscilloscope & Telemetry Charts (~40% of Width) */}
+              <div className="lg:col-span-5 flex flex-col min-h-[420px]">
                 <CorrelatorOscilloscope
                   telemetryEpoch={currentTelem}
                   allTelemetry={scenarioRun?.telemetry_epochs || []}
@@ -332,35 +311,47 @@ export default function App() {
           />
         )}
 
+        {activeTab === 'paper' && (
+          <PaperMatrixView onJumpTab={(tabId) => setActiveTab(tabId)} />
+        )}
+
         {activeTab === 'copilot' && (
           <CopilotView
             scenarioRun={scenarioRun}
             currentEpoch={currentEpoch}
           />
         )}
-
-        {activeTab === 'paper' && (
-          <PaperMatrixView
-            onJumpTab={(tabId) => setActiveTab(tabId)}
-          />
-        )}
       </main>
 
-      {/* Professor Viva God Mode Floating Panel (Ctrl+Shift+P) */}
+      {/* Cartographic Survey Footer & Archival Source Credits */}
+      <footer className="border-t border-[#dfdbd1] bg-[#fcfbf9] py-3 text-xs text-[#5e6265] mt-auto">
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span className="text-[#191c1d] font-medium">AEGIS-GIS Instrument</span> — Department of AI & Data Science, K.J. Somaiya College of Engineering.
+          </div>
+          <p className="text-[11px] text-[#707477]">
+            Historical cartography & geodetic references: <a href="https://commons.wikimedia.org/wiki/File:Carta_Marina.jpeg" target="_blank" rel="noreferrer" className="underline hover:text-[#191c1d]">Carta Marina (1539)</a>, <a href="https://commons.wikimedia.org/wiki/File:Map-making_Division_of_Coast_%26_Geodetic_Survey,_Dept_of_Commerce_LCCN2016877308.jpg" target="_blank" rel="noreferrer" className="underline hover:text-[#191c1d]">Coast & Geodetic Survey</a>, <a href="https://commons.wikimedia.org/wiki/File:(Frontispiece_to)_Ramsdens_great_theodolite_(Ordnance)._(to_accompanyV.1)_Account_of_the_observations_and_calculations_of_the_(IA_dr_frontispiece-to-ramsdens-great-theodolite-ordnance-to-accompanyv1-a-6877005).jpg" target="_blank" rel="noreferrer" className="underline hover:text-[#191c1d]">Ordnance Great Theodolite</a> (Public Domain).
+          </p>
+        </div>
+      </footer>
+
+      {/* Evaluator Expert View Panel */}
       <VivaControlPanel
         isOpen={isVivaPanelOpen}
         onClose={() => setIsVivaPanelOpen(false)}
-        onInjectAttack={handleInjectAttackNow}
-        onTriggerRecovery={handleTriggerRecoveryNow}
-        onResetSystem={handleResetSystem}
-        currentEpoch={currentEpoch}
-        setCurrentEpoch={setCurrentEpoch}
-        attackActive={isAttackActive}
-        ekfActive={enableEkf}
-        selectedScenario={selectedScenarioId}
-        onSelectScenario={(sId) => setSelectedScenarioId(sId)}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        onInjectSpoofing={() => {
+          setAttackOverride('INTERMEDIATE_SYNC');
+          setPowerAdvantageDb(4.5);
+        }}
+        onTriggerFusion={() => {
+          setEnableEkf(true);
+        }}
+        onResetSystem={() => {
+          setAttackOverride('');
+          setPowerAdvantageDb(3.0);
+          setEnableEkf(true);
+          handleReset();
+        }}
       />
     </div>
   );

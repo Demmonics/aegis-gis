@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 export default function CyberTypewriter({
   text = '',
-  speedMs = 15,
+  speedMs = 12,
   className = '',
   onComplete = null
 }) {
@@ -36,7 +36,6 @@ export default function CyberTypewriter({
     return () => clearInterval(interval);
   }, [text, speedMs, onComplete]);
 
-  // Click to reveal full text immediately
   const handleFastForward = () => {
     setDisplayedText(textRef.current);
     setIsTyping(false);
@@ -46,12 +45,12 @@ export default function CyberTypewriter({
   return (
     <div
       onClick={handleFastForward}
-      title="Click to reveal immediately"
-      className={`font-mono cursor-pointer select-text ${className}`}
+      title="Click to reveal text immediately"
+      className={`cursor-pointer select-text ${className}`}
     >
       <span>{displayedText}</span>
       {isTyping && (
-        <span className="inline-block w-2 h-4 bg-cyan-400 ml-0.5 align-middle animate-terminal-caret" />
+        <span className="inline-block w-1.5 h-3.5 bg-[#16697a] ml-0.5 align-middle animate-pulse" />
       )}
     </div>
   );
