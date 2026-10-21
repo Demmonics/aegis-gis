@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { MapContainer, TileLayer, Polyline, Polygon, CircleMarker, Popup, useMap } from 'react-leaflet';
+import { MAP_STYLES, DEFAULT_STYLE_ID } from '../services/mapConfig';
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
@@ -17,6 +18,8 @@ function TacticalMapComponent({
   selectedObservation = null,
   onSelectObservation = null
 }) {
+  const [mapStyle, setMapStyle] = useState(DEFAULT_STYLE_ID);
+
   if (!scenarioRun) {
     return (
       <div className="h-full w-full flex items-center justify-center bg-slate-950 text-slate-500 font-mono text-sm">
@@ -42,8 +45,36 @@ function TacticalMapComponent({
   // Parse reference GIS polygons
   const refFeatures = useMemo(() => scenarioRun.gis_reference_geojson?.features || [], [scenarioRun.gis_reference_geojson]);
 
+  const activeBasemap = MAP_STYLES[mapStyle] || MAP_STYLES.voyager;
+
   return (
     <div className="h-full w-full relative rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
+      {/* Floating Basemap Style Switcher */}
+      <div className="absolute top-3 right-3 z-[1000] flex items-center bg-slate-900/90 border border-slate-700/80 rounded-lg p-1 backdrop-blur-md shadow-xl text-[11px] font-mono gap-1">
+        <button
+          onClick={() => setMapStyle('voyager')}
+          title="CARTO Voyager Basemap"
+          className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+            mapStyle === 'voyager'
+              ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <span>🗺️ Voyager</span>
+        </button>
+        <button
+          onClick={() => setMapStyle('dark')}
+          title="CARTO Dark Matter Basemap"
+          className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+            mapStyle === 'dark'
+              ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <span>🌓 Dark Matter</span>
+        </button>
+      </div>
+
       <MapContainer
         center={[centerLat, centerLon]}
         zoom={meta.scenario_id === 'precision_ag_tractor' ? 18 : meta.scenario_id === 'uav_lidar_survey' ? 15 : 11}
@@ -55,10 +86,12 @@ function TacticalMapComponent({
           zoom={meta.scenario_id === 'precision_ag_tractor' ? 18 : meta.scenario_id === 'uav_lidar_survey' ? 15 : 11}
         />
 
-        {/* High-Contrast CartoDB Dark Matter Basemap */}
+        {/* Authenticated CARTO Basemap Layer */}
         <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          key={activeBasemap.id}
+          attribution={activeBasemap.attribution}
+          url={activeBasemap.url}
+          maxZoom={19}
         />
 
         {/* 1. Reference GIS Polygons */}

@@ -10,6 +10,7 @@ import {
   useMap
 } from 'react-leaflet';
 import L from 'leaflet';
+import { MAP_STYLES, DEFAULT_STYLE_ID } from '../services/mapConfig';
 import {
   Play,
   Pause,
@@ -219,6 +220,7 @@ export default function CinematicSimulationPlayer({
   const [playbackSpeed, setPlaybackSpeed] = useState(1); // 1x or 2x
   const [enableEkf, setEnableEkf] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
+  const [mapStyle, setMapStyle] = useState(DEFAULT_STYLE_ID);
 
   const timerRef = useRef(null);
 
@@ -463,6 +465,32 @@ export default function CinematicSimulationPlayer({
             </div>
           )}
 
+          {/* Floating Basemap Style Switcher */}
+          <div className="absolute top-4 right-4 z-[500] flex items-center bg-slate-950/90 border border-slate-700/80 rounded-lg p-1 backdrop-blur shadow-xl text-[11px] font-mono gap-1">
+            <button
+              onClick={() => setMapStyle('voyager')}
+              title="CARTO Voyager Basemap"
+              className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+                mapStyle === 'voyager'
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <span>🗺️ Voyager</span>
+            </button>
+            <button
+              onClick={() => setMapStyle('dark')}
+              title="CARTO Dark Matter Basemap"
+              className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+                mapStyle === 'dark'
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <span>🌓 Dark Matter</span>
+            </button>
+          </div>
+
           {/* Leaflet Map Canvas */}
           <MapContainer
             center={[54.78, 20.20]}
@@ -472,9 +500,12 @@ export default function CinematicSimulationPlayer({
           >
             <AutoMapCenter center={[54.78, 20.20]} zoom={10} />
 
+            {/* Authenticated CARTO Basemap Layer */}
             <TileLayer
-              attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+              key={mapStyle}
+              attribution={MAP_STYLES[mapStyle]?.attribution || MAP_STYLES.voyager.attribution}
+              url={MAP_STYLES[mapStyle]?.url || MAP_STYLES.voyager.url}
+              maxZoom={19}
             />
 
             {/* A. Shipping Corridor Polygon (Green) */}

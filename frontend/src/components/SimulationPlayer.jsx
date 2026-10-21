@@ -9,6 +9,7 @@ import {
   useMap
 } from 'react-leaflet';
 import L from 'leaflet';
+import { MAP_STYLES, DEFAULT_STYLE_ID } from '../services/mapConfig';
 import {
   Play,
   Pause,
@@ -315,6 +316,7 @@ function SimulationPlayerComponent({
   const [selectedScenarioId, setSelectedScenarioId] = useState('aviation_vilnius');
   const [scenarioData, setScenarioData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [mapStyle, setMapStyle] = useState(DEFAULT_STYLE_ID);
 
   // Playback state
   const [currentEpoch, setCurrentEpoch] = useState(0);
@@ -547,6 +549,32 @@ function SimulationPlayerComponent({
             </span>
           </div>
 
+          {/* Floating Basemap Style Switcher */}
+          <div className="absolute top-3 right-3 z-[400] flex items-center bg-slate-950/90 border border-slate-700/80 rounded-lg p-1 backdrop-blur shadow-xl text-[11px] font-mono gap-1">
+            <button
+              onClick={() => setMapStyle('voyager')}
+              title="CARTO Voyager Basemap"
+              className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+                mapStyle === 'voyager'
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <span>🗺️ Voyager</span>
+            </button>
+            <button
+              onClick={() => setMapStyle('dark')}
+              title="CARTO Dark Matter Basemap"
+              className={`px-2 py-0.5 rounded flex items-center gap-1 transition-all ${
+                mapStyle === 'dark'
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <span>🌓 Dark Matter</span>
+            </button>
+          </div>
+
           {/* Interactive Leaflet Map View */}
           <MapContainer
             center={scenarioData.map_center}
@@ -559,9 +587,11 @@ function SimulationPlayerComponent({
               zoom={scenarioData.default_zoom || 11}
             />
 
+            {/* Authenticated CARTO Basemap Layer */}
             <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+              key={mapStyle}
+              url={MAP_STYLES[mapStyle]?.url || MAP_STYLES.voyager.url}
+              attribution={MAP_STYLES[mapStyle]?.attribution || MAP_STYLES.voyager.attribution}
               maxZoom={19}
             />
 

@@ -20,8 +20,18 @@ import {
 import { Play, Pause, RotateCcw, Shield, Zap, AlertTriangle, Cpu, Film } from 'lucide-react';
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    // Default to true for seamless local hosting; allows manual logout
+    const saved = localStorage.getItem('aegis_auth');
+    return saved !== 'false';
+  });
+  const [currentUser, setCurrentUser] = useState(() => {
+    const saved = localStorage.getItem('aegis_user');
+    if (saved) {
+      try { return JSON.parse(saved); } catch (e) {}
+    }
+    return { email: 'evaluator@somaiya.edu', role: 'KJSCE Professor / Evaluator (Local Mode)' };
+  });
   const [activeTab, setActiveTab] = useState('command');
   const [isVivaPanelOpen, setIsVivaPanelOpen] = useState(false);
 
@@ -132,8 +142,12 @@ export default function App() {
 
   if (!isAuthenticated) {
     return <AuthGate onAuthenticated={(authData) => {
+      localStorage.setItem('aegis_auth', 'true');
+      if (authData?.user) {
+        localStorage.setItem('aegis_user', JSON.stringify(authData.user));
+        setCurrentUser(authData.user);
+      }
       setIsAuthenticated(true);
-      setCurrentUser(authData.user);
     }} />;
   }
 
@@ -148,7 +162,10 @@ export default function App() {
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        onLogout={() => setIsAuthenticated(false)}
+        onLogout={() => {
+          localStorage.setItem('aegis_auth', 'false');
+          setIsAuthenticated(false);
+        }}
         user={currentUser}
         onOpenVivaPanel={() => setIsVivaPanelOpen(true)}
       />
