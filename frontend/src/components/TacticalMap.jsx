@@ -20,22 +20,14 @@ function TacticalMapComponent({
 }) {
   const [mapStyle, setMapStyle] = useState(DEFAULT_STYLE_ID);
 
-  if (!scenarioRun) {
-    return (
-      <div className="h-full w-full flex items-center justify-center bg-slate-950 text-slate-500 font-mono text-sm">
-        Initializing Tactical Cartographic WebGIS...
-      </div>
-    );
-  }
-
-  const meta = scenarioRun.scenario_metadata;
-  const centerLat = meta.center_coords[1];
-  const centerLon = meta.center_coords[0];
+  const meta = scenarioRun?.scenario_metadata;
+  const centerLat = meta?.center_coords?.[1] || 54.68;
+  const centerLon = meta?.center_coords?.[0] || 19.85;
 
   // Memoize path transformations so epoch progression doesn't trigger map re-projections
-  const truePath = useMemo(() => (scenarioRun.ground_truth_path || []).map(p => [p[1], p[0]]), [scenarioRun.ground_truth_path]);
-  const spoofedPath = useMemo(() => (scenarioRun.reported_spoofed_path || []).map(p => [p[1], p[0]]), [scenarioRun.reported_spoofed_path]);
-  const ekfPath = useMemo(() => (scenarioRun.ekf_recovered_path || []).map(p => [p[1], p[0]]), [scenarioRun.ekf_recovered_path]);
+  const truePath = useMemo(() => (scenarioRun?.ground_truth_path || []).map(p => [p[1], p[0]]), [scenarioRun?.ground_truth_path]);
+  const spoofedPath = useMemo(() => (scenarioRun?.reported_spoofed_path || []).map(p => [p[1], p[0]]), [scenarioRun?.reported_spoofed_path]);
+  const ekfPath = useMemo(() => (scenarioRun?.ekf_recovered_path || []).map(p => [p[1], p[0]]), [scenarioRun?.ekf_recovered_path]);
 
   // Current epoch points
   const curTrue = truePath[currentEpoch] || [centerLat, centerLon];
@@ -43,7 +35,15 @@ function TacticalMapComponent({
   const curEkf = ekfPath[currentEpoch] || [centerLat, centerLon];
 
   // Parse reference GIS polygons
-  const refFeatures = useMemo(() => scenarioRun.gis_reference_geojson?.features || [], [scenarioRun.gis_reference_geojson]);
+  const refFeatures = useMemo(() => scenarioRun?.gis_reference_geojson?.features || [], [scenarioRun?.gis_reference_geojson]);
+
+  if (!scenarioRun) {
+    return (
+      <div className="h-full w-full flex items-center justify-center bg-slate-950 text-slate-500 font-mono text-sm">
+        Initializing Tactical Cartographic WebGIS...
+      </div>
+    );
+  }
 
   const activeBasemap = MAP_STYLES[mapStyle] || MAP_STYLES.voyager;
 
