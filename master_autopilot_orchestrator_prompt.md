@@ -17,7 +17,7 @@ The user is going to sleep right now and needs to present this project to their 
 
 2. STRICT GIT BRANCH & ROLLBACK SAFETY PROTOCOL:
    - Initialize a Git repository (`git init`) immediately if one does not exist.
-   - Configure a local git user if not configured (`git config user.name "Yoosha-AEGIS"` and `git config user.email "yoosha@somaiya.edu"`).
+   - Configure a local git user if not configured (`git config user.name "AEGIS-Team"` and `git config user.email "aegis@project.local"`).
    - For EVERY phase (Phase 1 through Phase 5):
      a) Create and checkout a dedicated feature branch (e.g., `git checkout -b feat/phase-1-physics-engine`).
      b) Implement all code for that phase completely (zero mocks, zero `pass` or `TODO` stubs).
